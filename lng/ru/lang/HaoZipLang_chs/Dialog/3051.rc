@@ -1,0 +1,8 @@
+3051 DIALOGEX 0, 0, 450, 301, 0
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Тестирование производительности"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ PUSHBUTTON "", 1, 0, 0, 0, 0
+ PUSHBUTTON "", 2, 0, 0, 0, 0
+}

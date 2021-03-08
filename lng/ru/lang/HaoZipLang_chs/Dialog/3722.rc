@@ -1,0 +1,17 @@
+3722 DIALOGEX 0, 0, 246, 228, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+CAPTION "Пароль"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ GROUPBOX "Изменение пароля", 65535, 5, 7, 236, 188
+ AUTORADIOBUTTON "Не изменять пароль", 3723, 15, 22, 220, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "Удалить текущий пароль", 3724, 15, 37, 220, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Изменить текущий пароль", 3725, 15, 52, 220, 10, NOT WS_TABSTOP
+ EDITTEXT 3084, 30, 69, 169, 14, ES_PASSWORD | ES_AUTOHSCROLL | WS_DISABLED
+ LTEXT "Повторно введите пароль (для проверки)", 3126, 30, 89, 168, 8
+ EDITTEXT 3085, 30, 100, 169, 14, ES_PASSWORD | ES_AUTOHSCROLL | WS_DISABLED
+ AUTOCHECKBOX "Показать пароль", 3086, 30, 119, 74, 10, WS_DISABLED
+ AUTOCHECKBOX "&Шифровать имя файлов", 3083, 30, 134, 169, 10, WS_DISABLED
+ LTEXT "Для изменения зашифрованного архива нужно ввести первоначальный пароль", 65535, 20, 202, 209, 23
+ LTEXT "", 3127, 115, 121, 106, 8
+}

@@ -1,0 +1,17 @@
+3263 DIALOGEX 0, 0, 340, 124, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Добавить новое расширение"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ LTEXT "&Укажите расширение(я) файла", 3767, 77, 5, 257, 8
+ LTEXT "(например: .Jpg; .Zip)", 3768, 77, 18, 257, 8
+ EDITTEXT 2123, 77, 29, 257, 14, ES_AUTOHSCROLL
+ GROUPBOX "Метод сжатия", 3771, 77, 47, 257, 55
+ AUTORADIOBUTTON "Добавлять в архив без сжатия", 3307, 100, 58, 172, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "Использовать скоростное сжатие", 3308, 100, 72, 164, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Использовать максимальное сжатие", 3309, 100, 86, 164, 10, NOT WS_TABSTOP
+ DEFPUSHBUTTON "ОК", 1, 114, 105, 50, 14
+ PUSHBUTTON "Отмена", 2, 174, 105, 50, 14
+ LTEXT "Формат файла", 3770, 6, 18, 66, 8
+ COMBOBOX 3769, 6, 30, 66, 30, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL
+}

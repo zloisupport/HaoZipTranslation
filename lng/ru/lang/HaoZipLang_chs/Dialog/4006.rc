@@ -1,0 +1,23 @@
+4006 DIALOGEX 0, 0, 187, 209, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Добавление ярлыка"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ AUTORADIOBUTTON "На Рабочем столе", 4037, 15, 18, 135, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "В меню 'Пуск'", 4038, 15, 29, 135, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "В меню 'Пуск/Программы'", 4039, 15, 40, 135, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "В папке 'Автозагрузка'", 4040, 15, 51, 135, 10, NOT WS_TABSTOP
+ LTEXT "Имя файла, для которого будет создан ярлык", 65535, 13, 80, 157, 8
+ EDITTEXT 4036, 9, 89, 170, 14, ES_AUTOHSCROLL
+ LTEXT "Папка, в которую будет помещён ярлык", 65535, 13, 106, 157, 8
+ EDITTEXT 4041, 9, 115, 170, 14, ES_AUTOHSCROLL
+ LTEXT "Описание ярлыка", 65535, 13, 132, 157, 8
+ EDITTEXT 4043, 9, 141, 170, 14, ES_AUTOHSCROLL
+ LTEXT "Имя ярлыка", 65535, 13, 158, 157, 8
+ EDITTEXT 4044, 9, 167, 170, 14, ES_AUTOHSCROLL
+ PUSHBUTTON "ОК", 1, 13, 190, 50, 14
+ PUSHBUTTON "Отмена", 2, 69, 190, 50, 14
+ PUSHBUTTON "&Справка", 9, 125, 190, 50, 14
+ GROUPBOX "Место создания ярлыка", 65535, 5, 5, 177, 60
+ GROUPBOX "Параметры ярлыка", 65535, 5, 69, 177, 117
+}

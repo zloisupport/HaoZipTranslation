@@ -1,0 +1,24 @@
+2214 DIALOGEX 0, 0, 280, 232, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+CAPTION "Поиск"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ GROUPBOX "Что искать", 21020, 6, 6, 270, 60
+ LTEXT "Имя файла или папки", 21021, 18, 18, 150, 8
+ COMBOBOX 23115, 18, 30, 246, 90, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL
+ AUTOCHECKBOX "&С учетом регистра", 21024, 18, 48, 73, 10
+ AUTOCHECKBOX "Точное совпадение имени файла", 21025, 126, 48, 128, 10
+ GROUPBOX "Где искать", 21026, 6, 72, 270, 60
+ LTEXT "Папка или архив", 21027, 18, 84, 81, 8
+ EDITTEXT 23008, 18, 96, 180, 12, ES_AUTOHSCROLL
+ PUSHBUTTON "Обзор", 21028, 204, 96, 60, 14
+ AUTOCHECKBOX "Поиск в подпапках", 21031, 18, 114, 99, 10
+ GROUPBOX "Поиск в архиве", 21032, 6, 138, 270, 66
+ AUTOCHECKBOX "Искать в архивах следующего типа", 21033, 18, 150, 179, 10
+ LTEXT "&Тип архива", 21034, 30, 168, 45, 8
+ COMBOBOX 23116, 96, 168, 168, 70, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL
+ AUTOCHECKBOX "Пропускать зашифрованные архивы", 21037, 18, 186, 174, 10
+ DEFPUSHBUTTON "&Поиск", 1, 132, 210, 67, 14
+ PUSHBUTTON "&Отмена", 2, 204, 210, 67, 14
+ PUSHBUTTON "", 9, 0, 0, 0, 0
+}

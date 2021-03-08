@@ -1,0 +1,21 @@
+4001 DIALOGEX 0, 0, 250, 214, 0
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Извлечение"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ GROUPBOX "Путь для распаковки", 65535, 5, 5, 240, 89
+ EDITTEXT 4046, 26, 18, 215, 14, ES_AUTOHSCROLL
+ AUTORADIOBUTTON "Создать в папке \"Program Files\"", 4030, 15, 36, 164, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "Создать в текущей папке", 4031, 15, 49, 164, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Абсолютный путь", 4032, 15, 62, 164, 10, NOT WS_TABSTOP
+ CONTROL "", 65535, "STATIC", SS_ETCHEDHORZ, 5, 76, 240, 1
+ AUTOCHECKBOX "Сохранять и восстанавливать пути", 4047, 10, 81, 164, 10
+ GROUPBOX "Программа установки", 65535, 5, 99, 240, 110
+ LTEXT "Выполнить после извлечения", 65535, 10, 114, 164, 8
+ EDITTEXT 4042, 9, 124, 232, 14, ES_AUTOHSCROLL
+ LTEXT "Выполнить до извлечения", 65535, 10, 144, 164, 8
+ EDITTEXT 4033, 9, 154, 232, 14, ES_AUTOHSCROLL
+ LTEXT "Вывод сообщения до извлечения", 65535, 10, 170, 164, 8
+ EDITTEXT 4069, 9, 180, 232, 14, ES_AUTOHSCROLL
+ LTEXT "Можно указать несколько задач одновременно, разделяя \" ; \"", 65535, 10, 197, 227, 8
+}

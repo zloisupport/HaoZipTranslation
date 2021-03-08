@@ -1,0 +1,11 @@
+3719 DIALOGEX 0, 0, 246, 79, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Подтверждение HaoZip"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ DEFPUSHBUTTON "Да", 1, 66, 60, 50, 14
+ PUSHBUTTON "Нет", 2, 130, 60, 50, 14
+ AUTOCHECKBOX "Не спрашивать в следующий раз", 3721, 41, 44, 193, 10
+ ICON "", 3719, 12, 13, 21, 20
+ LTEXT "Статический", 3720, 41, 9, 193, 31
+}

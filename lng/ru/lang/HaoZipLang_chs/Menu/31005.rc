@@ -1,0 +1,81 @@
+31005 MENU
+{
+ POPUP "&Файл"
+ {
+  MENUITEM "Новый\tCtrl+N", -7936, MENUBREAK
+  MENUITEM "Открыть...\tCtrl+O", -7935
+  MENUITEM "Закрыть", -7934
+  MENUITEM SEPARATOR
+  MENUITEM "Сохранить\tCtrl+S", -7933
+  MENUITEM "Сохранить как...", -7932
+  MENUITEM SEPARATOR
+  MENUITEM "Печать...\tCtrl+P", -7929
+  MENUITEM "Предварительный просмотр", -7927
+  MENUITEM "Настройка печати...", -7930
+  MENUITEM SEPARATOR
+  POPUP "Последние файлы"
+  {
+   MENUITEM "(пусто)", -7920, GRAYED
+  }
+  MENUITEM SEPARATOR
+  MENUITEM "Выход", -7871
+ }
+ POPUP "&Правка"
+ {
+  MENUITEM "Отменить\tCtrl+Z", -7893
+  MENUITEM "Повторить\tCtrl+Y", -7892
+  MENUITEM SEPARATOR
+  MENUITEM "Вырезать\tCtrl+X", -7901
+  MENUITEM "Копировать\tCtrl+C", -7902
+  MENUITEM "Вставить\tCtrl+V", -7899
+  MENUITEM "Удалить\tDel", -7904
+  MENUITEM SEPARATOR
+  MENUITEM "&Выбрать все\tCtrl+A", -7894
+  MENUITEM SEPARATOR
+  MENUITEM "Найти...\tCtrl+F", -7900
+  MENUITEM "Найти далее\tF3", -7896
+  MENUITEM "Заменить...\tCtrl+H", -7895
+ }
+ POPUP "&Вид"
+ {
+  MENUITEM "Стандартная панель", -6144
+  MENUITEM "Настройка панели", 31053
+  MENUITEM SEPARATOR
+  MENUITEM "Строка состояния", -6143
+ }
+ POPUP "Формат"
+ {
+  MENUITEM "Шрифт...", -7840
+  POPUP "Эффекты"
+  {
+   MENUITEM "Жирный\tCtrl+B", 31043
+   MENUITEM "Курсив\tCtrl+I", 31042
+   MENUITEM "Подчеркивание\tCtrl+U", 31044
+  }
+  POPUP "Выравнивание"
+  {
+   MENUITEM "Выровнять по левому краю", 31047
+   MENUITEM "Выровнять по центру", 31051
+   MENUITEM "Выровнять по правому краю", 31049
+  }
+  MENUITEM SEPARATOR
+  MENUITEM "Цвет текста...\tCtrk+K", 31045
+  MENUITEM "Цвет подсветки...", 31050
+  MENUITEM "Цвет фона...", 31046
+  MENUITEM SEPARATOR
+  MENUITEM "Перенос строк", 31054
+  POPUP "Код"
+  {
+   MENUITEM "Авто-выбор", 31073
+   MENUITEM SEPARATOR
+   MENUITEM "Упрощенный китайский (GB2312)", 31075
+   MENUITEM "Unicode", 31078
+   MENUITEM "Unicode Big Endian", 31077
+   MENUITEM "UTF-8", 31079
+  }
+ }
+ POPUP "&Сервис"
+ {
+  MENUITEM "Параметры...", 31055
+ }
+}

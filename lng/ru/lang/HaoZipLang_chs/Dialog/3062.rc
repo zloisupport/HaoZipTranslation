@@ -1,0 +1,8 @@
+3062 DIALOGEX 0, 0, 243, 64, 0
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUPWINDOW | WS_CAPTION
+FONT 9, "Segoe UI", 400, FALSE
+{
+ DEFPUSHBUTTON "Нет", 1147, 213, 40, 33, 16
+ PUSHBUTTON "Да", 1145, 174, 40, 33, 16
+ LTEXT "Вы не сможет отменить переключение изображений в архиве, и потеряете функцию пакетной обработки изображений. Хотите отказаться?", 1146, 7, 4, 255, 26
+}

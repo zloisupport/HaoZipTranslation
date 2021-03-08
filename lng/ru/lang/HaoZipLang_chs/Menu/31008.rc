@@ -1,0 +1,27 @@
+31008 MENU
+{
+ POPUP "1"
+ {
+  MENUITEM "Вырезать\tCtrl+X", -7901
+  MENUITEM "Копировать\tCtrl+C", -7902
+  MENUITEM "Вставить\tCtrl+V", -7899
+  MENUITEM SEPARATOR
+  MENUITEM "Шрифт...", -7840
+  MENUITEM SEPARATOR
+  MENUITEM "Жирный", 31043
+  MENUITEM "Курсив", 31042
+  MENUITEM "Подчеркивание", 31044
+  MENUITEM SEPARATOR
+  MENUITEM "Цвет текста", 31045
+  MENUITEM "Цвет выделения", 31050
+  MENUITEM SEPARATOR
+  MENUITEM "Закрыть", -7934
+ }
+ POPUP "2"
+ {
+  MENUITEM "&Вставлять в позицию курсора", 31056
+  MENUITEM "&Загружать в новое изображение", 31057
+  MENUITEM SEPARATOR
+  MENUITEM "Отменить перемещение", 31058
+ }
+}

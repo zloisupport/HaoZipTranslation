@@ -1,0 +1,12 @@
+3013 DIALOGEX 0, 0, 203, 88, 0
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | WS_POPUPWINDOW | WS_CAPTION
+EXSTYLE = WS_EX_TOPMOST
+CAPTION "HaoZip - Выключение ПК"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ DEFPUSHBUTTON "Выключить (10 с)", 1, 27, 65, 68, 14
+ PUSHBUTTON "Отмена", 2, 107, 65, 68, 14
+ LTEXT "Операция завершена, компьютер будет выключен!\nЗакройте все программы, чтобы не потерять данные.", 65535, 14, 14, 179, 26
+ LTEXT "Причина выключения:", 3237, 14, 47, 167, 8
+ GROUPBOX "Примечания", 65535, 5, 5, 193, 78
+}

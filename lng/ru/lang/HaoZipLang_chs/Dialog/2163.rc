@@ -1,0 +1,18 @@
+2163 DIALOGEX 0, 0, 300, 191, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+CAPTION "Безопасность"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ GROUPBOX "Что такое 2345 Cloud Killing", 65535, 5, 8, 290, 49
+ LTEXT "Облачное обнаружение (2345 Cloud Killing) - это три облачных сервиса, которые интегрированы в архиватор HaoZip.", 65535, 21, 23, 258, 20
+ GROUPBOX "Настройки Avira", 65535, 5, 62, 290, 66
+ GROUPBOX "Дополнительные параметры", 65535, 5, 136, 290, 49
+ AUTORADIOBUTTON "Если меньше, чем", 2178, 14, 78, 75, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Ручное сканирование", 2226, 14, 94, 96, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Отключить функцию  облачного обнаружения", 2177, 14, 111, 174, 10, NOT WS_TABSTOP
+ EDITTEXT 2179, 96, 76, 23, 13, ES_CENTER | ES_NUMBER
+ LTEXT "МБ - автоматическое сканирование", 2222, 122, 78, 127, 9
+ AUTOCHECKBOX "Подсказка при  открытии подозрительных файлов", 2165, 14, 168, 197, 10
+ AUTOCHECKBOX "Пропускать зашифрованные файлы", 2224, 14, 150, 235, 10
+ LTEXT "Облака Avira, 360, QQ Butler защитят вас от троянов и вирусов.", 65535, 21, 40, 258, 15
+}

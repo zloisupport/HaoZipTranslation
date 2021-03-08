@@ -1,0 +1,19 @@
+3108 DIALOGEX 0, 0, 261, 133, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Подтверждение замены файла"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ PUSHBUTTON "Да", 3210, 7, 95, 50, 14
+ PUSHBUTTON "Да для всех", 3211, 60, 95, 50, 14
+ PUSHBUTTON "Переименовать", 3212, 113, 95, 61, 14
+ PUSHBUTTON "Переименовать все", 3213, 176, 95, 75, 14
+ PUSHBUTTON "Нет", 3214, 7, 111, 50, 14
+ PUSHBUTTON "Нет для всех", 3215, 60, 111, 50, 14
+ PUSHBUTTON "Отмена", 2, 113, 111, 61, 14
+ PUSHBUTTON "&Справка", 3216, 176, 111, 75, 14
+ LTEXT "Файл уже существует:", 65535, 5, 8, 102, 8
+ LTEXT "", 3234, 19, 23, 232, 8, SS_ENDELLIPSIS | SS_PATHELLIPSIS
+ ICON "", 3235, 23, 40, 21, 20
+ LTEXT "0 байт\n\nИзменён: 2009-02-09", 3220, 55, 40, 189, 27
+ LTEXT "Перезаписать существующий файл?", 65535, 34, 79, 160, 8
+}

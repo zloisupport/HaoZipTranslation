@@ -1,0 +1,16 @@
+3262 DIALOGEX 0, 0, 263, 192, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Редактирование списка фильтруемых файлов"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ DEFPUSHBUTTON "ОК", 1, 77, 171, 50, 14
+ PUSHBUTTON "Отмена", 2, 136, 171, 50, 14
+ PUSHBUTTON "Добавить", 3300, 203, 17, 56, 14
+ PUSHBUTTON "Изменить", 3279, 203, 37, 56, 14
+ PUSHBUTTON "Удалить", 3277, 203, 57, 56, 14
+ PUSHBUTTON "Очистить", 3278, 203, 77, 56, 14
+ PUSHBUTTON "Восстановить", 3302, 203, 97, 56, 14
+ CTEXT "Всего из 0", 3308, 206, 115, 50, 8
+ LTEXT "Фильтр расширений файлов:", 65535, 7, 7, 108, 8
+ CONTROL "", 2120, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000080D, 7, 17, 192, 150
+}

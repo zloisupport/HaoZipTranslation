@@ -1,0 +1,9 @@
+3781 DIALOGEX 0, 0, 173, 65, 0
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Сообщение - HaoZip"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ PUSHBUTTON "&Закрыть", 1, 59, 36, 50, 14
+ LTEXT "Статический", 3785, 63, 14, 74, 16
+ LTEXT "Статический", 3784, 43, 14, 22, 21
+}

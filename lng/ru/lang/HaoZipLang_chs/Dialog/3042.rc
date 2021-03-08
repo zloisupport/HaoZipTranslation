@@ -1,0 +1,27 @@
+3042 DIALOGEX 0, 0, 195, 208, 0
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "Segoe UI", 0, FALSE
+{
+ EDITTEXT 1007, 99, 9, 79, 14, ES_AUTOHSCROLL
+ EDITTEXT 1008, 99, 28, 79, 14, ES_AUTOHSCROLL
+ AUTOCHECKBOX "&Дополнительно добавить", 1014, 7, 51, 106, 10
+ EDITTEXT 1009, 72, 63, 41, 14, ES_AUTOHSCROLL | ES_NUMBER
+ EDITTEXT 1010, 72, 84, 104, 14, ES_AUTOHSCROLL
+ EDITTEXT 1012, 72, 110, 105, 14, ES_AUTOHSCROLL
+ AUTOCHECKBOX "Д&ополнительно удалить", 1015, 7, 132, 104, 10
+ EDITTEXT 1019, 71, 144, 42, 14, ES_AUTOHSCROLL | ES_NUMBER
+ EDITTEXT 1018, 71, 163, 42, 14, ES_AUTOHSCROLL | ES_NUMBER
+ LTEXT "Начать с", 65535, 25, 65, 37, 9
+ LTEXT "Добавить после имени файла", 65535, 7, 28, 83, 19
+ LTEXT "Добавить перед именем файла", 65535, 7, 9, 89, 19
+ LTEXT "Добавить строку", 65535, 7, 86, 59, 11
+ CONTROL "", 3032, "msctls_updown32", 0x00000020, 113, 144, 10, 14
+ LTEXT "Удалить из имени", 65535, 7, 113, 63, 9
+ LTEXT "символа", 65535, 127, 65, 47, 9
+ LTEXT "Удалить", 65535, 28, 166, 35, 9
+ CONTROL "", 3034, "msctls_updown32", 0x00000020, 113, 163, 10, 14
+ LTEXT "Начать с", 65535, 27, 146, 37, 9
+ LTEXT "символа", 65535, 127, 146, 47, 9
+ LTEXT "символов", 65535, 127, 165, 47, 9
+ CONTROL "", 3031, "msctls_updown32", 0x00000020, 114, 63, 10, 14
+}

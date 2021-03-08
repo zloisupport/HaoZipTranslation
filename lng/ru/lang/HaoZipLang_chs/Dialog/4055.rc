@@ -1,0 +1,16 @@
+4055 DIALOGEX 0, 0, 250, 214, 0
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Режимы"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ GROUPBOX "Временный режим", 65535, 5, 5, 240, 90
+ AUTOCHECKBOX "Извлечь во временную папку", 4058, 11, 17, 210, 10
+ LTEXT "Запрос (необязательно)", 65535, 11, 32, 155, 8
+ EDITTEXT 4059, 11, 43, 227, 14, ES_AUTOHSCROLL
+ LTEXT "Заголовок окна с запросом", 65535, 11, 63, 155, 8
+ EDITTEXT 4060, 11, 74, 227, 14, ES_AUTOHSCROLL
+ GROUPBOX "Режим вывода информации", 65535, 5, 100, 240, 63
+ AUTORADIOBUTTON "Отображать всё", 4061, 11, 112, 185, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "Не показывать начальный диалог", 4062, 11, 126, 185, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Скрыть всё", 4063, 11, 140, 185, 10, NOT WS_TABSTOP
+}

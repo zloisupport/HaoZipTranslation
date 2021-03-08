@@ -1,0 +1,29 @@
+3261 DIALOGEX 0, 0, 291, 193, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Преобразование архивов"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ PUSHBUTTON "&Фоновый режим", 3276, 21, 174, 69, 14
+ PUSHBUTTON "Пауза", 3277, 94, 174, 56, 14
+ PUSHBUTTON "Отмена", 2, 154, 174, 56, 14
+ PUSHBUTTON "&Справка", 3278, 214, 174, 59, 14
+ EDITTEXT 2123, 5, 5, 281, 71, ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | ES_WANTRETURN | WS_VSCROLL
+ GROUPBOX "Текущее состояние", 65535, 5, 81, 153, 46
+ LTEXT "Извлечение", 3281, 15, 92, 138, 9
+ LTEXT "Имя файла                       0%", 3282, 15, 103, 113, 8
+ RTEXT "100%", 3299, 135, 103, 18, 8
+ CONTROL "", 3279, "msctls_progress32", WS_BORDER, 13, 114, 142, 10
+ GROUPBOX "Архивов", 65535, 164, 81, 122, 46
+ LTEXT "Найдено:", 65535, 171, 99, 46, 8
+ RTEXT "0", 3284, 225, 99, 48, 8
+ LTEXT "Преобразовано:", 65535, 171, 110, 57, 8
+ RTEXT "0", 3285, 227, 110, 46, 8
+ GROUPBOX "Выполнено", 65535, 5, 131, 153, 39
+ LTEXT "Прошло времени", 3283, 15, 142, 138, 8
+ CONTROL "", 3280, "msctls_progress32", WS_BORDER, 13, 156, 142, 10
+ GROUPBOX "Размер", 65535, 164, 131, 122, 39
+ LTEXT "Старый", 65535, 171, 142, 32, 8
+ RTEXT "0", 3286, 209, 142, 64, 8
+ LTEXT "Новый", 65535, 171, 156, 32, 9
+ RTEXT "0", 3287, 209, 156, 64, 9
+}

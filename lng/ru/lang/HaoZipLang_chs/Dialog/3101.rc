@@ -1,0 +1,26 @@
+3101 DIALOGEX 0, 0, 327, 230, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+CAPTION "Общие"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ LTEXT "Путь для извлечения (если не существует, то будет создан)", 65535, 5, 7, 246, 8
+ COMBOBOX 3046, 5, 20, 248, 139, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL
+ PUSHBUTTON "Показать", 3045, 259, 5, 63, 13
+ PUSHBUTTON "Создать папку", 3049, 259, 20, 63, 13
+ GROUPBOX "Режим обновления", 65535, 5, 38, 168, 46
+ AUTORADIOBUTTON "Извлечь с заменой файлов", 3056, 14, 49, 105, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "Извлечь с обновлением файлов", 3063, 14, 60, 123, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "&Обновить только существующие файлы", 3064, 14, 71, 151, 10, NOT WS_TABSTOP
+ GROUPBOX "Режим перезаписи", 65535, 5, 86, 168, 60, WS_GROUP
+ AUTORADIOBUTTON "&Спрашивать подтверждение", 3057, 14, 99, 109, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "П&ерезаписывать без запроса", 3060, 14, 110, 123, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Пропускать имеющиеся файлы", 3058, 14, 121, 125, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Переименовывать автоматически", 3059, 14, 132, 132, 10, NOT WS_TABSTOP
+ GROUPBOX "Разное", 65535, 5, 150, 168, 60, WS_GROUP
+ AUTOCHECKBOX "Распаковать архивы во вложенные папки", 3062, 14, 161, 156, 10
+ AUTOCHECKBOX "Оставить на диске поврежденные файлы", 3055, 14, 173, 156, 10
+ AUTOCHECKBOX "&Показать файлы в Проводнике ", 3048, 14, 185, 123, 10
+ AUTOCHECKBOX "Пропускать запароленные архивы", 3827, 14, 197, 141, 10
+ CONTROL "", 3047, "SysTreeView32", WS_BORDER | WS_TABSTOP | 0x00000023, 178, 38, 143, 187
+ PUSHBUTTON "Сохранить настройки", 3061, 5, 211, 168, 14
+}

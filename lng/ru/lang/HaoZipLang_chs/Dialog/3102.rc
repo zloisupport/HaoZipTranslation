@@ -1,0 +1,29 @@
+3102 DIALOGEX 0, 0, 327, 222, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CHILD | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Дополнительно"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ GROUPBOX "Пути файлов", 65535, 5, 8, 156, 63, WS_GROUP
+ AUTORADIOBUTTON "Извлекать с полными путями", 3052, 19, 20, 121, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "Извлекать файлы без путей", 3054, 19, 33, 121, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Извлекать с абсолютными путями", 3049, 19, 44, 132, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Извлекать с относительными путями", 3055, 19, 56, 141, 10, NOT WS_TABSTOP
+ GROUPBOX "Дата и время файлов", 65535, 166, 8, 156, 63, WS_GROUP
+ AUTOCHECKBOX "Сохранить время изменения", 3271, 182, 19, 121, 11
+ AUTOCHECKBOX "Сохранить время создания", 3272, 182, 33, 121, 11
+ AUTOCHECKBOX "Сохранить время открытия", 3273, 182, 47, 121, 11
+ GROUPBOX "Удаление исходного архива", 65535, 5, 77, 317, 56, WS_GROUP
+ AUTORADIOBUTTON "Не удалять", 3053, 19, 90, 141, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "&Спросить", 3051, 19, 102, 141, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Удалять всегда", 3050, 19, 114, 141, 10, NOT WS_TABSTOP
+ LTEXT "", 65535, 212, 91, 81, 8
+ LTEXT "", 65535, 212, 103, 81, 8
+ LTEXT "", 65535, 212, 115, 81, 8
+ AUTOCHECKBOX "&Типы файлов, исключаемые из извлечения", 3268, 16, 144, 163, 11
+ EDITTEXT 3269, 26, 158, 296, 14, ES_AUTOHSCROLL, WS_EX_CLIENTEDGE
+ AUTOCHECKBOX "Включено по умолчанию", 3270, 26, 174, 201, 11
+ AUTOCHECKBOX "Т&ипы файлов для извлечения", 3274, 16, 190, 115, 11
+ EDITTEXT 3275, 26, 203, 296, 14, ES_AUTOHSCROLL, WS_EX_CLIENTEDGE
+ LTEXT "(например: *. tmp *. bak)", 65535, 182, 146, 89, 8
+ LTEXT "(например: *. doc *. txt)", 65535, 135, 192, 201, 8
+}

@@ -1,0 +1,16 @@
+3105 DIALOGEX 0, 0, 290, 185, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+CAPTION "Пароль"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ GROUPBOX "Архивация с паролем", 65535, 5, 10, 280, 170
+ LTEXT "Введите пароль", 3125, 30, 34, 74, 8, NOT WS_GROUP
+ LTEXT "(Выбранный формат не поддерживается)", 3238, 113, 34, 145, 8
+ EDITTEXT 3084, 30, 45, 226, 14, ES_PASSWORD | ES_AUTOHSCROLL
+ LTEXT "Повторно введите пароль (для проверки)", 3126, 30, 64, 187, 8, NOT WS_GROUP
+ EDITTEXT 3085, 30, 75, 226, 14, ES_PASSWORD | ES_AUTOHSCROLL
+ AUTOCHECKBOX "Показать пароль", 3086, 30, 94, 164, 10
+ AUTOCHECKBOX "&Шифровать имена файлов", 3083, 30, 109, 100, 10
+ LTEXT "(только 7z)", 65535, 139, 110, 85, 8
+ LTEXT "", 65535, 235, 96, 8, 8
+}

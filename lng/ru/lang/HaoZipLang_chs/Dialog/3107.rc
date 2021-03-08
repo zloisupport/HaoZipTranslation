@@ -1,0 +1,18 @@
+3107 DIALOGEX 0, 0, 277, 74, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Сканирование архивов.."
+FONT 9, "Segoe UI", 0, FALSE
+{
+ GROUPBOX "Текущее состояние", 65535, 5, 5, 267, 44
+ LTEXT "Сканируется:", 65535, 11, 21, 49, 8
+ CONTROL "Найти имя файла", 3229, "STATIC", SS_LEFTNOWORDWRAP | SS_ENDELLIPSIS | SS_PATHELLIPSIS, 69, 21, 187, 8
+ LTEXT "Папок:", 65535, 11, 35, 49, 8
+ LTEXT "0", 3230, 65, 35, 26, 8
+ LTEXT "Файлов:", 65535, 94, 35, 49, 8
+ LTEXT "0", 3231, 145, 35, 36, 8
+ LTEXT "Архивов:", 65535, 185, 35, 49, 8
+ LTEXT "0", 3232, 240, 35, 28, 8
+ PUSHBUTTON "&Фоновый режим", 3227, 33, 55, 69, 14
+ PUSHBUTTON "Пауза", 3228, 111, 55, 58, 14
+ PUSHBUTTON "Отмена", 2, 176, 55, 58, 14
+}
