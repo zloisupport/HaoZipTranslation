@@ -1,0 +1,9 @@
+503 DIALOGEX 0, 0, 255, 87, 0
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Virtual CD"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ LTEXT "Инициализация виртуального диска, подождите ...", 65535, 6, 15, 243, 13
+ CONTROL "", 2176, "msctls_progress32", WS_BORDER, 12, 36, 230, 16
+ PUSHBUTTON "Отмена", 2174, 203, 61, 39, 15
+}

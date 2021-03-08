@@ -1,0 +1,10 @@
+501 DIALOGEX 0, 0, 198, 146, 0
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Внимание"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ LTEXT "Виртуальный диск уже используется, выберите другой образ для замены", 65535, 12, 12, 165, 27
+ LISTBOX 1000, 11, 36, 174, 79, LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+ PUSHBUTTON "&ОК", 1, 37, 128, 50, 14
+ PUSHBUTTON "&Отмена", 2, 97, 128, 50, 14
+}
