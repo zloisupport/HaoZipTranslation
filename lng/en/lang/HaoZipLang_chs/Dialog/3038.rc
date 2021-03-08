@@ -1,0 +1,26 @@
+3038 DIALOGEX 0, 0, 195, 208, 0
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "Segoe UI", 400, FALSE
+{
+ LTEXT "Naming rules:", -1, 7, 9, 59, 10
+ EDITTEXT 3023, 7, 22, 168, 14, ES_AUTOHSCROLL
+ LTEXT "Use * to insert the original file name", -1, 7, 45, 136, 10
+ LTEXT "Use # to insert a number or letter", -1, 7, 58, 185, 10
+ LTEXT "Start index", -1, 7, 75, 44, 8
+ EDITTEXT 3024, 65, 73, 40, 14, ES_AUTOHSCROLL | ES_NUMBER
+ CONTROL "", 1011, "msctls_updown32", 0x00000030, 105, 74, 10, 14
+ LTEXT "Incremental", -1, 7, 93, 42, 8
+ EDITTEXT 3025, 65, 90, 40, 14, ES_AUTOHSCROLL | ES_NUMBER
+ CONTROL "", 1013, "msctls_updown32", 0x00000030, 105, 89, 13, 14
+ LTEXT "Number of digits", -1, 7, 111, 56, 8
+ EDITTEXT 3026, 65, 106, 40, 14, ES_AUTOHSCROLL | ES_NUMBER
+ CONTROL "", 3033, "msctls_updown32", 0x00000030, 105, 105, 13, 14
+ AUTOCHECKBOX "&Fill bits", 3027, 7, 128, 42, 11
+ AUTOCHECKBOX "&Alphabetical index", 3028, 64, 129, 73, 10
+ COMBOBOX 1113, 140, 127, 43, 49, CBS_DROPDOWNLIST | WS_VSCROLL
+ AUTOCHECKBOX "Change extension to", 1114, 7, 146, 83, 10
+ EDITTEXT 1073, 93, 144, 42, 14, ES_AUTOHSCROLL
+ LTEXT "Filename Options", -1, 7, 163, 65, 10
+ COMBOBOX 1016, 7, 175, 127, 30, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL
+ AUTOCHECKBOX "Automatically &resolve naming conflicts", 1017, 7, 193, 166, 11
+}

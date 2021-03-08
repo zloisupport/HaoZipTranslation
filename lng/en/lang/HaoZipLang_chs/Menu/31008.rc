@@ -1,0 +1,27 @@
+31008 MENU
+{
+ POPUP "1"
+ {
+  MENUITEM "Cu&t\tCtrl+X", -7901
+  MENUITEM "&Copy\tCtrl+C", -7902
+  MENUITEM "&Paste\tCtrl+V", -7899
+  MENUITEM SEPARATOR
+  MENUITEM "&Font ...", -7840
+  MENUITEM SEPARATOR
+  MENUITEM "&Bold", 31043
+  MENUITEM "&Italic", 31042
+  MENUITEM "&Underline", 31044
+  MENUITEM SEPARATOR
+  MENUITEM "T&ext Color", 31045
+  MENUITEM "&Highlight Color", 31050
+  MENUITEM SEPARATOR
+  MENUITEM "Cl&ose", -7934
+ }
+ POPUP "2"
+ {
+  MENUITEM "&Inserted into the cursor position", 31056
+  MENUITEM "&Loaded into new view", 31057
+  MENUITEM SEPARATOR
+  MENUITEM "&Cancel drag file", 31058
+ }
+}

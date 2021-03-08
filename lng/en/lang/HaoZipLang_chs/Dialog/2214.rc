@@ -1,0 +1,23 @@
+2214 DIALOGEX 0, 0, 280, 232, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+CAPTION "Find"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ GROUPBOX "What to Find", 21020, 6, 6, 270, 60
+ LTEXT "the name of the file or directory to Search", 21021, 18, 18, 150, 8
+ COMBOBOX 23115, 18, 30, 246, 90, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL
+ AUTOCHECKBOX "C&ase-sensitive", 21024, 18, 48, 68, 10
+ AUTOCHECKBOX "Exactly match the file name", 21025, 126, 48, 112, 10
+ GROUPBOX "Where to Find", 21026, 6, 72, 270, 60
+ LTEXT "Folder or Archive", 21027, 18, 84, 81, 8
+ EDITTEXT 23008, 18, 96, 180, 12, ES_AUTOHSCROLL
+ PUSHBUTTON "View", 21028, 204, 96, 60, 14
+ AUTOCHECKBOX "Search in the subfolders", 21031, 18, 114, 99, 10
+ GROUPBOX "Search in archive", 21032, 6, 138, 270, 66
+ AUTOCHECKBOX "Archive files in the following types to search ", 21033, 18, 150, 179, 10
+ LTEXT "Archive &Type ", 21034, 30, 168, 45, 8
+ COMBOBOX 23116, 96, 168, 168, 70, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL
+ AUTOCHECKBOX "Ignore the file name encrypted archive file", 21037, 18, 186, 174, 10
+ DEFPUSHBUTTON "&Find", 1, 132, 210, 67, 14
+ PUSHBUTTON "&Cancel", 2, 204, 210, 67, 14
+}

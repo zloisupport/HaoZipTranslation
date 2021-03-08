@@ -1,0 +1,19 @@
+3830 DIALOGEX 0, 0, 503, 196, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "HaoZip split volumes arrange"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ CONTROL "", 3832, "SysListView32", WS_BORDER | WS_TABSTOP | 0x00004809, 7, 28, 220, 127
+ CONTROL "", 3831, "SysListView32", WS_BORDER | WS_TABSTOP | 0x00004809, 276, 28, 220, 127
+ PUSHBUTTON "Add->", 3834, 233, 69, 38, 16
+ PUSHBUTTON "<-Remove\n", 3833, 233, 89, 38, 16
+ AUTOCHECKBOX "Do &not use this feature next time", 3837, 7, 173, 200, 11
+ DEFPUSHBUTTON "&OK", 1, 336, 173, 50, 16
+ PUSHBUTTON "&Ignore", 2, 391, 173, 50, 16
+ PUSHBUTTON "&Help", 3836, 446, 173, 50, 16
+ LTEXT "Currently available to detect more than one sub-volume, please specify the correct sub-volumes, added to the list of sub-volume finishing.\n", -1, 7, 4, 478, 8
+ LTEXT "List of available sub-volumes:", -1, 7, 16, 220, 8
+ LTEXT "Sub-volume order list:", -1, 276, 16, 220, 8
+ LTEXT "", 3835, 12, 160, 216, 8
+ LTEXT "\n\n", 3842, 277, 160, 216, 8
+}

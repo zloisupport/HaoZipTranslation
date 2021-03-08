@@ -1,0 +1,23 @@
+2103 DIALOGEX 0, 0, 300, 195, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+CAPTION "Compression"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ GROUPBOX "Compression", -1, 5, 5, 136, 71
+ PUSHBUTTON "Modify Default &Profile", 2124, 14, 17, 114, 14
+ PUSHBUTTON "Or&ganize Profile", 2126, 14, 37, 114, 14
+ PUSHBUTTON "Organize Compression &Method", 2144, 14, 57, 114, 14
+ GROUPBOX "Volume size list", -1, 146, 5, 149, 34
+ PUSHBUTTON "Define &Volume Size...", 2129, 153, 19, 135, 14
+ GROUPBOX "Automated detect multi volume archives", -1, 146, 45, 149, 31
+ AUTORADIOBUTTON "O&n(Recommended)", 2148, 153, 59, 84, 10, WS_GROUP
+ AUTORADIOBUTTON "O&ff", 2149, 244, 59, 42, 10
+ GROUPBOX "Default folder to &archives", -1, 5, 82, 290, 34
+ EDITTEXT 2073, 14, 95, 225, 14, ES_AUTOHSCROLL
+ PUSHBUTTON "&Browse", 2074, 242, 95, 50, 14
+ GROUPBOX "Default folder to e&xtracted files", -1, 5, 121, 290, 51
+ EDITTEXT 2075, 14, 134, 225, 14, ES_AUTOHSCROLL
+ PUSHBUTTON "Bro&wse", 2076, 242, 134, 50, 14
+ AUTOCHECKBOX "App&end file name", 2151, 14, 154, 109, 10
+ AUTOCHECKBOX "&Remove duplicate folders", 2145, 128, 154, 104, 10
+}

@@ -1,0 +1,26 @@
+3054 DIALOGEX 0, 0, 487, 247, 0
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "Segoe UI", 400, FALSE
+{
+ CTEXT "Hardware performance evaluation has been canceled, the proposed re-test", 1115, 45, 9, 262, 8
+ LTEXT "Benchmark Result", 1090, 23, 34, 124, 8
+ CTEXT "Compression Speed      ", 1091, 7, 59, 76, 8
+ CTEXT "Compression CPU usage", 1092, 74, 59, 79, 8
+ CTEXT "Compression Speed  ", 1093, 157, 59, 68, 8
+ CTEXT "Decompression Speed      ", 1094, 227, 59, 84, 8
+ CTEXT "Decompressing CPU usage", 1095, 305, 59, 88, 8
+ CTEXT "Decompression Speed  ", 1096, 398, 59, 76, 8
+ CTEXT "%s KB/s", 1097, 21, 85, 29, 8
+ CTEXT "%s %%", 1098, 94, 85, 22, 8
+ CTEXT "%s MIPS", 1099, 171, 85, 29, 8
+ CTEXT "%s KB/s", 1100, 247, 85, 29, 8
+ CTEXT "%s %%", 1101, 335, 85, 22, 8
+ CTEXT "%s MIPS", 1102, 421, 85, 29, 8
+ CTEXT "Larger values are the better, the results reflect only systematic evaluation of conventional compression/decompression performance for reference purposes only", 1103, 66, 115, 319, 20
+ RTEXT "Total Score: Benchmark data is invalid.", 1104, 276, 157, 178, 8
+ LTEXT "%s", 1105, 427, 157, 10, 8
+ LTEXT "Score", 1106, 445, 158, 20, 8
+ LTEXT "View Performance Rating", 1107, 361, 181, 97, 8
+ PUSHBUTTON "Restart", 1074, 166, 203, 50, 14
+ PUSHBUTTON "Exit", 1086, 248, 203, 50, 14
+}

@@ -1,0 +1,17 @@
+3263 DIALOGEX 0, 0, 340, 124, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Add filter file extension"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ LTEXT "file &extension", 3767, 77, 5, 257, 8
+ LTEXT "(Such as: .Jpg; .Zip)", 3768, 77, 18, 257, 8
+ EDITTEXT 2123, 77, 29, 257, 14, ES_AUTOHSCROLL
+ GROUPBOX "Compression method", 3771, 77, 47, 257, 55
+ AUTORADIOBUTTON "Stored directly without compression", 3307, 100, 58, 172, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "Using the fastest compression", 3308, 100, 72, 164, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Using the best compression", 3309, 100, 86, 164, 10, NOT WS_TABSTOP
+ DEFPUSHBUTTON "&OK", 1, 114, 105, 50, 14
+ PUSHBUTTON "&Cancel", 2, 174, 105, 50, 14
+ LTEXT "Selec&t file format", 3770, 6, 18, 66, 8
+ COMBOBOX 3769, 6, 30, 66, 30, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL
+}

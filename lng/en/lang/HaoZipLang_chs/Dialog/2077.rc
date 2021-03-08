@@ -1,0 +1,28 @@
+2077 DIALOGEX 0, 0, 300, 191, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+CAPTION "Appearance"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ GROUPBOX "Toolbar", 65535, 5, 5, 193, 71
+ AUTOCHECKBOX "Sta&ndard Button", 2105, 13, 20, 65, 10
+ AUTOCHECKBOX "Address &Bar", 2202, 118, 20, 75, 10
+ AUTOCHECKBOX "Folder &Tree", 2106, 13, 33, 104, 10
+ AUTOCHECKBOX "Archive Folder T&ree", 2107, 13, 46, 142, 10
+ AUTOCHECKBOX "Show &compressed files", 2220, 13, 59, 104, 10
+ GROUPBOX "File name", 1, 5, 80, 193, 41
+ AUTOCHECKBOX "&Show Archives First", 2078, 13, 93, 104, 10
+ AUTOCHECKBOX "Show Encry&pted or Compressed NTFS files in color", 2079, 13, 107, 179, 10
+ GROUPBOX "Interface settings", 2, 5, 129, 193, 62
+ AUTOCHECKBOX "&Dual panel", 2224, 13, 144, 104, 10
+ PUSHBUTTON "Set &Font", 2080, 12, 160, 75, 14
+ GROUPBOX "List style", 3, 204, 6, 90, 71, WS_GROUP
+ AUTOCHECKBOX "Show G&rid Lines", 2112, 211, 20, 74, 12
+ AUTOCHECKBOX "F&ull Row Select", 2113, 211, 34, 74, 12
+ GROUPBOX "File Size Style", 4, 204, 80, 90, 41
+ AUTORADIOBUTTON "Archi&ve Style", 2133, 211, 93, 74, 12, WS_GROUP
+ AUTORADIOBUTTON "&Windows Style", 2135, 211, 107, 74, 12
+ GROUPBOX "Arrangement", 5, 204, 129, 90, 62
+ AUTOCHECKBOX "Priority ar&chive", 2221, 211, 144, 74, 12
+ AUTOCHECKBOX "Sort by &Name", 2222, 211, 158, 74, 12
+ AUTOCHECKBOX "F&lat view", 2223, 211, 172, 74, 12
+}

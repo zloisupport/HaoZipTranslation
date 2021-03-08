@@ -1,0 +1,18 @@
+2163 DIALOGEX 0, 0, 300, 191, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+CAPTION "Security"
+FONT 9, "Segoe UI", 0, FALSE
+{
+ GROUPBOX "which is 2345 Cloud Killing", 65535, 5, 8, 290, 45
+ LTEXT "Cloud Killin (2345 Cloud Killing) - these are three common services, which are integrated in the arhichivat", 21, 20, 17, 228, 19
+ GROUPBOX "Avira Settings", 65535, 5, 62, 290, 66
+ GROUPBOX "Extras", 65535, 5, 136, 290, 49
+ AUTORADIOBUTTON "If there is a change", 2178, 14, 78, 75, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Manual Scanning", 2226, 14, 94, 96, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Deactivate the service function", 2177, 14, 111, 174, 10, NOT WS_TABSTOP
+ EDITTEXT 2179, 96, 76, 23, 13, ES_CENTER | ES_NUMBER
+ LTEXT "- automatic scanning", 2222, 122, 78, 127, 9
+ AUTOCHECKBOX "Guidelines for Opening Supported Files", 2165, 14, 168, 197, 10
+ AUTOCHECKBOX "Send Encrypted Files", 2224, 14, 150, 235, 10
+ LTEXT "Avira package, 360, QQ Butler will protect you from thrones and viruses.", 65535, 19, 37, 258, 11
+}

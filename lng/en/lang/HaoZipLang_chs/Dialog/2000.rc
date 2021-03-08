@@ -1,0 +1,29 @@
+2000 DIALOGEX 0, 0, 300, 195, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+CAPTION "General"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ GROUPBOX "Compression/Decompression mode", 2193, 5, 5, 290, 38
+ AUTORADIOBUTTON "Smart mode", 2208, 11, 17, 99, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "Full-Speed mode", 2195, 11, 29, 99, 10, NOT WS_TABSTOP
+ LTEXT "(Low CPU usage)", 2196, 112, 17, 177, 8, WS_DISABLED
+ LTEXT "(High CPU usage)", 2210, 112, 29, 177, 8, WS_DISABLED
+ GROUPBOX "Shell Integeration", -1, 5, 48, 162, 83
+ AUTOCHECKBOX "Intege HaoZip into shell", 2042, 11, 60, 145, 10
+ AUTOCHECKBOX "Cascaded Context Menus", 2043, 20, 73, 132, 10
+ AUTOCHECKBOX "Icons in Context Menus", 2044, 20, 86, 132, 10
+ AUTOCHECKBOX "Add Archive Types to \"New File\" Menus", 2049, 20, 99, 144, 10
+ PUSHBUTTON "Context Menus ...", 2045, 29, 113, 113, 14
+ GROUPBOX "Log/History", -1, 170, 48, 125, 83
+ AUTOCHECKBOX "Keep Archives History", 2046, 176, 60, 113, 10
+ AUTOCHECKBOX "Allow History In Dialog", 2047, 176, 73, 113, 10
+ AUTOCHECKBOX "Log Errors to File", 2147, 176, 86, 113, 10
+ PUSHBUTTON "Clear History", 2048, 176, 113, 113, 14
+ GROUPBOX "Interface", -1, 5, 136, 290, 54
+ AUTOCHECKBOX "Always On Top", 2036, 20, 148, 126, 10
+ AUTOCHECKBOX "Show Archive Comments", 2037, 20, 161, 126, 10
+ AUTOCHECKBOX "Auto Prevent System From Sleep", 2041, 20, 174, 126, 10
+ AUTOCHECKBOX "Add HaoZip to Desktop", 2038, 160, 148, 129, 10
+ AUTOCHECKBOX "Add HaoZip to Start Menu", 2039, 160, 161, 129, 10
+ AUTOCHECKBOX "Create HaoZip Program Group", 2040, 160, 174, 129, 10
+}

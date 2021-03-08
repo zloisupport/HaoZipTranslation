@@ -1,0 +1,27 @@
+3042 DIALOGEX 0, 0, 195, 208, 0
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "Segoe UI", 400, FALSE
+{
+ EDITTEXT 1007, 77, 8, 100, 14, ES_AUTOHSCROLL
+ EDITTEXT 1008, 77, 26, 100, 14, ES_AUTOHSCROLL
+ AUTOCHECKBOX "Extra &Add", 1014, 7, 46, 58, 10
+ EDITTEXT 1009, 71, 63, 42, 14, ES_AUTOHSCROLL | ES_NUMBER
+ EDITTEXT 1010, 71, 83, 57, 14, ES_AUTOHSCROLL
+ EDITTEXT 1012, 93, 105, 78, 14, ES_AUTOHSCROLL
+ AUTOCHECKBOX "Extra &Delete", 1015, 7, 132, 75, 10
+ EDITTEXT 1019, 71, 144, 42, 14, ES_AUTOHSCROLL | ES_NUMBER
+ EDITTEXT 1018, 71, 163, 42, 14, ES_AUTOHSCROLL | ES_NUMBER
+ LTEXT "Start index", -1, 17, 65, 45, 9
+ LTEXT "Add after file name", -1, 7, 28, 69, 9
+ LTEXT "Add before file name", -1, 7, 9, 69, 9
+ LTEXT "Add string", -1, 17, 85, 41, 11
+ CONTROL "", 3032, "msctls_updown32", 0x00000020, 113, 144, 10, 14
+ LTEXT "Delete from the file name", -1, 7, 107, 82, 9
+ LTEXT "th Characters", -1, 127, 65, 47, 9
+ LTEXT "Total Delete", -1, 18, 166, 45, 9
+ CONTROL "", 3034, "msctls_updown32", 0x00000020, 113, 163, 10, 14
+ LTEXT "Start index", -1, 17, 146, 45, 9
+ LTEXT "th Characters", -1, 127, 146, 47, 9
+ LTEXT "Characters", -1, 127, 165, 47, 9
+ CONTROL "", 3031, "msctls_updown32", 0x00000020, 114, 63, 10, 14
+}

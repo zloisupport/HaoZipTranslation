@@ -1,0 +1,18 @@
+3107 DIALOGEX 0, 0, 277, 74, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Scanning archives ... - HaoZip"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ GROUPBOX "Current status", -1, 5, 5, 267, 44
+ LTEXT "Scanning:", -1, 11, 20, 43, 8
+ CONTROL "Find file name", 3229, "STATIC", SS_LEFTNOWORDWRAP | SS_ENDELLIPSIS | SS_PATHELLIPSIS, 69, 21, 187, 8
+ LTEXT "Directories:", -1, 11, 35, 49, 8
+ LTEXT "0", 3230, 65, 35, 26, 8
+ LTEXT "Files:", -1, 94, 35, 49, 8
+ LTEXT "0", 3231, 145, 35, 36, 8
+ LTEXT "Archieves:", -1, 185, 35, 49, 8
+ LTEXT "0", 3232, 240, 35, 28, 8
+ PUSHBUTTON "&Background", 3227, 39, 55, 58, 14
+ PUSHBUTTON "&Pause", 3228, 105, 55, 58, 14
+ PUSHBUTTON "&Cancel", 2, 171, 55, 58, 14
+}

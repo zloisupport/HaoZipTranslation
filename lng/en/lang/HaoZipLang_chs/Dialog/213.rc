@@ -1,0 +1,17 @@
+213 DIALOGEX 0, 0, 272, 101, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "HaoZip"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ DEFPUSHBUTTON "OK(&O)", 1, 137, 82, 50, 14
+ PUSHBUTTON "&Cancel", 2, 199, 82, 50, 14
+ ICON "", 1128, 18, 37, 21, 20
+ LTEXT "You need to install the plug-in to modify the %s format, to confirm the installation?", 1133, 12, 6, 234, 16
+ RTEXT "Name:", -1, 46, 31, 39, 8
+ RTEXT "Author:", -1, 46, 46, 39, 8
+ RTEXT "Description:", -1, 46, 61, 39, 8
+ LTEXT "Static", 1130, 89, 31, 154, 8
+ LTEXT "Static", 1131, 89, 46, 154, 8
+ LTEXT "Static", 1132, 89, 61, 154, 8
+ LTEXT "Disclaimer", 1129, 20, 82, 68, 8
+}

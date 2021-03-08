@@ -1,0 +1,8 @@
+3062 DIALOGEX 0, 0, 243, 64, 0
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUPWINDOW | WS_CAPTION
+FONT 8, "Segoe UI", 400, FALSE
+{
+ DEFPUSHBUTTON "No", 1147, 185, 40, 33, 16
+ PUSHBUTTON "Yes", 1145, 147, 40, 33, 16
+ LTEXT "Picture function is configured pressure, will not be able to cancel the compressed file switch picture, loss of batch image processing functions, and whether you want to cancel?", 1146, 21, 4, 204, 35
+}

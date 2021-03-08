@@ -1,0 +1,21 @@
+3334 DIALOGEX 0, 0, 290, 185, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "File"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ LTEXT "&Files", -1, 5, 7, 110, 8
+ EDITTEXT 3340, 5, 18, 222, 14, ES_AUTOHSCROLL
+ PUSHBUTTON "&Edit", 3341, 235, 18, 50, 14
+ LTEXT "Files to e&xclude", -1, 5, 36, 161, 8
+ EDITTEXT 3336, 5, 47, 222, 14, ES_AUTOHSCROLL
+ PUSHBUTTON "E&dit", 3337, 235, 47, 50, 14
+ LTEXT "Files to store &without compression", -1, 5, 65, 176, 8
+ EDITTEXT 3338, 5, 76, 222, 14, ES_AUTOHSCROLL
+ PUSHBUTTON "Edi&t", 3339, 235, 76, 50, 14
+ GROUPBOX "File paths", -1, 5, 111, 280, 69, WS_GROUP
+ AUTORADIOBUTTON "Store &relative path", 3112, 18, 123, 187, 10, WS_GROUP
+ AUTORADIOBUTTON "Store &absolute path", 3069, 18, 136, 187, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Do &not store paths", 3072, 18, 149, 187, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Store full paths &including the drive letter", 3071, 18, 162, 187, 10, NOT WS_TABSTOP
+ LTEXT "(The above three kinds of file list support wildcard: * and?)", -1, 5, 94, 214, 8
+}

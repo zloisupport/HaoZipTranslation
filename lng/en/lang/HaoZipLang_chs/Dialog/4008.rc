@@ -1,0 +1,14 @@
+4008 DIALOGEX 0, 0, 230, 97, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "SFX file conversion progress"
+FONT 8, "Segoe UI", 0, FALSE
+{
+ PUSHBUTTON "&Cancel", 2, 89, 79, 50, 14
+ CONTROL "", 4049, "msctls_progress32", WS_BORDER, 5, 64, 220, 11
+ LTEXT "Processing:", -1, 5, 5, 210, 8
+ LTEXT "", 4050, 20, 17, 203, 8
+ LTEXT "Destination path:", -1, 5, 28, 210, 8
+ LTEXT "", 4051, 20, 39, 203, 8
+ LTEXT "Progress:", -1, 5, 53, 180, 8
+ CTEXT "", 4052, 198, 53, 27, 8
+}

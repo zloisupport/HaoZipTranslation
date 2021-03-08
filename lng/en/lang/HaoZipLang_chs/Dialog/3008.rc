@@ -1,0 +1,38 @@
+3008 DIALOGEX 0, 0, 270, 135, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Searching files ..."
+FONT 8, "Segoe UI", 400, FALSE
+{
+ PUSHBUTTON "&Background", 3199, 32, 116, 63, 14
+ PUSHBUTTON "&Pause", 3200, 103, 116, 63, 14
+ PUSHBUTTON "&Cancel", 2, 174, 116, 63, 14
+ GROUPBOX "Current status", -1, 5, 5, 260, 38
+ LTEXT "Processing:", -1, 11, 19, 44, 8
+ CONTROL "Find file name", 3190, "STATIC", SS_LEFTNOWORDWRAP | SS_ENDELLIPSIS | SS_PATHELLIPSIS, 57, 19, 204, 8
+ LTEXT "Directories:", -1, 11, 31, 49, 8
+ LTEXT "0", 3204, 61, 31, 26, 8
+ LTEXT "Files:", -1, 91, 31, 51, 8
+ LTEXT "0", 3202, 146, 31, 31, 8
+ GROUPBOX "Progress in archive", -1, 5, 49, 167, 63
+ LTEXT "Total Files:", -1, 12, 61, 42, 8
+ LTEXT "1234567", 3193, 53, 61, 31, 8
+ LTEXT "Total Size:", -1, 85, 61, 36, 8
+ LTEXT "12345.1 MB", 3195, 125, 61, 43, 8
+ LTEXT "Read Files:", -1, 12, 74, 42, 8
+ LTEXT "1234567", 3194, 53, 74, 31, 8
+ LTEXT "Processed:", -1, 85, 74, 36, 8
+ LTEXT "12345.1 MB", 3196, 125, 74, 43, 8
+ LTEXT "Progress:", -1, 12, 86, 31, 8
+ LTEXT "100.00%", 3197, 133, 86, 29, 8
+ CONTROL "", 3198, "msctls_progress32", WS_BORDER | 0x00000001, 12, 97, 150, 9
+ GROUPBOX "Found result", -1, 175, 49, 90, 63
+ LTEXT "Files:", -1, 180, 61, 43, 8
+ LTEXT "0", 3201, 228, 61, 33, 8
+ LTEXT "Directories:", -1, 180, 74, 43, 8
+ LTEXT "0", 3203, 228, 74, 33, 8
+ LTEXT "Elapsed time:", -1, 180, 86, 43, 8
+ LTEXT "00:00:00", 3192, 228, 86, 33, 8
+ LTEXT "Archives:", -1, 183, 31, 43, 8
+ LTEXT "0", 3205, 229, 31, 32, 8
+ LTEXT "Static", 3206, 50, 86, 79, 8
+}

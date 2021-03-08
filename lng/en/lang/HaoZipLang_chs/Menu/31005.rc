@@ -1,0 +1,81 @@
+31005 MENU
+{
+ POPUP "&File"
+ {
+  MENUITEM "&New\tCtrl+N", -7936, MENUBREAK
+  MENUITEM "&Open..\tCtrl+O", -7935
+  MENUITEM "&Close", -7934
+  MENUITEM SEPARATOR
+  MENUITEM "&Save\tCtrl+S", -7933
+  MENUITEM "Save &As...", -7932
+  MENUITEM SEPARATOR
+  MENUITEM "&Print ...\tCtrl+P", -7929
+  MENUITEM "Print pre&view", -7927
+  MENUITEM "Print Set&up ...", -7930
+  MENUITEM SEPARATOR
+  POPUP "Recent &files"
+  {
+   MENUITEM "(empty)", -7920, GRAYED
+  }
+  MENUITEM SEPARATOR
+  MENUITEM "E&xit", -7871
+ }
+ POPUP "&Edit"
+ {
+  MENUITEM "&Undo\tCtrl+Z", -7893
+  MENUITEM "R&edo\tCtrl+Y", -7892
+  MENUITEM SEPARATOR
+  MENUITEM "Cu&t\tCtrl+X", -7901
+  MENUITEM "&Copy\tCtrl+C", -7902
+  MENUITEM "&Paste\tCtrl+V", -7899
+  MENUITEM "&Delete\tDel", -7904
+  MENUITEM SEPARATOR
+  MENUITEM "Select &All\tCtrl+A", -7894
+  MENUITEM SEPARATOR
+  MENUITEM "&Find...\tCtrl+F", -7900
+  MENUITEM "Find &Next\tF3", -7896
+  MENUITEM "&Replace ...\tCtrl+H", -7895
+ }
+ POPUP "&View"
+ {
+  MENUITEM "S&tandard Toolbar", -6144
+  MENUITEM "&Format Toolbar", 31053
+  MENUITEM SEPARATOR
+  MENUITEM "&Status Bar", -6143
+ }
+ POPUP "For&mat"
+ {
+  MENUITEM "&Font ...", -7840
+  POPUP "&Effects"
+  {
+   MENUITEM "&Bold\tCtrl+B", 31043
+   MENUITEM "&Italic\tCtrl+I", 31042
+   MENUITEM "&Underline\tCtrl+U", 31044
+  }
+  POPUP "&Alignment"
+  {
+   MENUITEM "Align &Left", 31047
+   MENUITEM "Align &Center", 31051
+   MENUITEM "Align &Right", 31049
+  }
+  MENUITEM SEPARATOR
+  MENUITEM "&Text Color ...\tCtrk+K", 31045
+  MENUITEM "&Highlight Color...", 31050
+  MENUITEM "&Background Color ...", 31046
+  MENUITEM SEPARATOR
+  MENUITEM "Auto &Wrap", 31054
+  POPUP "&Code"
+  {
+   MENUITEM "&Auto-selected", 31073
+   MENUITEM SEPARATOR
+   MENUITEM "Simplified Chinese(GB2312)", 31075
+   MENUITEM "Unicode", 31078
+   MENUITEM "Unicode Big Endian", 31077
+   MENUITEM "UTF-8", 31079
+  }
+ }
+ POPUP "&Tools"
+ {
+  MENUITEM "&Options ...", 31055
+ }
+}

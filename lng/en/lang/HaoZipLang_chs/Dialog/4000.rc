@@ -1,0 +1,14 @@
+4000 DIALOGEX 0, 0, 250, 214, 0
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Advanced"
+FONT 8, "Segoe UI", 0, FALSE
+{
+ GROUPBOX "Delete", -1, 5, 5, 240, 55
+ LTEXT "Files to &delete in the destination folder", -1, 8, 17, 177, 8
+ EDITTEXT 4027, 8, 28, 234, 14, ES_AUTOHSCROLL
+ GROUPBOX "Shortcut", -1, 5, 66, 240, 143
+ PUSHBUTTON "Add Shortc&ut", 4029, 160, 192, 82, 14
+ EDITTEXT 4028, 8, 78, 234, 109, ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+ AUTOCHECKBOX "&Request administrator access", 4057, 15, 194, 134, 10
+ AUTOCHECKBOX "Delete &self after installation", 4058, 15, 46, 222, 10
+}

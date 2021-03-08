@@ -1,0 +1,21 @@
+4001 DIALOGEX 0, 0, 250, 214, 0
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Extract"
+FONT 8, "Segoe UI", 0, FALSE
+{
+ GROUPBOX "Path to extract", -1, 5, 5, 240, 89
+ EDITTEXT 4046, 26, 18, 215, 14, ES_AUTOHSCROLL
+ AUTORADIOBUTTON "Create in \"&Program Files\"", 4030, 15, 36, 164, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "Create in &current folder", 4031, 15, 49, 164, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "&Absolute path", 4032, 15, 62, 164, 10, NOT WS_TABSTOP
+ CONTROL "", -1, "STATIC", SS_ETCHEDHORZ, 5, 76, 240, 1
+ AUTOCHECKBOX "Save and &restore path", 4047, 10, 81, 164, 10
+ GROUPBOX "Setup", -1, 5, 99, 240, 110
+ LTEXT "Run a&fter extraction", -1, 10, 114, 164, 8
+ EDITTEXT 4042, 9, 124, 232, 14, ES_AUTOHSCROLL
+ LTEXT "Run &before extraction", -1, 10, 144, 164, 8
+ EDITTEXT 4033, 9, 154, 232, 14, ES_AUTOHSCROLL
+ LTEXT "Pr&e-release before Decompress", -1, 10, 170, 164, 8
+ EDITTEXT 4069, 9, 180, 232, 14, ES_AUTOHSCROLL
+ LTEXT "Calling multiple procedures at the same time, please use \";\" to separate", -1, 10, 197, 227, 8
+}

@@ -1,0 +1,9 @@
+3060 DIALOGEX 0, 0, 250, 83, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "HaoZip plug-in installation"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ CONTROL "", 1122, "msctls_progress32", WS_BORDER, 9, 38, 231, 11
+ PUSHBUTTON "&Cancel", 2, 184, 63, 52, 15
+ LTEXT "Downloading and install the format plug-in, please wait ...", -1, 20, 15, 212, 8
+}

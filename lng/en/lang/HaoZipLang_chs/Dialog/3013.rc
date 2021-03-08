@@ -1,0 +1,12 @@
+3013 DIALOGEX 0, 0, 203, 88, 0
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | WS_POPUPWINDOW | WS_CAPTION
+EXSTYLE = WS_EX_TOPMOST
+CAPTION "HaoZip - Turn PC off"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ DEFPUSHBUTTON "&Shutdown 10s", 1, 27, 65, 68, 14
+ PUSHBUTTON "&Cancel", 2, 107, 65, 68, 14
+ LTEXT "Operation is complete, the computer will be shut down!\nPlease save your program in time to avoid data loss.", -1, 14, 19, 179, 21
+ LTEXT "Shutdown reason:", 3237, 14, 47, 167, 8
+ GROUPBOX "Tip of shutdown", -1, 5, 5, 193, 78
+}

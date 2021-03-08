@@ -1,0 +1,20 @@
+3248 DIALOGEX 0, 0, 259, 152, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Convert archive type"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ DEFPUSHBUTTON "&OK", 1, 41, 133, 50, 14
+ PUSHBUTTON "&Cancel", 2, 105, 133, 50, 14
+ PUSHBUTTON "&Help", 3252, 169, 133, 50, 14
+ ICON "", 3255, 13, 14, 21, 20
+ LTEXT "Can not update the current archive", -1, 47, 10, 202, 8
+ LTEXT "HaoZip will automatically convert the archive format.", -1, 47, 22, 202, 8
+ LTEXT "Do you want to continue?", -1, 47, 34, 202, 8
+ LTEXT "(Click the \"Help\" button for more information)", -1, 12, 49, 233, 8
+ LTEXT "Note: The conversion may take several minutes.", -1, 13, 63, 241, 8
+ AUTORADIOBUTTON "Convert and keep original archive(Recommended)", 3249, 12, 91, 174, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "Convert and delete original archive", 3250, 12, 105, 197, 10, NOT WS_TABSTOP
+ PUSHBUTTON "Compre&ssion", 3254, 189, 89, 62, 14, WS_GROUP
+ CTEXT "Line 1", 3701, 5, 121, 249, 8
+ CTEXT "Line 2", 3702, 5, 77, 249, 8
+}

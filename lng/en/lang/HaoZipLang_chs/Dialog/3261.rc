@@ -1,0 +1,29 @@
+3261 DIALOGEX 0, 0, 291, 193, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Convert archives progress"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ PUSHBUTTON "&Background", 3276, 27, 174, 56, 14
+ PUSHBUTTON "&Pause", 3277, 87, 174, 56, 14
+ PUSHBUTTON "&Cancel", 2, 147, 174, 56, 14
+ PUSHBUTTON "&Help", 3278, 207, 174, 56, 14
+ EDITTEXT 2123, 5, 5, 281, 71, ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | ES_WANTRETURN | WS_VSCROLL
+ GROUPBOX "Current status", -1, 5, 81, 153, 46
+ LTEXT "Extracting", 3281, 15, 92, 138, 9
+ LTEXT "File Name                          0%", 3282, 15, 103, 113, 8
+ RTEXT "100%", 3299, 135, 103, 18, 8
+ CONTROL "", 3279, "msctls_progress32", WS_BORDER, 13, 114, 142, 10
+ GROUPBOX "Archives", -1, 164, 81, 122, 46
+ LTEXT "Found:", -1, 171, 99, 46, 8
+ RTEXT "0", 3284, 225, 99, 48, 8
+ LTEXT "Converted:", -1, 171, 110, 46, 8
+ RTEXT "0", 3285, 225, 110, 48, 8
+ GROUPBOX "Progress", -1, 5, 131, 153, 39
+ LTEXT "Elapsed time", 3283, 15, 142, 138, 8
+ CONTROL "", 3280, "msctls_progress32", WS_BORDER, 13, 156, 142, 10
+ GROUPBOX "Size", -1, 164, 131, 122, 39
+ LTEXT "Old", -1, 171, 142, 32, 8
+ RTEXT "0", 3286, 209, 142, 64, 8
+ LTEXT "New", -1, 171, 156, 32, 9
+ RTEXT "0", 3287, 209, 156, 64, 9
+}

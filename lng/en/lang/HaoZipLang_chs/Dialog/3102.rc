@@ -1,0 +1,29 @@
+3102 DIALOGEX 0, 0, 327, 222, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CHILD | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Advanced"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ GROUPBOX "File paths", -1, 5, 8, 156, 63, WS_GROUP
+ AUTORADIOBUTTON "Extract &full paths", 3052, 19, 20, 121, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "Do no&t extract paths", 3054, 19, 32, 121, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Extract a&bsolute paths", 3049, 19, 44, 121, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Extract &relative paths", 3055, 19, 56, 121, 10, NOT WS_TABSTOP
+ GROUPBOX "File Time", -1, 166, 8, 156, 63, WS_GROUP
+ AUTOCHECKBOX "Set &modification time", 3271, 182, 19, 121, 11
+ AUTOCHECKBOX "Set &creation time", 3272, 182, 33, 121, 11
+ AUTOCHECKBOX "Set last &access time", 3273, 182, 47, 121, 11
+ GROUPBOX "Delete archive", -1, 5, 77, 317, 56, WS_GROUP
+ AUTORADIOBUTTON "&Never delete", 3053, 19, 90, 141, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "As&k for confirmation", 3051, 19, 102, 141, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Always &delete", 3050, 19, 114, 141, 10, NOT WS_TABSTOP
+ LTEXT "", -1, 212, 91, 81, 8
+ LTEXT "", -1, 212, 103, 81, 8
+ LTEXT "", -1, 212, 115, 81, 8
+ AUTOCHECKBOX "File types to exclude from e&xtracting", 3268, 16, 144, 147, 11
+ EDITTEXT 3269, 26, 158, 296, 14, ES_AUTOHSCROLL, WS_EX_CLIENTEDGE
+ AUTOCHECKBOX "Al&ways enabled by default", 3270, 26, 174, 201, 11
+ AUTOCHECKBOX "File &list to extracting", 3274, 16, 190, 93, 11
+ EDITTEXT 3275, 26, 203, 296, 14, ES_AUTOHSCROLL, WS_EX_CLIENTEDGE
+ LTEXT "(Such as: *. tmp *. bak)", -1, 171, 146, 143, 8
+ LTEXT "(Such as: *. doc *. txt)", -1, 113, 191, 201, 8
+}

@@ -1,0 +1,37 @@
+3260 DIALOGEX 0, 0, 392, 340, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Convert Archive Type"
+FONT 8, "Segoe UI", 400, FALSE
+{
+ DEFPUSHBUTTON "&OK", 1, 106, 321, 50, 14
+ PUSHBUTTON "&Cancel", 2, 170, 321, 50, 14
+ PUSHBUTTON "&Help", 3271, 234, 321, 50, 14
+ LTEXT "Archives to con&vert", -1, 4, 8, 173, 8
+ CONTROL "", 3260, "SysListView32", WS_BORDER | WS_TABSTOP | 0x00000801, 4, 18, 206, 116
+ PUSHBUTTON "&Add..", 3262, 50, 136, 50, 14
+ PUSHBUTTON "&Remove", 3263, 119, 136, 50, 14
+ LTEXT "Select archive &types", -1, 214, 8, 152, 8
+ CONTROL "", 3261, "SysListView32", WS_BORDER | WS_TABSTOP | 0x00000803, 214, 18, 174, 116
+ CTEXT "Selected 0", 3272, 217, 139, 71, 9
+ PUSHBUTTON "A&ll", 3712, 292, 136, 43, 14
+ PUSHBUTTON "&None", 3719, 340, 136, 43, 14
+ GROUPBOX "Convertion Options", -1, 4, 156, 384, 92
+ AUTOCHECKBOX "Lo&west allowed ratio", 3264, 14, 167, 180, 11
+ EDITTEXT 3266, 25, 182, 38, 14, ES_AUTOHSCROLL | ES_NUMBER
+ CONTROL "", 3265, "msctls_updown32", 0x000000B6, 52, 182, 11, 14
+ LTEXT "When the <new>/<old> larger than this value, Haozip will keep the original compressed file, not conversion.  ", -1, 25, 200, 343, 11
+ PUSHBUTTON "Co&mpression...", 3273, 297, 167, 75, 13
+ AUTOCHECKBOX "Folders for converted arch&ives", 3267, 14, 214, 180, 11
+ EDITTEXT 3268, 25, 228, 347, 14, ES_AUTOHSCROLL
+ PUSHBUTTON "Select &Folder...", 3269, 297, 213, 75, 13
+ GROUPBOX "Encrypted File Options", -1, 4, 253, 206, 66
+ AUTORADIOBUTTON "S&kip encrypted files", 3309, 14, 264, 182, 14, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "Conv&ert encrypted files, and use &new password", 3310, 14, 278, 182, 12, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Convert encrypted files, and keep old pa&ssword", 3312, 14, 290, 182, 12, NOT WS_TABSTOP
+ LTEXT "Decompression password:", -1, 15, 305, 87, 10
+ EDITTEXT 3715, 105, 303, 89, 12, ES_PASSWORD | ES_AUTOHSCROLL
+ GROUPBOX "Advanced Options", -1, 214, 253, 174, 65, WS_GROUP
+ AUTOCHECKBOX "&Delete archive after converted", 3270, 227, 265, 153, 10
+ AUTOCHECKBOX "Kee&p original comments in archive", 3311, 227, 279, 152, 10
+ LTEXT "%", -1, 66, 185, 8, 8
+}

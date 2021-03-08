@@ -1,0 +1,10 @@
+3053 DIALOGEX 0, 0, 351, 138, 0
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "Segoe UI", 400, FALSE
+{
+ CTEXT "Benchmarking your computer, please wait ...", 1085, 57, 20, 219, 8
+ CONTROL "", 1081, "msctls_progress32", WS_BORDER, 56, 51, 180, 10
+ LTEXT "0%", 1084, 247, 52, 22, 10
+ CTEXT "Parameters    Dictionary Size: %s    CPU Usage: %s    Threads: %s", 1083, 42, 78, 259, 8
+ PUSHBUTTON "Benchmark terminated", 1082, 141, 97, 86, 14
+}
