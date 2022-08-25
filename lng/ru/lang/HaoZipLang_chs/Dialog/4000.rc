@@ -1,7 +1,7 @@
 4000 DIALOGEX 0, 0, 250, 214, 0
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION " Дополнительно "
-FONT 9, "Дополнительно", 0, FALSE
+FONT 9, "Segoe UI", 0, FALSE
 {
  GROUPBOX "Удаление", 65535, 5, 5, 240, 55
  LTEXT "Файлы, удаляемые в папке назначения", 65535, 8, 17, 177, 8
