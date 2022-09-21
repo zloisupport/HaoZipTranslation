@@ -3,9 +3,9 @@ What is it?
 
 HaoZip translation language files
 
-# Compile
+# Tools
  
-You can install by compiling it from the source
+You need install by editing in from the files
 
     Restools(2018)
     
@@ -15,7 +15,7 @@ You can install by compiling it from the source
     
     (optionnal) Adobe Photoshop C6 &&
 
-# Compile & Run
+# Edit & Build
 ### HaoZipLang_chs.dll
 Open `HaoZipLang_chs.dll` in **Restools** 
     
