@@ -32,20 +32,23 @@ def main():
 #  "ProductVersion:5.8
 
 
-	companyName = 	"HaoZip"
-	LegalCopyright = 	"HaoZip.cc"
+	productVersion = "5.8.1.1"
+	fileVersion = "5.8.1.1"
+	companyName = "HaoZip"
+	legalCopyright = "HaoZip(c) 2022 2345.com"
 	for file in fileList:
 		extLen = len(file)-4
 		fileDescription = file[:extLen]
 
 		subprocess.run(f'Restorator.exe -open {file} -nobackup \
-			-verSetString Comments {fileDescription} \
-			-verSetString CompanyName {companyName} \
-			-verSetString FileDescription {fileDescription}\
-			-verSetString InternalName {fileDescription}\
-			-verSetString LegalCopyright {LegalCopyright}\
-			-verSetString OriginalFilename {file}\
-			-verSetString ProductName {fileDescription}  \
-			-verSetString ProductVersion {fileDescription}  \
+			-verSetString Comments "{fileDescription}"\
+			-verSetString CompanyName "{companyName}"\
+			-verSetString FileDescription "{fileDescription}"\
+			-verSetString InternalName "{fileDescription}"\
+			-verSetString LegalCopyright "{legalCopyright}"\
+			-verSetString OriginalFilename "{file}"\
+			-verSetString ProductName "{fileDescription}"\
 			-saveAs {file} -exit')
+		# -verSetString ProductVersion "{productVersion}"\
+		# -verSetString FileVersion "{fileVersion}"\
 main()
