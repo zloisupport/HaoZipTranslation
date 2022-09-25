@@ -2,6 +2,7 @@ import subprocess
 
 def main():
 	fileList = [
+		"2345DirectUI.dll",
 		"HaoZip.dll",
 		"HaoZip.exe",
 		"HaoZipC.exe",
