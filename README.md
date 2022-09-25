@@ -43,6 +43,8 @@ Open `HaoZipLang_chs.dll` in **Restools**
     
 So that there is no error about the installation, change the data about the version in the files
 
+
+
     HaoZip.dll
     HaoZip.exe
     HaoZipC.exe
@@ -71,8 +73,7 @@ So that there is no error about the installation, change the data about the vers
        * File Description
        
        * Original Filename
-  
-  
-  
+       
+To avoid editing the PEVersion manually, run ChangePeInfo.py
   
   
