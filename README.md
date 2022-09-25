@@ -9,6 +9,8 @@ You need install by editing in from the files
 
     Restools(2018)
     
+    Python 3.10*
+    
     Vscode or other text editor
     
     Git
