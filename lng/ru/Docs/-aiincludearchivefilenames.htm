@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+
+<html>
+	
+<head>
+	<title>-ai (Include archive filenames) ключ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="" />
+    <meta name="generator" content="HelpNDoc Personal Edition 6.7.0.479" />
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+
+	
+
+	<script type="text/javascript" src="js/chmRelative.js"></script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>-ai (Include archive filenames) ключ</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic3.htm">Команды</a> &rsaquo;&rsaquo; <a href="Newtopic.htm">Ключи Командной строки</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic.htm"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="-axExcludearchivefilenames.htm"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="-anDisableparsingofarchive_name.htm"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts20">-ai (Include archive filenames) ключ</span></p>
+<p class="rvps2"><span class="rvts14">Определяет дополнительно включаемые имена файлов архива и подстановочные знаки.</span></p>
+<p class="rvps2"><span class="rvts14">Множественные включающие ключи, поддержаны.</span></p>
+<p class="rvps2"><span class="rvts11">Синтаксис</span></p>
+<p class="rvps2"><span class="rvts22">-ai[&lt;recurse_type&gt;]&lt;file_ref&gt;</span><br/><span class="rvts22">&lt;recurse_type&gt; ::= r[- | 0]</span><br/><span class="rvts22">&lt;file_ref&gt; ::= @{listfile} | !{wildcard}</span></p>
+<p class="rvps2"><span class="rvts11">Параметры</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: inside;">
+<li class="rvps2"><a name="recurse_type"></a><span class="rvts11">&lt;recurse_type&gt;</span></li>
+</ul>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: inside;">
+<li class="rvps2"><span class="rvts14">Определяет, как подстановочные знаки и имена файла, определенные в этом ключе должны использоваться. Если эта опция не будет назначена, то рекурсия использоваться не будет. Для подробностей см. описание ключа </span><a class="rvts15" href="-rRecursesubdirectories.htm">-r (Recurse)</a><span class="rvts14">.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts22">&lt;recurse_type&gt; ::= r[- | 0]</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: inside;">
+<li class="rvps2"><a name="file_ref"></a><span class="rvts11">&lt;file_ref&gt;</span></li>
+</ul>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: inside;">
+<li class="rvps2"><span class="rvts14">Определяет имена файлов и подстановочные знаки или файл-список, который определяет обрабатываемые файлы.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts22">&lt;file_ref&gt; ::= @{listfile} | !{wildcard}</span></p>
+<div class="rvps2"><table border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td valign="middle" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Опция</span></p>
+</td>
+<td valign="middle" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Описание</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle" style="padding: 1px;"><p class="rvps2"><span class="rvts14">{listfile}</span></p>
+</td>
+<td valign="middle" style="padding: 1px;"><p class="rvps2"><span class="rvts14">Определяет имя файл-списка. См. описание </span><span class="rvts24">Файл-список</span><span class="rvts14">.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle" style="padding: 1px;"><p class="rvps2"><span class="rvts14">{wildcard}</span></p>
+</td>
+<td valign="middle" style="padding: 1px;"><p class="rvps2"><span class="rvts14">Определяет подстановочные знаки или имя файла.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts11">Пример</span></p>
+<p class="rvps2"><span class="rvts22">HaoZipC t -an -air!*.7z</span></p>
+<p class="rvps2"><span class="rvts14">тестирует *.7z архивы в текущем каталоге и все его подкаталоги.</span></p>
+<p class="rvps2"><span class="rvts11">Команды, которые могут использоваться с этим ключом</span></p>
+<p class="rvps2"><a class="rvts15" href="../dialog/add.htm">a (Add)</a><span class="rvts14">, </span><a class="rvts15" href="../dialog/delete.htm">d (Delete)</a><span class="rvts14">, </span><a class="rvts15" href="../dialog/extract.htm">e (Extract)</a><span class="rvts14">, </span><a class="rvts15" href="../dialog/list.htm">l (List)</a><span class="rvts14">, </span><a class="rvts15" href="../dialog/test.htm">t (Test)</a><span class="rvts14">, </span><a class="rvts15" href="../dialog/update.htm">u (Update)</a><span class="rvts14">, </span><a class="rvts15" href="../dialog/extract_full.htm">x (Extract with full paths)</a></p>
+<p class="rvps2"><span class="rvts11">См. также</span></p>
+<p class="rvps2"><span class="rvts11">Ключи:</span><span class="rvts14">&nbsp;</span><a class="rvts15" href="-axExcludearchivefilenames.htm">-ax (Exclude archives)</a><span class="rvts14">&nbsp;</span><a class="rvts15" href="-anDisableparsingofarchive_name.htm">-an (Disable parsing of archive_name)</a></p>
+<p></p>
+<p class="rvps4" style="clear: both;"><span class="rvts16"></span><span class="rvts17"></span></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2021 by HaoZip. All Rights Reserved.
+			</div>
+		</div>
+	
+
+	
+	
+
+	
+</body>
+	
+</html>
+

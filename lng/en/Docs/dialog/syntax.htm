@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Command Line Syntax</TITLE>
+<META content="text/html; charset=Windows-1252" http-equiv=Content-Type><LINK 
+rel=stylesheet type=text/css href="style.css">
+<META name=GENERATOR content="MSHTML 8.00.7601.17514"></HEAD>
+<BODY>
+<H1>Command Line Syntax</H1><PRE class=syntax>  HaoZipC <A href="commands/index.htm">&lt;command&gt;</A> [<A href="/switches/index.htm">&lt;switch&gt;</A>...] &lt;base_archive_name&gt; [&lt;arguments&gt;...]
+</PRE><PRE class=syntax>&lt;arguments&gt; ::= <A href="/switches/index.htm">&lt;switch&gt;</A> | &lt;wildcard&gt; | &lt;filename&gt; | [@listfile] 
+<A href="/switches/index.htm">&lt;switch&gt;</A>::= -{switch_name}
+</PRE>
+<P>Expressions in square brackets (between '[' and ']') are optional.</P>
+<P>Expressions in curly braces ('{' and '}') mean that instead of that 
+Expression (including braces), the user must substitute some string.</P>
+<P>Expression</P><PRE class=syntax>expression1 | expression2 | ... | expressionN
+</PRE>
+<P>means that any (but only one) from these expressions must be specified. 
+<P><A href="commands/index.htm">Commands</A> and <A 
+href="/switches/index.htm">switches</A> can be entered in upper or lower 
+case.</P>
+<P>Command is the first non-switch argument.</P>
+<P>The "base_archive_name" must be the first filename on the command line after 
+the command.</P>
+<P>The switches and other filenames can be in any order.</P>
+<P>Wildcards or filenames with spaces must be quoted:</P><PRE>    "Dir\Program files\*"
+    Dir\"Program files"\*
+</PRE>
+<P>Switch options can be combined to save command line length. However, some 
+switch options take optional string arguments and therefore, must be the last 
+option in a combined argument token string because HaoZip accepts the rest of 
+the argument token as the optional argument.</P>
+<P>HaoZip uses wild name matching similar to Windows 95:</P>
+<UL>
+  <LI><B>'*'</B> means a sequence of arbitrary characters. 
+  <LI><B>'?'</B> means any character. </LI></UL>
+<P><B>HaoZip doesn't use the system wildcard parser. HaoZip doesn't follow the 
+archaic rule by which *.* means any file. HaoZip treats *.* as matching the name 
+of any file that has an extension. To process all files, you must use a * 
+wildcard.</B></P>
+<P>Examples:</P>
+<TABLE border=0>
+  <TBODY>
+  <TR>
+    <TD>*.txt</TD>
+    <TD>means all files with an extension of ".txt"</TD></TR>
+  <TR>
+    <TD>?a*</TD>
+    <TD>means all files with a second character of "a"</TD></TR>
+  <TR>
+    <TD>*1*</TD>
+    <TD>means all names that contains character "1"</TD></TR>
+  <TR>
+    <TD>*.*.*</TD>
+    <TD>means all names that contain two at least "." 
+characters</TD></TR></TBODY></TABLE>
+<P>The default wildcard "*" will be used if there is no filename/wildcard in the 
+command line.</P>
+<P>Slash ('\') at the end of a path means a directory. Without a Slash ('\') at 
+the end of the path, the path can refer either to a file or a directory. 
+<H2><A name=ListFile></A>List file</H2>
+<P>You can supply one or more filenames or wildcards for special list files 
+(files containing lists of files). The filenames in such list file must be 
+separated by new line symbol(s).</P>
+<P>For list files, HaoZip uses UTF-8 encoding by default. You can change 
+encoding using <A href="/switches/charset.htm">-scs</A> switch.</P>
+<P>Multiple list files are supported.</P>
+<P>For example, if the file "listfile.txt" contains the following:</P><PRE>    My programs\*.cpp
+    Src\*.cpp
+</PRE>
+<P>then the command</P><PRE>    HaoZipC a -tzip archive.zip @listfile.txt
+</PRE>
+<P>adds to the archive "archive.zip" all "*.cpp" files from directories "My 
+programs" and "Src".</P>
+<H2><A name=ListFile></A>Short and Long File Names</H2>
+<P>HaoZip supports short file names (like FILENA~1.TXT) in some cases. However, 
+it's strongly recommended to use only the real (long) file 
+names.</P></BODY></HTML>

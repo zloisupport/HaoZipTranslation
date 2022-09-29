@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+
+<html>
+	
+<head>
+	<title>-si (read data from stdin) ключ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="" />
+    <meta name="generator" content="HelpNDoc Personal Edition 6.7.0.479" />
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+
+	
+
+	<script type="text/javascript" src="js/chmRelative.js"></script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>-si (read data from stdin) ключ</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic3.htm">Команды</a> &rsaquo;&rsaquo; <a href="Newtopic.htm">Ключи Командной строки</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic.htm"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="-sccSetcharsetforconsoleinputout.htm"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="-sowritedatatostdout.htm"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts20">-si (read data from stdin) ключ</span></p>
+<p class="rvps2"><span class="rvts14">Заставляет HaoZip, читать данные из stdin (стандартный ввод) вместо дисковых файлов.</span></p>
+<p class="rvps2"><span class="rvts11">Синтаксис</span></p>
+<p class="rvps2"><span class="rvts22">-si{file_name}</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: inside;">
+<li class="rvps2"><span class="rvts11">{file_name}</span></li>
+</ul>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: inside;">
+<li class="rvps2"><span class="rvts14">Определяет имя, под которым будут сохранены в архиве сжатые данные. Если file_name не будет определено, то данные будут сохранены без имени.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts14">Примечание: текущая версия HaoZip поддерживает чтение архивов из stdin только для xz, lzma, tar, gzip и bzip2 архивов.</span></p>
+<p class="rvps2"><span class="rvts11">Примеры</span></p>
+<p class="rvps2"><span class="rvts22">HaoZipC a archive.gz -tgzip -siDoc2.txt &lt; Doc.txt</span></p>
+<p class="rvps2"><span class="rvts14">упаковывает входящий поток из файла </span><span class="rvts25">Doc.txt</span><span class="rvts14">&nbsp;в архив</span><span class="rvts25">&nbsp;archive.gz</span><span class="rvts14">, используя имя файла </span><span class="rvts25">Doc2.txt</span><span class="rvts14">.</span></p>
+<p class="rvps2"><span class="rvts22">HaoZipC x HaoZip4.tar.gz -so | HaoZipC x -si -ttar</span></p>
+<p class="rvps2"><span class="rvts14">распаковывает архив tar.gz.</span></p>
+<p class="rvps2"><span class="rvts11">Команды, которые могут использоваться с этим ключом</span></p>
+<p class="rvps2"><a class="rvts15" href="../dialog/add.htm">a (Add)</a><span class="rvts14">, </span><a class="rvts15" href="../dialog/extract.htm">e (Extract)</a><span class="rvts14">, </span><a class="rvts15" href="../dialog/update.htm">u (Update)</a><span class="rvts14">, </span><a class="rvts15" href="../dialog/extract_full.htm">x (Extract with full paths)</a></p>
+<p></p>
+<p class="rvps4" style="clear: both;"><span class="rvts16"></span><span class="rvts17"></span></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2021 by HaoZip. All Rights Reserved.
+			</div>
+		</div>
+	
+
+	
+	
+
+	
+</body>
+	
+</html>
+

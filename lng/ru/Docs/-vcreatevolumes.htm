@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+
+<html>
+	
+<head>
+	<title>-v (Create Volumes) ключ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="" />
+    <meta name="generator" content="HelpNDoc Personal Edition 6.7.0.479" />
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+
+	
+
+	<script type="text/javascript" src="js/chmRelative.js"></script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>-v (Create Volumes) ключ</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic3.htm">Команды</a> &rsaquo;&rsaquo; <a href="Newtopic.htm">Ключи Командной строки</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic.htm"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="-uUpdateoptions.htm"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="-wsetWorkingdirectory-wsetWorkin.htm"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts20">-v (Create Volumes) ключ</span></p>
+<p class="rvps2"><span class="rvts14">Определяет размеры томов.</span></p>
+<p class="rvps2"><span class="rvts11">Синтаксис</span></p>
+<p class="rvps2"><span class="rvts22">-v{Size}[b | k | m | g]</span></p>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: inside;">
+<li class="rvps2"><span class="rvts11">{Size}[b | k | m | g]</span></li>
+</ul>
+<ul style="text-indent: 0px; padding: 0; margin: 0 0 0 0px; list-style-position: inside;">
+<li class="rvps2"><span class="rvts14">Определяет размеры томов в байтах, килобайтах (1 килобайт = 1024 байта), Мегабайтах (1 Мегабайт = 1024 килобайта) или Гигабайтах (1 Гигабайт = 1024 Мегабайта). Если Вы определяете только {Size}, HaoZip обработают его как байты.</span></li>
+</ul>
+<p class="rvps2"><span class="rvts14">Можно определить несколько ключей -v.</span></p>
+<p class="rvps2"><span class="rvts11">Примечание:</span><span class="rvts14">&nbsp;Пожалуйста, не используйте тома (и не копируйте тома) до окончания архивирования. HaoZip может изменить любые тома (включая первые тома) в конце архивирования.</span></p>
+<p class="rvps2"><span class="rvts11">Пример</span></p>
+<p class="rvps2"><span class="rvts22">HaoZipC a a.7z *.txt -v10k -v15k -v2m</span></p>
+<p class="rvps2"><span class="rvts14">создает многотомный архив a.7z. Первый том будет 10 кб, второй будет 15 кб, а все другие будут 2 Мб.</span></p>
+<p class="rvps2"><span class="rvts22">HaoZipC a -sfx7zSetup_rus.sfx -v2m a.exe *.txt</span></p>
+<p class="rvps2"><span class="rvts14">создает многотомный самораспаковывающийся архив a.exe. Первый том будет самораспаковывающимся (a.exe), а все остальные обычные тома (sfxv) размером 2 Мб. Рядом с HaoZipC.exe должен лежать 7zSetup_rus.sfx</span></p>
+<p class="rvps2"><span class="rvts11">Команды, которые могут использоваться с этим ключом</span></p>
+<p class="rvps2"><a class="rvts15" href="../dialog/add.htm">a (Add)</a><span class="rvts14">, </span><a class="rvts15" href="../switches/sfx.htm">-sfx</a></p>
+<p></p>
+<p class="rvps4" style="clear: both;"><span class="rvts16"></span><span class="rvts17"></span></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2021 by HaoZip. All Rights Reserved.
+			</div>
+		</div>
+	
+
+	
+	
+
+	
+</body>
+	
+</html>
+

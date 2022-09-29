@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+
+<html>
+	
+<head>
+	<title>-r (Recurse subdirectories) ключ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="" />
+    <meta name="generator" content="HelpNDoc Personal Edition 6.7.0.479" />
+	
+	
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+
+	
+
+	<script type="text/javascript" src="js/chmRelative.js"></script>
+	
+	
+</head>
+
+<body>
+
+
+
+	
+		<div id="topic_header">
+			<div id="topic_header_content">
+				<h1>-r (Recurse subdirectories) ключ</h1>
+				
+				
+				<div id="topic_breadcrumb">
+					<a href="Newtopic3.htm">Команды</a> &rsaquo;&rsaquo; <a href="Newtopic.htm">Ключи Командной строки</a> &rsaquo;&rsaquo; 
+				</div>
+				
+			</div>
+			
+			<div id="topic_header_nav">
+				
+				
+				<a href="Newtopic.htm"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				
+				
+				<a href="-psetPassword.htm"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				
+				
+				<a href="-sfxCreateSFXarchive.htm"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				
+			</div>
+			
+			<div class="clear"></div>
+		</div>
+	
+	
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps2"><span class="rvts20">-r (Recurse subdirectories) ключ</span></p>
+<p class="rvps2"><span class="rvts14">Определяет метод обработки подстановочных знаков и имен файла в командной строке.</span></p>
+<p class="rvps2"><span class="rvts11">Синтаксис</span></p>
+<p class="rvps2"><span class="rvts22">-r[- | 0]</span></p>
+<div class="rvps2"><table border="0" cellpadding="1" cellspacing="2" style="border-width: 0px; border-spacing: 2px;">
+<tr valign="top">
+<td valign="middle" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Ключ</span></p>
+</td>
+<td valign="middle" style="padding: 1px;"><p class="rvps2"><span class="rvts11">Описание</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle" style="padding: 1px;"><p class="rvps2"><span class="rvts14">-r</span></p>
+</td>
+<td valign="middle" style="padding: 1px;"><p class="rvps2"><span class="rvts14">Допустить рекурсию подкаталогов.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle" style="padding: 1px;"><p class="rvps2"><span class="rvts14">-r-</span></p>
+</td>
+<td valign="middle" style="padding: 1px;"><p class="rvps2"><span class="rvts14">Отключить рекурсию подкаталогов. Эта опция - по умолчанию для всех команд.</span></p>
+</td>
+</tr>
+<tr valign="top">
+<td valign="middle" style="padding: 1px;"><p class="rvps2"><span class="rvts14">-r0</span></p>
+</td>
+<td valign="middle" style="padding: 1px;"><p class="rvps2"><span class="rvts14">Допустить рекурсию подкаталогов только для имен подстановочных знаков.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="rvps2"><span class="rvts11">Примеры</span></p>
+<p class="rvps2"><span class="rvts22">HaoZipC l archive.zip *.doc -r-</span></p>
+<p class="rvps2"><span class="rvts14">составляет список всех </span><span class="rvts25">*.doc</span><span class="rvts14">&nbsp;файлов, которые принадлежат корневому каталогу архива в архиве </span><span class="rvts25">archive.zip</span><span class="rvts14">.</span></p>
+<p class="rvps2"><span class="rvts22">HaoZipC a -tzip archive.zip -r src\*.cpp src\*.h</span></p>
+<p class="rvps2"><span class="rvts14">добавляет все </span><span class="rvts25">*.cpp</span><span class="rvts14">&nbsp;и </span><span class="rvts25">*.h</span><span class="rvts14">&nbsp;файлы из каталога </span><span class="rvts25">src</span><span class="rvts14">&nbsp;и всех его подкаталогов в архив</span><span class="rvts25">&nbsp;archive.zip</span><span class="rvts14">.</span></p>
+<p class="rvps2"><span class="rvts22">HaoZipC a archive.7z folder1\</span></p>
+<p class="rvps2"><span class="rvts14">добавляет все файлы из каталога folder1 и всех его подкаталогов в архив archive.7z.</span></p>
+<p class="rvps2"><span class="rvts22">HaoZipC a archive.7z -r folder2\</span></p>
+<p class="rvps2"><span class="rvts14">ищет все каталоги folder2 во всех подкаталогах, и добавляет их (включая все подкаталоги) в архив archive.7z.</span></p>
+<p class="rvps2"><span class="rvts11">Команды, которые могут использоваться с этим ключом</span></p>
+<p class="rvps2"><a class="rvts15" href="../dialog/add.htm">a (Add)</a><span class="rvts14">, </span><a class="rvts15" href="../dialog/delete.htm">d (Delete)</a><span class="rvts14">, </span><a class="rvts15" href="../dialog/extract.htm">e (Extract)</a><span class="rvts14">, </span><a class="rvts15" href="../dialog/list.htm">l (List)</a><span class="rvts14">, </span><a class="rvts15" href="../dialog/test.htm">t (Test)</a><span class="rvts14">, </span><a class="rvts15" href="../dialog/update.htm">u (Update)</a><span class="rvts14">, </span><a class="rvts15" href="../dialog/extract_full.htm">x (Extract with full paths)</a></p>
+<p class="rvps2"><span class="rvts11">См. также</span></p>
+<p class="rvps2"><span class="rvts11">Ключи:</span><span class="rvts14">&nbsp;</span><a class="rvts15" href="-aiIncludearchivefilenames.htm">-i (Include)</a><span class="rvts14">, </span><a class="rvts15" href="-axExcludearchivefilenames.htm">-x (Exclude)</a></p>
+<p></p>
+<p class="rvps4" style="clear: both;"><span class="rvts16"></span><span class="rvts17"></span></p>
+
+	</div>
+	
+	
+		<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2021 by HaoZip. All Rights Reserved.
+			</div>
+		</div>
+	
+
+	
+	
+
+	
+</body>
+	
+</html>
+
