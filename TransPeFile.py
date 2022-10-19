@@ -14,7 +14,7 @@ def langDll():
 	dirPathString= "D:\\repos\\HaoZipTranslation\\lng\\en\\lang\HaoZipLang_chs\\String"
 	dirPathMenu= "D:\\repos\\HaoZipTranslation\\lng\\en\\lang\\HaoZipLang_chs\\Menu"
 
-	dirPathBMP= "D:\\repos\\HaoZipTranslation\\lng\\en\\HaoZip\Bitmap"
+	dirPathBMP= "D:\\repos\\HaoZipTranslation\\lng\\en\\HaoZip\\Bitmap"
 
 	dirHaoCDDialog ="D:\\repos\\HaoZipTranslation\\lng\\en\\HaoZipCD\\Dialog"
 	dirHaoCDString ="D:\\repos\\HaoZipTranslation\\lng\\en\\HaoZipCD\\String"

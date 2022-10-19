@@ -7,6 +7,7 @@ def main():
 		"HaoZip.exe",
 		"HaoZipC.exe",
 		"HaozipCD.dll",
+		"HaozipCD.exe",
 		"HaoZipCom.dll",
 		"HaoZipCom32.dll",
 		"HaoZipEditor.dll",
@@ -49,7 +50,7 @@ def main():
 			-verSetString LegalCopyright "{legalCopyright}"\
 			-verSetString OriginalFilename "{file}"\
 			-verSetString ProductName "{fileDescription}"\
-			-saveAs {file} -exit')
+			-save -exit')
 		# -verSetString ProductVersion "{productVersion}"\
 		# -verSetString FileVersion "{fileVersion}"\
 main()
