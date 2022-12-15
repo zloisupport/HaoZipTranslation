@@ -1,14 +1,14 @@
-2091 DIALOGEX 0, 0, 300, 191, 0
-STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
-CAPTION "Update"
-FONT 8, "Segoe UI", 400, FALSE
-{
- GROUPBOX "Online Upgrade", -1, 5, 5, 290, 62
- AUTORADIOBUTTON "Update &Weekly", 2093, 15, 20, 100, 10, NOT WS_TABSTOP
- AUTORADIOBUTTON "Update &Monthly", 2095, 15, 34, 100, 10, NOT WS_TABSTOP
- AUTORADIOBUTTON "Update M&anually", 2094, 15, 48, 100, 10, NOT WS_TABSTOP
- LTEXT "You can immediately check for updates, upgrade to the latest version.", -1, 17, 84, 157, 20
- PUSHBUTTON "Check for new version now", 2169, 186, 81, 102, 14
- LTEXT "View more information, please visit:", -1, 17, 111, 114, 8
- LTEXT "http://www.haozip.2345.com/update.htm", 2170, 138, 111, 145, 8
-}
+// 2091 DIALOGEX 0, 0, 300, 191, 0
+// STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+// CAPTION "Update"
+// FONT 8, "Segoe UI", 400, FALSE
+// {
+//  GROUPBOX "Online Upgrade", -1, 5, 5, 290, 62
+//  AUTORADIOBUTTON "Update &Weekly", 2093, 15, 20, 100, 10, NOT WS_TABSTOP
+//  AUTORADIOBUTTON "Update &Monthly", 2095, 15, 34, 100, 10, NOT WS_TABSTOP
+//  AUTORADIOBUTTON "Update M&anually", 2094, 15, 48, 100, 10, NOT WS_TABSTOP
+//  LTEXT "You can immediately check for updates, upgrade to the latest version.", -1, 17, 84, 157, 20
+//  PUSHBUTTON "Check for new version now", 2169, 186, 81, 102, 14
+//  LTEXT "View more information, please visit:", -1, 17, 111, 114, 8
+//  LTEXT "http://www.haozip.2345.com/update.htm", 2170, 138, 111, 145, 8
+// }

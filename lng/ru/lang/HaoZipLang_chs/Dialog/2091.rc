@@ -1,13 +1,13 @@
-2091 DIALOGEX 0, 0, 300, 191, 0
-STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
-CAPTION "Обновление"
-FONT 9, "Segoe UI", 0, FALSE
-{
- GROUPBOX "Онлайн обновление", 65535, 5, 5, 290, 48
- AUTORADIOBUTTON "&Автоматическое обновление", 2093, 15, 20, 127, 10, NOT WS_TABSTOP
- AUTORADIOBUTTON "&Ручное обновление", 2094, 15, 34, 100, 10, NOT WS_TABSTOP
- LTEXT "Вы можете проверить и выполнить обновление до последней версии", 65535, 17, 78, 157, 20
- PUSHBUTTON "Проверить сейчас", 2169, 186, 81, 102, 14
- LTEXT "Дополнительная информация по адресу:", 65535, 17, 111, 141, 8
- LTEXT "http://haozip.2345.com/update.htm", 2170, 165, 111, 119, 8
-}
+// 2091 DIALOGEX 0, 0, 300, 191, 0
+// STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+// CAPTION "Обновление"
+// FONT 9, "Segoe UI", 0, FALSE
+// {
+//  GROUPBOX "Онлайн обновление", 65535, 5, 5, 290, 48
+//  AUTORADIOBUTTON "&Автоматическое обновление", 2093, 15, 20, 127, 10, NOT WS_TABSTOP
+//  AUTORADIOBUTTON "&Ручное обновление", 2094, 15, 34, 100, 10, NOT WS_TABSTOP
+//  LTEXT "Вы можете проверить и выполнить обновление до последней версии", 65535, 17, 78, 157, 20
+//  PUSHBUTTON "Проверить сейчас", 2169, 186, 81, 102, 14
+//  LTEXT "Дополнительная информация по адресу:", 65535, 17, 111, 141, 8
+//  LTEXT "http://haozip.2345.com/update.htm", 2170, 165, 111, 119, 8
+// }
