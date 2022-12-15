@@ -1,0 +1,6 @@
+﻿23441, "2345 ace browser"
+23229, "HaoZip Image Viewer\tAlt+J"
+20867, 20867, "&Check for New Version\tAlt+U"
+Dialog
+2091
+2163
