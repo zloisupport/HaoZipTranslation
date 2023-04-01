@@ -8,7 +8,7 @@ import json
 	HaoZipLang changing function
 
 """
-def langDll(path,lang,workdir):
+def langDll(path,lang,workdirs):
 	dirPathDialog= f"{path}\\lng\\{lang}\\lang\\HaoZipLang_chs\\Dialog"
 
 
@@ -31,17 +31,17 @@ def langDll(path,lang,workdir):
 	resHaoCDDialog = getFiles(dirHaoCDDialog)
 	resHaoCDString = getFiles(dirHaoCDString)
 
-
-	# HaoZipLang_chs.dll
-	setAssignLang(workdir,"Dialog",dirPathDialog,resDialog)
-	setAssignLang(workdir,"PNG",dirPathPng,resPng)
-	setAssignLang(workdir,"String",dirPathString,resString)
-	setAssignLang(workdir,"Menu",dirPathMenu,resMenu)
-	# HaoZip.exe
-	setAssignHaoCD(workdir,"String",dirHaoCDString,resHaoCDString)
-	setAssignHaoCD(workdir,"Dialog",dirHaoCDDialog,resHaoCDDialog)
-	# HaoZipCD.exe
-	setAssignHao(workdir,dirPathBMP,resHaoBmp)
+	for workdir in workdirs:
+		# HaoZipLang_chs.dll
+		setAssignLang(workdir,"Dialog",dirPathDialog,resDialog)
+		setAssignLang(workdir,"PNG",dirPathPng,resPng)
+		setAssignLang(workdir,"String",dirPathString,resString)
+		setAssignLang(workdir,"Menu",dirPathMenu,resMenu)
+		# HaoZip.exe
+		setAssignHaoCD(workdir,"String",dirHaoCDString,resHaoCDString)
+		setAssignHaoCD(workdir,"Dialog",dirHaoCDDialog,resHaoCDDialog)
+		# HaoZipCD.exe
+		setAssignHao(workdir,dirPathBMP,resHaoBmp)
 
 
 
@@ -77,11 +77,31 @@ def getFiles(dirPath):
 			res.append(file)
 	return res
 
+def createWorkDir(dir_paths):
+	for dir_path in dir_paths:
+		if not os.path.exists(dir_path):
+			os.makedirs(dir_path)
+
+
+
 if __name__ == "__main__":
 	confFile = "conf.json"
 	if not os.path.exists(confFile):
 		print('conf.json: not found')
-		defaultData ={"path":"D:\\repos\\HaoZipTranslation", "lang": "en", "workdir":"D:\\repos\\temp"}
+		defaultData ={
+						"path": "D:\\repos\\HaoZipTranslation",
+						"workdir": "D:\\repos\\temp",
+						"lang" :{
+							"ru":{
+								"x64":"64",
+								"x32":"32"
+							},
+							"en":{
+								"x64":"64",
+								"x32":"32"
+							}
+						}
+					}
 		
 		print('creatig: conf.json ')
 		with open("conf.json","w",) as outFile:
@@ -92,7 +112,11 @@ if __name__ == "__main__":
 		data = json.load(open(confFile,'r'))
 
 		path = data['path']
-		lang = data['lang']
-		workdir = data['workdir']
-		print(f'conf: {path,lang,workdir}')
-		langDll(path,lang,workdir)
+		workDir = data['workdir']
+
+		for lang, values in data['lang'].items():
+			dir_paths = [f'{workDir}/{lang}/{values["x64"]}',
+						 f'{workDir}/{lang}/{values["x32"]}']
+			createWorkDir(dir_paths)
+			langDll(path,lang,dir_paths)
+
