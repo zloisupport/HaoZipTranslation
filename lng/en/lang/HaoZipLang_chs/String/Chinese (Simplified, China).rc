@@ -1185,7 +1185,7 @@ LANGUAGE 4, 2
 21117, "Split zip files does not support modify comment!"
 21118, "MD5 threshold setting is invalid, please enter a value between 1-102400."
 21120, "File name or folder name can not be empty or blank character"
-21121, "Set Code&Page"
+21121, "Set Encoding"
 21122, "System Default CodePage"
 21123, "Skin Theme Pack"
 21124, "&Get Multi-Language Edition ..."
