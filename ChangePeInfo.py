@@ -1,6 +1,25 @@
+import json
 import subprocess
+import os
 
-def main():
+def readJson():
+	confFile = "conf.json"
+	if not os.path.exists(confFile):
+		raise FileNotFoundError(confFile)
+	
+	print('read: conf.json ')
+	data = json.load(open(confFile, 'r'))
+	workDir = data['workdir']
+
+	for lang, values in data['lang'].items():
+		for arch in values.values():
+			changePe(workDir,lang,arch)
+
+
+def changePe(workDir=None,lang=None,arch=None):
+	app_path = f"{workDir}\\{lang}\\{arch}"
+	if not os.path.exists(app_path):
+		raise FileNotFoundError(app_path)
 	fileList = [
 		"2345DirectUI.dll",
 		"HaoZip.dll",
@@ -34,15 +53,26 @@ def main():
 #  "ProductVersion:5.8
 
 
-	productVersion = "5.8.1.1"
-	fileVersion = "5.8.1.1"
+	productVersion = "6.4.0.11152"
+	fileVersion = "6.4.0.11152"
 	companyName = "HaoZip"
-	legalCopyright = "HaoZip(c) 2022 2345.com"
+	legalCopyright = "HaoZip(c) 2023 2345.com"
+
+	subprocess.run(f'Restorator.exe -open {workDir}\\{lang}\\HaoZipLang_chs.dll -nobackup \
+			-verSetString Comments "HaoZipLang_chs {lang}"\
+			-verSetString CompanyName "{companyName}"\
+			-verSetString FileDescription "HaoZipLang_chs {lang}"\
+			-verSetString InternalName "HaoZipLang_chs {lang}"\
+			-verSetString LegalCopyright "{legalCopyright}"\
+			-verSetString OriginalFilename "HaoZipLang_chs.dll"\
+			-verSetString ProductName "HaoZipLang_chs {lang}"\
+			-save -exit')
+	
 	for file in fileList:
 		extLen = len(file)-4
-		fileDescription = file[:extLen]
+		fileDescription = file[:extLen]+f" {lang}"
 
-		subprocess.run(f'Restorator.exe -open {file} -nobackup \
+		subprocess.run(f'Restorator.exe -open {app_path}\\{file} -nobackup \
 			-verSetString Comments "{fileDescription}"\
 			-verSetString CompanyName "{companyName}"\
 			-verSetString FileDescription "{fileDescription}"\
@@ -53,4 +83,10 @@ def main():
 			-save -exit')
 		# -verSetString ProductVersion "{productVersion}"\
 		# -verSetString FileVersion "{fileVersion}"\
-main()
+
+def main():
+	readJson()
+
+
+if __name__ == "__main__":
+	main()
