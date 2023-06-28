@@ -3,12 +3,14 @@ import re
 import subprocess
 import os
 import json
-
+import time
 """
 
 	HaoZipLang changing function
 
 """
+count = 0
+RESTORATOR_FILE_BACKUP = '-nobackup'
 
 
 def langDll(path, lang, workdirs):
@@ -34,9 +36,9 @@ def langDll(path, lang, workdirs):
     resHaoBmp = getFiles(dirPathBMP)
     resHaoCDDialog = getFiles(dirHaoCDDialog)
     resHaoCDString = getFiles(dirHaoCDString)
-    count = 0
-    for workdir in workdirs:
 
+    for workdir in workdirs:
+ 
         # HaoZipCD.exe
         setAssignHaoCD(workdir, "String", dirHaoCDString, resHaoCDString)
         setAssignHaoCD(workdir, "Dialog", dirHaoCDDialog, resHaoCDDialog)
@@ -44,48 +46,57 @@ def langDll(path, lang, workdirs):
         setAssignHao(workdir, dirPathBMP, resHaoBmp)
 
         # HaoZipLang_chs.dll
-        count = count + 1
-        if count == 1:
+        # To prevent the loop from running four 
+        global count
+        count += 1
+        if count == 2:
+            count=0
             setAssignLang(workdir, "Dialog", dirPathDialog, resDialog)
             setAssignLang(workdir, "PNG", dirPathPng, resPng)
             setAssignLang(workdir, "String", dirPathString, resString)
             setAssignLang(workdir, "Menu", dirPathMenu, resMenu)
 
-
-def setAssignLang(workdir, type, dirPath, res):
-    if os.path.exists(f"{workdir[:len(workdir) - 2]}\\HaoZipLang_chs.dll"):
-        for x in res:
-            if type == "String":
+def setAssignLang(workdir, res_type, res_path, resourse):
+    print(f"""HaoZipLang_chs.dll
+    Open "{workdir[:len(workdir) - 2]}\HaoZipLang_chs.dll"
+    Locate: {workdir[:len(workdir) - 2]}
+    DirPath: {res_path}
+    Type:{res_type}""")
+    if os.path.exists(f"{workdir[:len(workdir) - 2]}\HaoZipLang_chs.dll"):
+       if res_type == "String":
+            for res in resourse:
                 subprocess.run(
-                    f'Restorator.exe -open "{workdir[:len(workdir) - 2]}\\HaoZipLang_chs.dll" -nobackup -delete String -assign "{dirPath}\\{x}" -save -exit')
+                    f'Restorator.exe -open "{workdir[:len(workdir) - 2]}\HaoZipLang_chs.dll" -nobackup -delete String -assign "{res_path}\{res}" -save -exit')
+       else:
+                subprocess.run(
+                        f'Restorator.exe -open "{workdir[:len(workdir) - 2]}\HaoZipLang_chs.dll" -nobackup -assignOn "{res_type}" "{res_path}" -save -exit')
+
+
+def setAssignHaoCD(workdir, res_type, res_path, resourse):
+    if os.path.exists(f"{workdir}\HaoZipCD.exe"):
+        print(f"""HaoZipCD.exe
+        Workdir: {workdir}
+        Res: {resourse}""")
+        for res in resourse:
+            if res_type == "String":
+                subprocess.run(
+                    f'Restorator.exe -open "{workdir}\HaoZipCD.exe" {RESTORATOR_FILE_BACKUP} -delete String -assign "{res_path}\{res}" -save -exit')
             else:
                 subprocess.run(
-                    f'Restorator.exe -open "{workdir[:len(workdir) - 2]}\\HaoZipLang_chs.dll" -nobackup -delete {type}\{x[:-3]} -assign "{dirPath}\\{x}" -save -exit')
+                    f'Restorator.exe -open "{workdir}\HaoZipCD.exe" {RESTORATOR_FILE_BACKUP} -delete {res_type}\{res[:-3]} -assign "{res_path}\{res}" -save -exit')
 
 
-def setAssignHaoCD(workdir, type, dirPath, res):
-    if os.path.exists(f"{workdir}\\HaoZipCD.exe"):
+def setAssignHao(workdir, res_path, res):
+    if os.path.exists(f"{workdir}\HaoZip.exe"):
         for x in res:
             print(x)
-            if type == "String":
-                subprocess.run(
-                    f'Restorator.exe -open "{workdir}\\HaoZipCD.exe" -nobackup -delete String -assign "{dirPath}\\{x}" -save -exit')
-            else:
-                subprocess.run(
-                    f'Restorator.exe -open "{workdir}\\HaoZipCD.exe" -nobackup -delete {type}\{x[:-3]} -assign "{dirPath}\\{x}" -save -exit')
+            subprocess.run(f'Restorator.exe -open "{workdir}\HaoZip.exe" {RESTORATOR_FILE_BACKUP} -assign "{res_path}\{x}" -save -exit')
 
 
-def setAssignHao(workdir, dirPath, res):
-    if os.path.exists(f"{workdir}\\HaoZip.exe"):
-        for x in res:
-            print(x)
-            subprocess.run(f'Restorator.exe -open "{workdir}\\HaoZip.exe" -nobackup -assign "{dirPath}\\{x}" -save -exit')
-
-
-def getFiles(dirPath):
+def getFiles(res_path):
     res = []
-    for file in os.listdir(dirPath):
-        if os.path.isfile(os.path.join(dirPath, file)):
+    for file in os.listdir(res_path):
+        if os.path.isfile(os.path.join(res_path, file)):
             res.append(file)
     return res
 
@@ -135,4 +146,8 @@ def main():
                 langDll(path, lang, dir_paths)
 
 if __name__ == "__main__":
+    start_time = time.time()
     main()
+    end_time = time.time()
+    exec_time = end_time - start_time
+    print(f"Execution time: {exec_time} sec")
