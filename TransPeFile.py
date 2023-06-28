@@ -14,36 +14,42 @@ RESTORATOR_FILE_BACKUP = '-nobackup'
 
 
 def langDll(path, lang, workdirs):
-    dirPathDialog = f"{path}\\lng\\{lang}\\lang\\HaoZipLang_chs\\Dialog"
-    dirPathPng = f"{path}\\lng\\{lang}\\lang\\HaoZipLang_chs\\PNG"
-    dirPathString = f"{path}\\lng\\{lang}\\lang\HaoZipLang_chs\\String"
-    dirPathMenu = f"{path}\\lng\\{lang}\\lang\\HaoZipLang_chs\\Menu"
-    dirPathBMP = f"{path}\\lng\\{lang}\\HaoZip\Bitmap"
+    root_dir = f'{path}\lng\{lang}'
+    root_HaoZipLang_chs = f'{root_dir}\lang\HaoZipLang_chs'
 
-    transFiles = [dirPathDialog,dirPathPng,dirPathString,dirPathMenu,dirPathBMP]
+    res_path_BMP = f"{root_dir}\HaoZip\Bitmap"
+    res_HaoCD_Dialog = f"{root_dir}\HaoZipCD\Dialog"
+    res_HaoCD_String = f"{root_dir}\HaoZipCD\String"
 
-    for file in transFiles:
+    res_path_Dialog = f"{root_HaoZipLang_chs}\Dialog"
+    res_path_Png = f"{root_HaoZipLang_chs}\PNG"
+    res_path_String = f"{root_HaoZipLang_chs}\String"
+    res_path_Menu = f"{root_HaoZipLang_chs}\Menu"
+
+
+    trans_files = [res_path_Dialog,res_path_Png,res_path_String,res_path_Menu,res_path_BMP]
+
+    for file in trans_files:
         if not os.path.exists(file):
             raise FileExistsError(file) 
 
-    dirHaoCDDialog = f"{path}\\lng\\{lang}\\HaoZipCD\\Dialog"
-    dirHaoCDString = f"{path}\\lng\\{lang}\\HaoZipCD\\String"
+    
 
-    resDialog = getFiles(dirPathDialog)
-    resPng = getFiles(dirPathPng)
-    resString = getFiles(dirPathString)
-    resMenu = getFiles(dirPathMenu)
-    resHaoBmp = getFiles(dirPathBMP)
-    resHaoCDDialog = getFiles(dirHaoCDDialog)
-    resHaoCDString = getFiles(dirHaoCDString)
+    resDialog = getFiles(res_path_Dialog)
+    resPng = getFiles(res_path_Png)
+    resString = getFiles(res_path_String)
+    resMenu = getFiles(res_path_Menu)
+    resHaoBmp = getFiles(res_path_BMP)
+    resHaoCDDialog = getFiles(res_HaoCD_Dialog)
+    resHaoCDString = getFiles(res_HaoCD_String)
 
     for workdir in workdirs:
  
         # HaoZipCD.exe
-        setAssignHaoCD(workdir, "String", dirHaoCDString, resHaoCDString)
-        setAssignHaoCD(workdir, "Dialog", dirHaoCDDialog, resHaoCDDialog)
+        setAssignHaoCD(workdir, "String", res_HaoCD_String, resHaoCDString)
+        setAssignHaoCD(workdir, "Dialog", res_HaoCD_Dialog, resHaoCDDialog)
         #  HaoZip.exe
-        setAssignHao(workdir, dirPathBMP, resHaoBmp)
+        setAssignHao(workdir, res_path_BMP, resHaoBmp)
 
         # HaoZipLang_chs.dll
         # To prevent the loop from running four 
@@ -51,10 +57,10 @@ def langDll(path, lang, workdirs):
         count += 1
         if count == 2:
             count=0
-            setAssignLang(workdir, "Dialog", dirPathDialog, resDialog)
-            setAssignLang(workdir, "PNG", dirPathPng, resPng)
-            setAssignLang(workdir, "String", dirPathString, resString)
-            setAssignLang(workdir, "Menu", dirPathMenu, resMenu)
+            setAssignLang(workdir, "Dialog", res_path_Dialog, resDialog)
+            setAssignLang(workdir, "PNG", res_path_Png, resPng)
+            setAssignLang(workdir, "String", res_path_String, resString)
+            setAssignLang(workdir, "Menu", res_path_Menu, resMenu)
 
 def setAssignLang(workdir, res_type, res_path, resourse):
     print(f"""HaoZipLang_chs.dll
