@@ -1,7 +1,7 @@
 3263 DIALOGEX 0, 0, 340, 124, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Добавить новое расширение"
-FONT 9, "Segoe UI", 0, FALSE
+FONT 9, "MS Shell Dlg", 0, FALSE
 {
  LTEXT "&Укажите расширение(я) файла", 3767, 77, 5, 257, 8
  LTEXT "(например: .Jpg; .Zip)", 3768, 77, 18, 257, 8

@@ -1,6 +1,6 @@
 3053 DIALOGEX 0, 0, 351, 138, 0
 STYLE DS_SETFONT | WS_CHILD
-FONT 9, "Segoe UI", 0, FALSE
+FONT 9, "MS Shell Dlg", 0, FALSE
 {
  CTEXT "ќценка производительности, подождите...", 1085, 56, 20, 238, 8
  CONTROL "", 1081, "msctls_progress32", WS_BORDER, 67, 52, 196, 10

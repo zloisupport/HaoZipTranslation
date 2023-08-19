@@ -1,7 +1,7 @@
 102 DIALOGEX 0, 0, 254, 214, 0
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Ðווסענ"
-FONT 9, "Segoe UI", 0, FALSE
+FONT 9, "MS Shell Dlg", 0, FALSE
 {
  GROUPBOX "Ðווסענ", 65535, 7, 7, 240, 200
  PUSHBUTTON "Èלןמנע פאיכא נווסענא (*.reg)", 4056, 10, 190, 126, 14

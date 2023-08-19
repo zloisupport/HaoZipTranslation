@@ -1,7 +1,7 @@
 2116 DIALOGEX 0, 0, 202, 151, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Управление профилями"
-FONT 9, "Segoe UI", 0, FALSE
+FONT 9, "MS Shell Dlg", 0, FALSE
 {
  GROUPBOX "Существующие профили", 65535, 4, 4, 139, 143
  PUSHBUTTON "Добавить", 2115, 148, 14, 50, 14

@@ -1,7 +1,7 @@
 3261 DIALOGEX 0, 0, 291, 193, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Преобразование архивов"
-FONT 9, "Segoe UI", 0, FALSE
+FONT 9, "MS Shell Dlg", 0, FALSE
 {
  PUSHBUTTON "&Фоновый режим", 3276, 21, 174, 69, 14
  PUSHBUTTON "Пауза", 3277, 94, 174, 56, 14

@@ -1,7 +1,7 @@
 3717 DIALOGEX 0, 0, 406, 292, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Тестирование производительности"
-FONT 9, "Segoe UI", 0, FALSE
+FONT 9, "MS Shell Dlg", 0, FALSE
 {
  DEFPUSHBUTTON "&Запуск теста", 3737, 343, 15, 64, 16
  LTEXT "&Размер словаря:", 1010, 10, 19, 59, 8

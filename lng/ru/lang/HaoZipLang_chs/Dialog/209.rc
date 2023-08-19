@@ -1,7 +1,7 @@
 209 DIALOGEX 0, 0, 286, 95, 0
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Параметры теста быстродействия оборудования"
-FONT 9, "Segoe UI", 0, FALSE
+FONT 9, "MS Shell Dlg", 0, FALSE
 {
  GROUPBOX "Параметры теста", 65535, 7, 7, 269, 59
  LTEXT "Размер словаря", 65535, 10, 24, 60, 8

@@ -1,7 +1,7 @@
 2103 DIALOGEX 0, 0, 301, 195, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "Сжатие"
-FONT 9, "Segoe UI", 0, FALSE
+FONT 9, "MS Shell Dlg", 0, FALSE
 {
  GROUPBOX "Сжатие", 65535, 5, 5, 136, 71
  PUSHBUTTON "Настроить профиль по умолчанию", 2124, 11, 17, 125, 14

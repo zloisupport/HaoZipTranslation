@@ -1,7 +1,7 @@
 3107 DIALOGEX 0, 0, 277, 74, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
 CAPTION "Сканирование архивов.."
-FONT 9, "Segoe UI", 0, FALSE
+FONT 9, "MS Shell Dlg", 0, FALSE
 {
  GROUPBOX "Текущее состояние", 65535, 5, 5, 267, 44
  LTEXT "Сканируется:", 65535, 11, 21, 49, 8

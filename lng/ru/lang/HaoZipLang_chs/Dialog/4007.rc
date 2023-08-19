@@ -1,7 +1,7 @@
 4007 DIALOGEX 0, 0, 250, 214, 0
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Значок"
-FONT 9, "Segoe UI", 0, FALSE
+FONT 9, "MS Shell Dlg", 0, FALSE
 {
  GROUPBOX "Логотип SFX-архива", 65535, 5, 5, 240, 51
  LTEXT "Загрузить логотип SFX из файла", 65535, 12, 21, 161, 8

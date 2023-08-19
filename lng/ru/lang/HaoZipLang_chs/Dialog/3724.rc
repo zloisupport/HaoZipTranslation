@@ -1,7 +1,7 @@
 3724 DIALOGEX 0, 0, 202, 270, 0
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Параметры конвертирования изображений"
-FONT 9, "Segoe UI", 0, FALSE
+FONT 9, "MS Shell Dlg", 0, FALSE
 {
  GROUPBOX "Параметры JEPG", 65535, 6, 6, 108, 168
  LTEXT "Качество(0-100):", 65535, 18, 18, 64, 8

@@ -1,7 +1,7 @@
 107 DIALOGEX 0, 0, 354, 286, 0
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Страница свойств"
-FONT 9, "Segoe UI", 0, FALSE
+FONT 9, "MS Shell Dlg", 0, FALSE
 {
  GROUPBOX "Содержание", 65535, 4, 4, 346, 179
  LTEXT "&Найти: (старые символы)", 1051, 11, 15, 145, 8

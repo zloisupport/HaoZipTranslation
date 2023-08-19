@@ -1,7 +1,7 @@
 3036 DIALOGEX 0, 0, 432, 269, 0
 STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Пакетное переименование HaoZip"
-FONT 9, "Segoe UI", 0, FALSE
+FONT 9, "MS Shell Dlg", 0, FALSE
 {
  CONTROL "", 1000, "SysTabControl32", WS_TABSTOP, 5, 5, 188, 234
  GROUPBOX "Список файлов", 65535, 200, 6, 226, 234

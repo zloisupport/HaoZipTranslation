@@ -1,7 +1,7 @@
 3060 DIALOGEX 0, 0, 250, 83, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Установка плагина для HaoZip"
-FONT 9, "Segoe UI", 400, FALSE
+FONT 9, "MS Shell Dlg", 400, FALSE
 {
  CONTROL "", 1122, "msctls_progress32", WS_BORDER, 9, 38, 231, 11
  PUSHBUTTON "&Отмена", 2, 184, 63, 56, 15

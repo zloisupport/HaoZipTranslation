@@ -1,6 +1,6 @@
 3055 DIALOGEX 0, 0, 351, 244, 0
 STYLE DS_SETFONT | WS_CHILD
-FONT 9, "Segoe UI", 0, FALSE
+FONT 9, "MS Shell Dlg", 0, FALSE
 {
  CTEXT "Размер словаря: %s    Объем памяти: %s    Потоки: %s", 1089, 45, 9, 262, 8
  LTEXT "Результат теста", 1090, 23, 34, 154, 8

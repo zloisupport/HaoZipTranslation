@@ -1,7 +1,7 @@
 2077 DIALOGEX 0, 0, 300, 191, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "Внешний вид"
-FONT 9, "Segoe UI", 0, FALSE
+FONT 9, "MS Shell Dlg", 0, FALSE
 {
  GROUPBOX "Панель инструментов", 65535, 5, 5, 193, 71
  AUTOCHECKBOX "&Обычные кнопки", 2105, 13, 20, 88, 10

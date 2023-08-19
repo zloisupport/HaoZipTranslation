@@ -1,7 +1,7 @@
 3720 DIALOGEX 0, 0, 290, 185, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "Время"
-FONT 9, "Segoe UI", 0, FALSE
+FONT 9, "MS Shell Dlg", 0, FALSE
 {
  GROUPBOX "Файлы для обработки", 65535, 5, 5, 280, 59
  LTEXT "Обрабатывать файлы", 65535, 19, 17, 82, 8

@@ -1,7 +1,7 @@
 // 2163 DIALOGEX 0, 0, 300, 191, 0
 // STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 // CAPTION "Безопасность"
-// FONT 9, "Segoe UI", 0, FALSE
+// FONT 9, "MS Shell Dlg", 0, FALSE
 // {
 //  GROUPBOX "Что такое 2345 Cloud Killing", 65535, 5, 8, 290, 49
 //  LTEXT "Облачное обнаружение (2345 Cloud Killing) - это три облачных сервиса, которые интегрированы в архиватор HaoZip.", 65535, 21, 23, 258, 20

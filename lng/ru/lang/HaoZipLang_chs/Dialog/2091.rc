@@ -1,7 +1,7 @@
 // 2091 DIALOGEX 0, 0, 300, 191, 0
 // STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 // CAPTION "Обновление"
-// FONT 9, "Segoe UI", 0, FALSE
+// FONT 9, "MS Shell Dlg", 0, FALSE
 // {
 //  GROUPBOX "Онлайн обновление", 65535, 5, 5, 290, 48
 //  AUTORADIOBUTTON "&Автоматическое обновление", 2093, 15, 20, 127, 10, NOT WS_TABSTOP
