@@ -1598,7 +1598,7 @@ LANGUAGE 4, 2
 23994, "HaoZip will shutdown your computer, make sure you save all your work."
 23995, "Feedback"
 24001, "The context menu is destroyed, please fix it!"
-24002, "If you want a reminder to appear, click Yes."
+24002, "When the \n'User Control' prompt appears,\n please click 'Yes'."
 24003, "Recovery Failed!"
 24004, "Do Not Remind"
 24005, "Restore"
