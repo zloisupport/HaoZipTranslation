@@ -1,7 +1,7 @@
 107 DIALOGEX 0, 0, 354, 286, 0
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Property Page"
-FONT 8, "Segoe UI", 400, FALSE
+FONT 8, "MS Shell Dlg", 400, FALSE
 {
  GROUPBOX "Content", -1, 4, 4, 346, 179
  LTEXT "Fi&nd:(the old characters to be replaced)", 1051, 11, 15, 145, 8

@@ -1,7 +1,7 @@
 4055 DIALOGEX 0, 0, 250, 214, 0
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Modes"
-FONT 8, "Segoe UI", 0, FALSE
+FONT 8, "MS Shell Dlg", 0, FALSE
 {
  GROUPBOX "Temporary mode", -1, 5, 5, 240, 90
  AUTOCHECKBOX "&Unpack to temporary folder", 4058, 11, 17, 210, 10

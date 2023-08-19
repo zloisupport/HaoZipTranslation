@@ -1,7 +1,7 @@
 3263 DIALOGEX 0, 0, 340, 124, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Add filter file extension"
-FONT 8, "Segoe UI", 400, FALSE
+FONT 8, "MS Shell Dlg", 400, FALSE
 {
  LTEXT "file &extension", 3767, 77, 5, 257, 8
  LTEXT "(Such as: .Jpg; .Zip)", 3768, 77, 18, 257, 8

@@ -1,7 +1,7 @@
 209 DIALOGEX 0, 0, 286, 95, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Hardware benchmark parameter"
-FONT 8, "Segoe UI", 400, FALSE
+FONT 8, "MS Shell Dlg", 400, FALSE
 {
  GROUPBOX "Benchmark parameter", -1, 7, 7, 269, 59
  LTEXT "Dictionary size:", -1, 14, 24, 49, 8

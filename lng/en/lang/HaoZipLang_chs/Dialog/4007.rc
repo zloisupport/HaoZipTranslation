@@ -1,7 +1,7 @@
 4007 DIALOGEX 0, 0, 250, 214, 0
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Icon"
-FONT 8, "Segoe UI", 0, FALSE
+FONT 8, "MS Shell Dlg", 0, FALSE
 {
  GROUPBOX "Logo", -1, 5, 5, 240, 51
  LTEXT "Load SFX &logo from file", -1, 12, 21, 161, 8

@@ -1,6 +1,6 @@
 3055 DIALOGEX 0, 0, 505, 244, 0
 STYLE DS_SETFONT | WS_CHILD
-FONT 8, "Segoe UI", 400, FALSE
+FONT 8, "MS Shell Dlg", 400, FALSE
 {
  CTEXT "Parameters    Dictionary Size: %s    CPU Usage: %s    Threads: %s", 1089, 45, 9, 262, 8
  LTEXT "Benchmark Result", 1090, 23, 34, 154, 8

@@ -1,7 +1,7 @@
 2214 DIALOGEX 0, 0, 280, 232, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "Find"
-FONT 8, "Segoe UI", 400, FALSE
+FONT 8, "MS Shell Dlg", 400, FALSE
 {
  GROUPBOX "What to Find", 21020, 6, 6, 270, 60
  LTEXT "the name of the file or directory to Search", 21021, 18, 18, 150, 8

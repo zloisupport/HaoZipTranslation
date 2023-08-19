@@ -1,7 +1,7 @@
 3107 DIALOGEX 0, 0, 277, 74, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
 CAPTION "Scanning archives ... - HaoZip"
-FONT 8, "Segoe UI", 400, FALSE
+FONT 8, "MS Shell Dlg", 400, FALSE
 {
  GROUPBOX "Current status", -1, 5, 5, 267, 44
  LTEXT "Scanning:", -1, 11, 20, 43, 8

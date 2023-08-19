@@ -1,6 +1,6 @@
 3045 DIALOGEX 0, 0, 351, 66, 0
 STYLE DS_SETFONT | WS_CHILD
-FONT 8, "Segoe UI", 400, FALSE
+FONT 8, "MS Shell Dlg", 400, FALSE
 {
  PUSHBUTTON "", 3056, 10, 20, 20, 20
  LTEXT "Current system information:", 3058, 43, 7, 128, 8

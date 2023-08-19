@@ -1,6 +1,6 @@
 3054 DIALOGEX 0, 0, 487, 247, 0
 STYLE DS_SETFONT | WS_CHILD
-FONT 8, "Segoe UI", 400, FALSE
+FONT 8, "MS Shell Dlg", 400, FALSE
 {
  CTEXT "Hardware performance evaluation has been canceled, the proposed re-test", 1115, 45, 9, 262, 8
  LTEXT "Benchmark Result", 1090, 23, 34, 124, 8

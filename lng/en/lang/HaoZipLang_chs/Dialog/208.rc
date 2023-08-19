@@ -1,7 +1,7 @@
 208 DIALOGEX 0, 0, 408, 258, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Batch Replace String Result  - HaoZip"
-FONT 8, "Segoe UI", 400, FALSE
+FONT 8, "MS Shell Dlg", 400, FALSE
 {
  PUSHBUTTON "&Cancel", 2, 353, 31, 50, 14
  LTEXT "Current status:", -1, 5, 5, 62, 8

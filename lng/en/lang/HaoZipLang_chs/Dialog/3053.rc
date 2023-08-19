@@ -1,6 +1,6 @@
 3053 DIALOGEX 0, 0, 351, 138, 0
 STYLE DS_SETFONT | WS_CHILD
-FONT 8, "Segoe UI", 400, FALSE
+FONT 8, "MS Shell Dlg", 400, FALSE
 {
  CTEXT "Benchmarking your computer, please wait ...", 1085, 57, 20, 219, 8
  CONTROL "", 1081, "msctls_progress32", WS_BORDER, 56, 51, 180, 10

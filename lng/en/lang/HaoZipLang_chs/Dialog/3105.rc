@@ -1,7 +1,7 @@
 3105 DIALOGEX 0, 0, 290, 185, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "Password"
-FONT 8, "Segoe UI", 400, FALSE
+FONT 8, "MS Shell Dlg", 400, FALSE
 {
  GROUPBOX "Compression with password", -1, 5, 10, 280, 170
  LTEXT "Enter the password", 3125, 30, 34, 74, 8, NOT WS_GROUP

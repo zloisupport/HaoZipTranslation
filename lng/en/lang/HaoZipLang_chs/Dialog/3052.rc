@@ -1,6 +1,6 @@
 3052 DIALOGEX 0, 0, 372, 122, 0
 STYLE DS_SETFONT | WS_CHILD
-FONT 8, "Segoe UI", 400, FALSE
+FONT 8, "MS Shell Dlg", 400, FALSE
 {
  CTEXT "HaoZip will benchmark your hardware compression/decompression speed, this process may take several minutes.", 1075, 0, 41, 372, 10
  CTEXT "In order to ensure the accuracy of test results, we recommend that you close other applications.", 1076, 0, 59, 372, 10

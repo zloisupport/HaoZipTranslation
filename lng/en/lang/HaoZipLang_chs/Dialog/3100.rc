@@ -1,7 +1,7 @@
 3100 DIALOGEX 0, 0, 290, 185, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
 CAPTION "Comment"
-FONT 8, "Segoe UI", 400, FALSE
+FONT 8, "MS Shell Dlg", 400, FALSE
 {
  LTEXT "Com&ment text:", -1, 10, 9, 73, 8
  LTEXT "(Support zip and 7z only)", 3237, 90, 9, 172, 8

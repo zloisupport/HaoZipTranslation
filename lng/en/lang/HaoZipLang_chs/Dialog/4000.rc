@@ -1,7 +1,7 @@
 4000 DIALOGEX 0, 0, 250, 214, 0
 STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
 CAPTION "Advanced"
-FONT 8, "Segoe UI", 0, FALSE
+FONT 8, "MS Shell Dlg", 0, FALSE
 {
  GROUPBOX "Delete", -1, 5, 5, 240, 55
  LTEXT "Files to &delete in the destination folder", -1, 8, 17, 177, 8

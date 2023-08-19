@@ -1,7 +1,7 @@
 4505 DIALOGEX 0, 0, 181, 144, 0
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
 CAPTION "Select Viewer Type"
-FONT 8, "Segoe UI", 0, FALSE
+FONT 8, "MS Shell Dlg", 0, FALSE
 {
  GROUPBOX "Current file information", -1, 4, 5, 173, 62
  ICON "", 4506, 15, 28, 21, 20
