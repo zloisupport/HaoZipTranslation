@@ -93,11 +93,14 @@ def setAssignHaoCD(workdir, res_type, res_path, resourse):
                     f'Restorator.exe -open "{workdir}\HaoZipCD.exe" {RESTORATOR_FILE_BACKUP} -delete {res_type}\{res[:-3]} -assign "{res_path}\{res}" -save -exit')
 
 
-def setAssignHao(workdir, res_path, res):
+def setAssignHao(workdir, res_path, resourse):
+    print(f"""HaoZip.exe
+        Workdir: {workdir}
+        Res: {resourse}""")
     if os.path.exists(f"{workdir}\HaoZip.exe"):
-        for x in res:
-            print(x)
-            subprocess.run(f'Restorator.exe -open "{workdir}\HaoZip.exe" {RESTORATOR_FILE_BACKUP} -assign "{res_path}\{x}" -save -exit')
+        for res in resourse:
+            print(res)
+            subprocess.run(f'Restorator.exe -open "{workdir}\HaoZip.exe" {RESTORATOR_FILE_BACKUP} -assign "{res_path}\{res}" -save -exit')
 
 
 def getFiles(res_path):

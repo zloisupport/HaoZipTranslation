@@ -56,7 +56,7 @@ def changePe(workDir=None,lang=None,arch=None):
 	productVersion = "6.4.0.11152"
 	fileVersion = "6.4.0.11152"
 	companyName = "HaoZip"
-	legalCopyright = "HaoZip(c) 2023 2345.com"
+	legalCopyright = "HaoZip(c) 2023 haozip.2345.com"
 
 	subprocess.run(f'Restorator.exe -open {workDir}\\{lang}\\HaoZipLang_chs.dll -nobackup \
 			-verSetString Comments "HaoZipLang_chs {lang}"\
