@@ -1,8 +1,58 @@
-﻿23441, "2345 ace browser"
+﻿---------------------APP--------------------------------------------------------
+23441, "2345 ace browser"
 23229, "HaoZip Image Viewer\tAlt+J"
 20867, 20867, "&Check for New Version\tAlt+U"
 Dialog
 2091
+2211 //Disable associated model window
 2163
 23118
 23201
+
+
+
+
+
+---------------------SKIN--------------------------------------------------------
+Removing or off the elements in the skine
+Find the paths of the below Guid- $ n and remove or defend.
+Note: and for this, the software may not be launched if the element is removed for the skin. For some elements, you can put the Visible = "0" parameter.
+
+Удаление или выкл элементов в скине
+находи по путям указаным ниже Guid-$N и удаляем или закоментируем.
+Примечание: И за этого ПО может не запускаться если удалили важны элемент для скина.Для некоторых элементов можно поставить параметр Visible="0".
+
+
+"HaoZip.dui":{
+	"objects.xml":{
+				//Feedback button disabe click
+				//Don't delete Add pararm Visible="0"
+				GuidC5A4000F78C74CA1807ABC928B81F89E
+	}
+}
+
+"HaoZip.skn":{
+			"prop.xml":{ 
+							  ///-Tools
+							GuidEB2B22618B02431CB5ABB91E8810A2B5
+							}
+			
+			"shareres.xml ":{	
+								//Feedback button
+								Guid5C902A3A7CAB426D817BDF383950740E{
+										GuidB09EDA583ED34369975FF95D7C083006
+										GuidA74E376AFADC451E944291C3069D4F76
+										GuidEC58428C63EC4915970B95F9E4D0045F
+										Guid19E55E70F40845BC8237D0060D22392A
+										Guid133574F7A1C64C1CAAD7CD0AB6BF5C95	
+									}
+			
+									//MenuTools-button
+									Guid7F3724693C7B4439A2E3E11665770C76  {
+										Guid3D321ABCCC324E29AE51BD0809009699
+										Guid89AB1C9D61C443B590710EDB4C4C1BE3
+										GuidE3524F4B2F504873A0B092181F32A0F0
+										Guid624BD99080044917B4F60BBFF6A7D538
+									}
+			}
+}
