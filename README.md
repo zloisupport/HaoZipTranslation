@@ -7,7 +7,7 @@ HaoZip translation language files
  
 You need install by editing in from the files
 
-    Restools(2018)
+    Restorator 2018 (alternative: Resource Hacker,Resource Tuner ...)
     
     Python 3.10*
     
@@ -19,7 +19,7 @@ You need install by editing in from the files
 
 # Edit & Build
 ### HaoZipLang_chs.dll
-Open `HaoZipLang_chs.dll` in **Restools** 
+Open `HaoZipLang_chs.dll` in **Restorator 2018** 
     
    Select one files from 232,261,262,263  `PNG` category click context menu Assign->Auto assign... ->Browse select this repository `HaoZipTranslation/lng/en/lang/HaoZipLang_chs/PNG` select the desired file.
     
