@@ -1,0 +1,16 @@
+3262 DIALOGEX 0, 0, 263, 192, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Виправлення списку фільтрованих файлів"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ DEFPUSHBUTTON "&ОК", 1, 77, 171, 50, 14
+ PUSHBUTTON "В&ідмова", 2, 136, 171, 50, 14
+ PUSHBUTTON "Дод&ати", 3300, 206, 17, 50, 14
+ PUSHBUTTON "З&мінити", 3279, 206, 37, 50, 14
+ PUSHBUTTON "В&идалити", 3277, 206, 57, 50, 14
+ PUSHBUTTON "О&чистити", 3278, 206, 77, 50, 14
+ PUSHBUTTON "&Скинути", 3302, 206, 97, 50, 14
+ CTEXT "Всього створено 0", 3308, 206, 115, 50, 17
+ LTEXT "Фільтровані файли (по типу):", 65535, 7, 7, 101, 8
+ CONTROL "", 2120, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000080D, 7, 17, 194, 150
+}

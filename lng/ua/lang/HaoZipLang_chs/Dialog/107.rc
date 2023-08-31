@@ -1,0 +1,26 @@
+107 DIALOGEX 0, 0, 354, 286, 0
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Властивості"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ GROUPBOX "Зміст", 65535, 4, 4, 346, 179
+ LTEXT "&Знайти: (старі символи, які будуть замінені)", 1051, 11, 15, 155, 8
+ EDITTEXT 1053, 22, 26, 257, 59, ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+ PUSHBUTTON "&Історія", 1054, 286, 25, 58, 14
+ LTEXT "З&амінити на: (нові символи)", 1052, 11, 92, 129, 8
+ EDITTEXT 1070, 22, 103, 257, 59, ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+ PUSHBUTTON "І&сторія", 1055, 286, 110, 58, 14
+ AUTOCHECKBOX "&Враховувати регістр", 1056, 53, 167, 98, 10
+ AUTOCHECKBOX "&Шукати тільки слова повністю", 1057, 162, 167, 115, 10
+ GROUPBOX "Файли", 65535, 4, 186, 346, 96
+ LTEXT "&Тип файлу", 65535, 11, 198, 45, 8
+ COMBOBOX 1059, 60, 198, 232, 30, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL
+ PUSHBUTTON "&Огляд...", 1064, 296, 197, 50, 14
+ LTEXT "&Папка", 65535, 11, 217, 45, 8
+ COMBOBOX 1060, 60, 214, 232, 30, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL
+ PUSHBUTTON "&Огляд...", 1065, 296, 214, 50, 14
+ AUTOCHECKBOX "Вк&лючаючи підкаталоги", 1058, 49, 232, 136, 10
+ AUTOCHECKBOX "В&ключаючи файли в архіві, підтримуються тільки Zip/7z/Tar ", 1061, 49, 248, 216, 10
+ AUTOCHECKBOX "&Резервна копія файлів", 1062, 49, 264, 91, 10
+ PUSHBUTTON "Шл&ях збереження", 1063, 144, 262, 73, 14
+}

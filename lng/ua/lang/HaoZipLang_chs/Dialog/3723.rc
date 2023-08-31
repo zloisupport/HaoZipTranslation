@@ -1,0 +1,10 @@
+3723 DIALOGEX 0, 0, 283, 73, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Підтвердження поділу на томи"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ DEFPUSHBUTTON "ОК", 1, 77, 52, 50, 14
+ PUSHBUTTON "Відмова", 2, 149, 52, 50, 14
+ LTEXT "Статичний", 3272, 13, 4, 261, 32
+ AUTOCHECKBOX "Check1", 3740, 13, 41, 187, 11
+}

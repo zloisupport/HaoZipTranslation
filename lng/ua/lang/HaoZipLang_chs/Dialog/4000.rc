@@ -1,0 +1,14 @@
+4000 DIALOGEX 0, 0, 250, 214, 0
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Додатково"
+FONT 8, "MS Shell Dlg", 0, FALSE
+{
+ GROUPBOX "Видалення", 65535, 5, 5, 240, 55
+ LTEXT "&Файли, що видаляються у папці призначення:", 65535, 8, 17, 177, 8
+ EDITTEXT 4027, 8, 28, 234, 14, ES_AUTOHSCROLL
+ GROUPBOX "Ярлики", 65535, 5, 66, 240, 143
+ PUSHBUTTON "&Додати ярлик...", 4029, 160, 192, 82, 14
+ EDITTEXT 4028, 8, 78, 234, 109, ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+ AUTOCHECKBOX "&Запит адміністративного доступу", 4057, 15, 194, 134, 10
+ AUTOCHECKBOX "&Видалити вихідний архів після розпакування", 4058, 15, 46, 222, 10
+}

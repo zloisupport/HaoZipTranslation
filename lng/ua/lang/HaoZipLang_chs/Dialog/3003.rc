@@ -1,0 +1,15 @@
+3003 DIALOGEX 0, 0, 186, 105, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Введення пароля"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ LTEXT "Ім'я файлу", 3130, 16, 24, 153, 8, SS_ENDELLIPSIS | SS_PATHELLIPSIS
+ EDITTEXT 3113, 14, 42, 157, 14, ES_PASSWORD | ES_AUTOHSCROLL | WS_GROUP
+ AUTOCHECKBOX "В&ідображати пароль при введенні", 3839, 14, 60, 125, 10
+ AUTOCHECKBOX "&Застосувати до всіх зашифрованих файлів", 3840, 14, 72, 155, 10
+ DEFPUSHBUTTON "&ОК", 1, 9, 84, 50, 14
+ PUSHBUTTON "&Пропустити", 3841, 65, 84, 50, 14
+ PUSHBUTTON "В&ідмова", 2, 123, 84, 50, 14
+ GROUPBOX "Введіть пароль для зашифрованого файлу:", 65535, 5, 5, 176, 95
+ LTEXT "", 65535, 165, 61, 8, 8
+}

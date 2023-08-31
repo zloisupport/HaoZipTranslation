@@ -1,0 +1,12 @@
+3045 DIALOGEX 0, 0, 351, 66, 0
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ PUSHBUTTON "", 3056, 10, 20, 20, 20
+ LTEXT "Відомості про систему: ", 3058, 43, 7, 128, 8
+ CONTROL "Операційна система: ", 3046, "STATIC", SS_LEFTNOWORDWRAP, 52, 21, 288, 8
+ CONTROL "Об'єм пам'яті: ", 3047, "STATIC", SS_LEFTNOWORDWRAP, 52, 31, 288, 8
+ CONTROL "Процесор: ", 3048, "STATIC", SS_LEFTNOWORDWRAP, 52, 41, 290, 8
+ CONTROL "Жорсткий диск: ", 3049, "STATIC", SS_LEFTNOWORDWRAP, 52, 51, 169, 8
+ LTEXT "Змінити еталонні параметри", 3050, 229, 51, 115, 8
+}

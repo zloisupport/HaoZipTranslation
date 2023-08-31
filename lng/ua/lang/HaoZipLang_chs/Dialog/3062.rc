@@ -1,0 +1,8 @@
+3062 DIALOGEX 0, 0, 243, 64, 0
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUPWINDOW | WS_CAPTION
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ DEFPUSHBUTTON "Ні", 1147, 185, 40, 33, 16
+ PUSHBUTTON "Так", 1145, 147, 40, 33, 16
+ LTEXT "Ви не зможе скасувати перехід між зображеннями в архіві, і втратите функцію пакетної обробки зображень. Хочете відмовитися?", 1146, 21, 4, 204, 35
+}

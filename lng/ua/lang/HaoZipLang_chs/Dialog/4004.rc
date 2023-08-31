@@ -1,0 +1,12 @@
+4004 DIALOGEX 0, 0, 250, 214, 0
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Модуль"
+FONT 8, "MS Shell Dlg", 0, FALSE
+{
+ LTEXT "Вибір модуля SFX:", 65535, 5, 5, 132, 8
+ CONTROL "", 4026, "SysListView32", WS_BORDER | WS_TABSTOP | 0x0000080D, 5, 16, 240, 137
+ PUSHBUTTON "&Огляд...", 4048, 195, 159, 50, 14
+ LTEXT "&Вкажіть шлях для збереження SFX-архіву:", 4055, 5, 164, 135, 8
+ COMBOBOX 4054, 5, 175, 240, 46, CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL
+ PUSHBUTTON "&Зберегти поточні параметри як стандартні", 4034, 5, 195, 158, 14
+}

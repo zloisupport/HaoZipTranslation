@@ -1,0 +1,18 @@
+3107 DIALOGEX 0, 0, 277, 74, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Сканування архівів..."
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ GROUPBOX "Стан", 65535, 5, 5, 267, 44
+ LTEXT "Сканується:", 65535, 11, 20, 43, 8
+ CONTROL "Пошук файлу", 3229, "STATIC", SS_LEFTNOWORDWRAP | SS_ENDELLIPSIS | SS_PATHELLIPSIS, 69, 21, 187, 8
+ LTEXT "Папок:", 65535, 11, 35, 49, 8
+ LTEXT "0", 3230, 65, 35, 26, 8
+ LTEXT "Файлів:", 65535, 94, 35, 49, 8
+ LTEXT "0", 3231, 145, 35, 36, 8
+ LTEXT "Архівів:", 65535, 185, 35, 49, 8
+ LTEXT "0", 3232, 240, 35, 28, 8
+ PUSHBUTTON "&Фоново", 3227, 39, 55, 59, 14
+ PUSHBUTTON "&Пауза", 3228, 105, 55, 58, 14
+ PUSHBUTTON "В&ідмова", 2, 171, 55, 58, 14
+}

@@ -1,0 +1,27 @@
+31008 MENU
+{
+ POPUP "1"
+ {
+  MENUITEM "Вирізати\tCtrl+X", -7901
+  MENUITEM "Копіювати\tCtrl+C", -7902
+  MENUITEM "Вставити\tCtrl+V", -7899
+  MENUITEM SEPARATOR
+  MENUITEM "Шрифт...", -7840
+  MENUITEM SEPARATOR
+  MENUITEM "Напівжирний", 31043
+  MENUITEM "Курсив", 31042
+  MENUITEM "Підкреслення", 31044
+  MENUITEM SEPARATOR
+  MENUITEM "Кольори тексту", 31045
+  MENUITEM "Кольори виділення тексту", 31050
+  MENUITEM SEPARATOR
+  MENUITEM "Закрити", -7934
+ }
+ POPUP "2"
+ {
+  MENUITEM "Вставити в позицію курсору", 31056
+  MENUITEM "Завантажити у нове зображення", 31057
+  MENUITEM SEPARATOR
+  MENUITEM "Скасування перетягування файлу", 31058
+ }
+}

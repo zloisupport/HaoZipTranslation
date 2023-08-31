@@ -1,0 +1,12 @@
+207 DIALOGEX 0, 0, 261, 74, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Шлях для збереження резервних копій"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ DEFPUSHBUTTON "&ОК", 1, 73, 56, 50, 14
+ PUSHBUTTON "В&ідмова", 2, 139, 56, 50, 14
+ AUTORADIOBUTTON "&Створити резервні копії у вихідній папці (.bak)", 1060, 6, 6, 197, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "С&творити резервні копії в наступній папці:", 1061, 6, 20, 174, 10, NOT WS_TABSTOP
+ EDITTEXT 1035, 16, 33, 187, 14, ES_AUTOHSCROLL
+ DEFPUSHBUTTON "&Огляд...", 1063, 207, 33, 50, 14
+}

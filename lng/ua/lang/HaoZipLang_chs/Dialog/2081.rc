@@ -1,0 +1,18 @@
+2081 DIALOGEX 0, 0, 275, 195, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+CAPTION "Про програму HaoZip"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ DEFPUSHBUTTON "&Перевірити оновлення", 1, 100, 174, 97, 14
+ PUSHBUTTON "&ОК", 2, 202, 174, 60, 14
+ CTEXT "Архіватор HaoZip", 2087, 33, 62, 210, 8
+ LTEXT "Веб-сайт:", 65535, 80, 82, 31, 8
+ LTEXT "http://haozip.2345.com/Eng/index_en.htm", 2083, 116, 82, 143, 8
+ LTEXT "Написати авторам:", 65535, 49, 99, 67, 8
+ LTEXT "haozip@gmail.com", 2084, 116, 99, 107, 8
+ LTEXT "Форум підтримки:", 65535, 51, 116, 65, 8
+ LTEXT "Клацніть тут, щоб ввести повідомлення", 2085, 116, 116, 141, 8
+ CTEXT "Авторські права", 2086, 33, 151, 210, 8
+ CONTROL 2082, 65535, "STATIC", SS_BITMAP, 0, 0, 275, 48
+ CTEXT "Рядок", 2130, 14, 134, 248, 8
+}

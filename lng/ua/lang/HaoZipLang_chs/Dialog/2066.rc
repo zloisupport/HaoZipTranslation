@@ -1,0 +1,24 @@
+2066 DIALOGEX 0, 0, 300, 195, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+CAPTION "Система"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ GROUPBOX "Папка для тимчасових файлів", 65535, 5, 5, 290, 59
+ AUTORADIOBUTTON "&Системна тимчасова папка", 2067, 13, 16, 136, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "&Зазначена папка", 2069, 13, 31, 72, 10, NOT WS_TABSTOP
+ EDITTEXT 2070, 89, 29, 143, 14, ES_AUTOHSCROLL
+ PUSHBUTTON "&Огляд...", 2071, 238, 29, 50, 14
+ AUTOCHECKBOX "&Використовувати тільки для з'ємних дисків", 2072, 13, 46, 165, 10
+ GROUPBOX "Пап&ка запуску", 65535, 5, 69, 290, 47
+ AUTORADIOBUTTON "&При запуску переходити в останню робочу папку", 2041, 13, 82, 184, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "Заз&начена папка", 2146, 13, 98, 73, 10, NOT WS_TABSTOP
+ EDITTEXT 2131, 89, 96, 143, 14, ES_AUTOHSCROLL
+ PUSHBUTTON "&Огляд...", 2132, 238, 96, 50, 14
+ GROUPBOX "Не підраховувати MD5 для файлів розміром більше", 65535, 5, 122, 290, 31
+ AUTORADIOBUTTON "За&боронити", 2152, 14, 135, 79, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "З&азначений розмір", 2134, 71, 135, 76, 10, NOT WS_TABSTOP
+ LTEXT "&Мбайт", 65535, 200, 135, 25, 8
+ EDITTEXT 2116, 155, 132, 40, 14, ES_AUTOHSCROLL | ES_NUMBER
+ GROUPBOX "Звук", 65535, 5, 159, 290, 31
+ AUTOCHECKBOX "Увімкнути звуки", 2073, 13, 172, 205, 10
+}

@@ -1,0 +1,23 @@
+2214 DIALOGEX 0, 0, 280, 232, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+CAPTION "&Пошук"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ GROUPBOX "Що шукати", 21020, 6, 6, 270, 60
+ LTEXT "Ім'я файлу чи папки", 21021, 18, 18, 150, 8
+ COMBOBOX 23115, 18, 30, 246, 90, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL
+ AUTOCHECKBOX "В&раховуючи регістр", 21024, 18, 48, 82, 10
+ AUTOCHECKBOX "Точна відповідність імені файлу", 21025, 126, 48, 117, 10
+ GROUPBOX "Де шукати", 21026, 6, 72, 270, 60
+ LTEXT "Папка чи архів", 21027, 18, 84, 81, 8
+ EDITTEXT 23008, 18, 96, 180, 12, ES_AUTOHSCROLL
+ PUSHBUTTON "Огляд", 21028, 204, 96, 60, 14
+ AUTOCHECKBOX "Пошук в підпапках", 21031, 18, 114, 99, 10
+ GROUPBOX "Пошук в архіві", 21032, 6, 138, 270, 66
+ AUTOCHECKBOX "Шукати в архівах наступного типу", 21033, 18, 150, 179, 10
+ LTEXT "&Тип архіву", 21034, 30, 168, 45, 8
+ COMBOBOX 23116, 96, 168, 168, 70, CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL
+ AUTOCHECKBOX "Пропускати зашифровані архіви", 21037, 18, 186, 174, 10
+ DEFPUSHBUTTON "&Пошук", 1, 132, 210, 67, 14
+ PUSHBUTTON "&Відмова", 2, 204, 210, 67, 14
+}

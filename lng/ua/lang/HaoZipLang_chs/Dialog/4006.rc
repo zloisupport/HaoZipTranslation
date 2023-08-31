@@ -1,0 +1,23 @@
+4006 DIALOGEX 0, 0, 187, 209, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Додавання ярлика"
+FONT 8, "MS Shell Dlg", 0, FALSE
+{
+ AUTORADIOBUTTON "&На Робочому столі", 4037, 15, 18, 135, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "&У меню 'Пуск'", 4038, 15, 29, 135, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "У &меню 'Пуск/Програми'", 4039, 15, 40, 135, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "У &папці 'Автозавантаження'", 4040, 15, 51, 135, 10, NOT WS_TABSTOP
+ LTEXT "&Ім'я файлу, для якого буде створено ярлик:", 65535, 13, 80, 157, 8
+ EDITTEXT 4036, 9, 89, 170, 14, ES_AUTOHSCROLL
+ LTEXT "П&апка, в яку буде поміщено ярлик:", 65535, 13, 106, 157, 8
+ EDITTEXT 4041, 9, 115, 170, 14, ES_AUTOHSCROLL
+ LTEXT "Оп&ис ярлика:", 65535, 13, 132, 157, 8
+ EDITTEXT 4043, 9, 141, 170, 14, ES_AUTOHSCROLL
+ LTEXT "Ім'&я ярлика (файлу .lnk):", 65535, 13, 158, 157, 8
+ EDITTEXT 4044, 9, 167, 170, 14, ES_AUTOHSCROLL
+ PUSHBUTTON "&ОК", 1, 13, 190, 50, 14
+ PUSHBUTTON "В&ідмова", 2, 69, 190, 50, 14
+ PUSHBUTTON "&Допомога", 9, 125, 190, 50, 14
+ GROUPBOX "Місце створення ярлика", 65535, 5, 5, 177, 60
+ GROUPBOX "Параметри ярлика", 65535, 5, 69, 177, 117
+}

@@ -1,0 +1,12 @@
+5001 DIALOGEX 0, 0, 226, 90, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Вибір кодування"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ DEFPUSHBUTTON "&ОК", 1, 57, 71, 50, 14
+ PUSHBUTTON "В&ідмова", 2, 117, 71, 50, 14
+ LTEXT "&Підтримувані системою кодування:", 65535, 7, 6, 153, 8
+ COMBOBOX 5402, 5, 17, 216, 195, CBS_DROPDOWNLIST | WS_VSCROLL
+ AUTOCHECKBOX "&Застосувати тільки для читання архівів", 5404, 20, 39, 185, 10
+ AUTOCHECKBOX "З&робити кодуванням HaoZip по замовчуванню", 5405, 20, 52, 185, 10
+}

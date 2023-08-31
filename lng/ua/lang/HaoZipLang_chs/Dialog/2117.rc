@@ -1,0 +1,23 @@
+2117 DIALOGEX 0, 0, 267, 200, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Параметри профілю"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ DEFPUSHBUTTON "&ОК", 1, 52, 181, 50, 14
+ PUSHBUTTON "В&ідмова", 2, 108, 181, 50, 14
+ PUSHBUTTON "&Допомога", 9, 164, 181, 50, 14
+ LTEXT "&Ім'я профілю:", 65535, 8, 5, 143, 8
+ EDITTEXT 3275, 5, 16, 258, 14, ES_AUTOHSCROLL
+ AUTOCHECKBOX "Зберегти ім'я &архіву (включаючи шлях)", 2122, 8, 38, 143, 10
+ EDITTEXT 2123, 5, 51, 243, 14, ES_AUTOHSCROLL
+ PUSHBUTTON "6", 3715, 251, 51, 12, 14
+ PUSHBUTTON "&Огляд...", 3313, 213, 35, 50, 14
+ AUTOCHECKBOX "&Зберегти імена виділених файлів", 2124, 8, 73, 143, 10
+ GROUPBOX "Параметри", 65535, 5, 108, 258, 68
+ AUTOCHECKBOX "З&берегти як профіль по замовчуванню", 2127, 20, 120, 193, 10
+ AUTOCHECKBOX "&Створити ярлик на Робочому столі", 2128, 20, 148, 193, 10
+ AUTOCHECKBOX "&Негайне виконання", 2129, 20, 134, 193, 10
+ AUTOCHECKBOX "Дода&ти в контекстне меню", 2130, 20, 162, 193, 10
+ EDITTEXT 3340, 5, 86, 258, 14, ES_AUTOHSCROLL
+ PUSHBUTTON "З&мінити", 3341, 213, 70, 50, 14
+}

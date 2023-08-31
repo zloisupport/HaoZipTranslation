@@ -1,0 +1,9 @@
+211 DIALOGEX 0, 0, 250, 95, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Діалог"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ LTEXT "Статичний", 1121, 7, 15, 236, 28
+ CONTROL "", 1122, "msctls_progress32", WS_BORDER, 7, 52, 236, 11
+ PUSHBUTTON "Відмова", 2, 100, 73, 52, 15
+}

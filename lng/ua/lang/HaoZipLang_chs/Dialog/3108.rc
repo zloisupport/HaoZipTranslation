@@ -1,0 +1,19 @@
+3108 DIALOGEX 0, 0, 261, 133, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Підтвердження заміни файлу"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ PUSHBUTTON "&Так", 3210, 14, 95, 50, 14
+ PUSHBUTTON "Т&ак для всіх", 3211, 67, 95, 50, 14
+ PUSHBUTTON "&Перейменувати", 3212, 119, 95, 58, 14
+ PUSHBUTTON "П&ерейменувати всі", 3213, 179, 95, 72, 14
+ PUSHBUTTON "&Ні", 3214, 14, 111, 50, 14
+ PUSHBUTTON "Н&і для всіх", 3215, 67, 111, 50, 14
+ PUSHBUTTON "В&ідмова", 2, 119, 111, 57, 14
+ PUSHBUTTON "&Допомога", 3216, 179, 111, 72, 14
+ LTEXT "Файл вже існує", 65535, 5, 8, 102, 8
+ LTEXT "", 3234, 19, 23, 232, 8, SS_ENDELLIPSIS | SS_PATHELLIPSIS
+ ICON "", 3235, 23, 40, 21, 20
+ LTEXT "0 байт\n\nзмінено: 2009-02-09", 3220, 54, 40, 189, 27
+ LTEXT "Перезаписати існуючий файл?", 65535, 34, 79, 160, 8
+}

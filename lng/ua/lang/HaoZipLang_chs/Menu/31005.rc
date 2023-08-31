@@ -1,0 +1,81 @@
+31005 MENU
+{
+ POPUP "Файл"
+ {
+  MENUITEM "Новий\tCtrl+N", -7936, MENUBREAK
+  MENUITEM "Відкрити..\tCtrl+O", -7935
+  MENUITEM "Закрити", -7934
+  MENUITEM SEPARATOR
+  MENUITEM "Зберегти\tCtrl+S", -7933
+  MENUITEM "Зберегти як...", -7932
+  MENUITEM SEPARATOR
+  MENUITEM "Друк...\tCtrl+P", -7929
+  MENUITEM "Попередній перегляд друку", -7927
+  MENUITEM "Налаштування друку...", -7930
+  MENUITEM SEPARATOR
+  POPUP "Недавн&і файли"
+  {
+   MENUITEM "(Порожній)", -7920, GRAYED
+  }
+  MENUITEM SEPARATOR
+  MENUITEM "Вихід", -7871
+ }
+ POPUP "Правка"
+ {
+  MENUITEM "Скасувати\tCtrl+Z", -7893
+  MENUITEM "Повернути\tCtrl+Y", -7892
+  MENUITEM SEPARATOR
+  MENUITEM "Вирізати\tCtrl+X", -7901
+  MENUITEM "Копіювати\tCtrl+C", -7902
+  MENUITEM "Вставити\tCtrl+V", -7899
+  MENUITEM "Видалити\tDel", -7904
+  MENUITEM SEPARATOR
+  MENUITEM "Вибрати всі\tCtrl+A", -7894
+  MENUITEM SEPARATOR
+  MENUITEM "Знайти...\tCtrl+F", -7900
+  MENUITEM "Знайти далі\tF3", -7896
+  MENUITEM "Замінити...\tCtrl+H", -7895
+ }
+ POPUP "Вигляд"
+ {
+  MENUITEM "Панель інструментів: стандартна", -6144
+  MENUITEM "Панелі форматування", 31053
+  MENUITEM SEPARATOR
+  MENUITEM "Рядок стану", -6143
+ }
+ POPUP "Формат"
+ {
+  MENUITEM "Шрифт...", -7840
+  POPUP "Ефекти"
+  {
+   MENUITEM "Напівжирний\tCtrl+B", 31043
+   MENUITEM "Курсив\tCtrl+I", 31042
+   MENUITEM "Підкреслення\tCtrl+U", 31044
+  }
+  POPUP "Вирівнювання"
+  {
+   MENUITEM "Вирівнювання вліво", 31047
+   MENUITEM "Вирівняти по центру", 31051
+   MENUITEM "Вирівнювання вправо", 31049
+  }
+  MENUITEM SEPARATOR
+  MENUITEM "Кольори тексту...\tCtrk+K", 31045
+  MENUITEM "Кольори підсвічування тексту...", 31050
+  MENUITEM "Кольори фону...", 31046
+  MENUITEM SEPARATOR
+  MENUITEM "Автоперенесення", 31054
+  POPUP "Кодування"
+  {
+   MENUITEM "Автовибір", 31073
+   MENUITEM SEPARATOR
+   MENUITEM "Китайська спрощена(GB2312)", 31075
+   MENUITEM "Юнікод", 31078
+   MENUITEM "Unicode Big Endian", 31077
+   MENUITEM "UTF-8", 31079
+  }
+ }
+ POPUP "Інструменти"
+ {
+  MENUITEM "Опції...", 31055
+ }
+}

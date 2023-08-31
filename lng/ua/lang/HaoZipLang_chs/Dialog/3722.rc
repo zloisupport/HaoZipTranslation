@@ -1,0 +1,17 @@
+3722 DIALOGEX 0, 0, 246, 228, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+CAPTION "Введення пароля"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ GROUPBOX "Зміна пароля", 65535, 5, 7, 236, 188
+ AUTORADIOBUTTON "&Не змінювати пароль", 3723, 15, 22, 220, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "В&идалити поточний пароль", 3724, 15, 37, 220, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "&Змінити поточний пароль", 3725, 15, 52, 220, 10, NOT WS_TABSTOP
+ EDITTEXT 3084, 30, 69, 169, 14, ES_PASSWORD | ES_AUTOHSCROLL | WS_DISABLED
+ LTEXT "Вв&едіть пароль ще раз (для перевірки)", 3126, 30, 89, 168, 8
+ EDITTEXT 3085, 30, 100, 169, 14, ES_PASSWORD | ES_AUTOHSCROLL | WS_DISABLED
+ AUTOCHECKBOX "В&ідображати пароль при введенні", 3086, 30, 119, 74, 10, WS_DISABLED
+ AUTOCHECKBOX "&Шифрувати імена файлів", 3083, 30, 134, 169, 10, WS_DISABLED
+ LTEXT "*Для можливості зміни зашифрованих архівів необхідно ввести  поточний пароль!", 65535, 5, 205, 235, 18
+ LTEXT "", 3127, 95, 121, 106, 8
+}

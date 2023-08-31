@@ -1,0 +1,18 @@
+2216 DIALOGEX 0, 0, 267, 179, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Додатково..."
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ AUTOCHECKBOX "Попередження про підозрілі файли", 2165, 26, 128, 130, 9
+ GROUPBOX "Відкривати архів для автоматичного сканування файлів", 65535, 10, 69, 245, 52
+ EDITTEXT 2179, 67, 83, 23, 13, ES_NUMBER
+ LTEXT "МБ, автосканування", 2209, 94, 85, 76, 10
+ AUTORADIOBUTTON "Не сканувати автоматично", 2177, 26, 102, 131, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "Менше", 2178, 26, 84, 39, 10, NOT WS_TABSTOP
+ GROUPBOX "Діапазон сканування", 65535, 10, 6, 245, 57
+ AUTORADIOBUTTON "Всі документи", 2220, 26, 19, 183, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "Пропукати архіви", 2221, 26, 32, 183, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Пропускати архіви з паролем", 2222, 26, 46, 183, 10, NOT WS_TABSTOP
+ PUSHBUTTON "&Відмова", 2, 153, 156, 50, 14
+ PUSHBUTTON "&OK", 1, 76, 156, 50, 14
+}

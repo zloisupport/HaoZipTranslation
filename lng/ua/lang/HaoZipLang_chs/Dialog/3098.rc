@@ -1,0 +1,35 @@
+3098 DIALOGEX 0, 0, 246, 228, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_VISIBLE | WS_CAPTION
+CAPTION "Інформація"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ CONTROL "", 3020, "STATIC", SS_BLACKFRAME, 5, 14, 55, 209
+ CTEXT "Архів HaoZip", 3247, 79, 7, 153, 9
+ GROUPBOX "", 65535, 65, 16, 176, 32
+ LTEXT "Версія:", 65535, 72, 24, 82, 8
+ LTEXT "Базова ФС:", 65535, 72, 36, 82, 8
+ GROUPBOX "", 65535, 65, 47, 176, 50
+ LTEXT "Файлів:", 65535, 72, 55, 43, 8
+ LTEXT "Загальний розмір:", 65535, 72, 65, 63, 8
+ LTEXT "Розмір в архіві:", 65535, 72, 75, 52, 8
+ LTEXT "Ступінь стискання:", 65535, 72, 85, 64, 8
+ GROUPBOX "", 65535, 65, 96, 176, 42
+ LTEXT "Розмір SFX-модуля:", 65535, 72, 105, 68, 8
+ LTEXT "Головний коментар:", 65535, 72, 116, 69, 8
+ LTEXT "Пароль:", 65535, 72, 127, 57, 8
+ CONTROL "1.0", 3042, "STATIC", SS_LEFTNOWORDWRAP, 171, 24, 65, 8, WS_EX_RIGHT
+ LTEXT "Невідомо", 3017, 167, 36, 70, 8, 0, WS_EX_RIGHT
+ LTEXT "Невідомо", 3016, 117, 55, 120, 8, 0, WS_EX_RIGHT
+ LTEXT "Невідомо", 3039, 141, 65, 96, 8, 0, WS_EX_RIGHT
+ LTEXT "Невідомо", 3018, 132, 75, 105, 8, 0, WS_EX_RIGHT
+ LTEXT "Невідомо", 3021, 143, 85, 93, 8, 0, WS_EX_RIGHT
+ LTEXT "0 байт", 3022, 141, 105, 96, 8, 0, WS_EX_RIGHT
+ LTEXT "Ні", 3014, 141, 116, 96, 8, 0, WS_EX_RIGHT
+ LTEXT "Ні", 3019, 141, 127, 96, 8, 0, WS_EX_RIGHT
+ GROUPBOX "Контрольна сума файлу (MD5)", 65535, 65, 141, 176, 30
+ EDITTEXT 3041, 72, 153, 144, 12, ES_READONLY | NOT WS_BORDER
+ EDITTEXT 3043, 72, 181, 105, 12, ES_READONLY | NOT WS_BORDER
+ PUSHBUTTON "&Підрахувати", 3703, 182, 180, 59, 14
+ AUTOCHECKBOX "&Видалити SFX-модуль", 3714, 72, 201, 105, 10, WS_DISABLED
+ PUSHBUTTON "&Розпакувати...", 3015, 182, 201, 59, 14
+}

@@ -1,0 +1,21 @@
+3334 DIALOGEX 0, 0, 290, 185, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUPWINDOW | WS_CAPTION
+CAPTION "Файли"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ LTEXT "&Файли, що додаються:", 65535, 5, 7, 110, 8
+ EDITTEXT 3340, 5, 18, 222, 14, ES_AUTOHSCROLL
+ PUSHBUTTON "Дод&ати", 3341, 235, 18, 50, 14
+ LTEXT "Фа&йли виключені із обробки:", 65535, 5, 36, 161, 8
+ EDITTEXT 3336, 5, 47, 222, 14, ES_AUTOHSCROLL
+ PUSHBUTTON "&Додати", 3337, 235, 47, 50, 14
+ LTEXT "Файли, що додаються в архів без стискання:", 65535, 5, 65, 176, 8
+ EDITTEXT 3338, 5, 76, 222, 14, ES_AUTOHSCROLL
+ PUSHBUTTON "Д&одати", 3339, 235, 76, 50, 14
+ GROUPBOX "Шляхи файлів", 65535, 5, 111, 280, 69, WS_GROUP
+ AUTORADIOBUTTON "Зб&ерігати відносні шляхи", 3112, 18, 123, 187, 10, WS_GROUP
+ AUTORADIOBUTTON "&Зберігати абсолютні шляхи", 3069, 18, 136, 187, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "&Не зберігати шляхи", 3072, 18, 149, 187, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "З&берігати повні шляхи, включаючи букву диска", 3071, 18, 162, 187, 10, NOT WS_TABSTOP
+ LTEXT "(Всі три види списків підтримують шаблони: * та ?)", 65535, 5, 94, 214, 8
+}

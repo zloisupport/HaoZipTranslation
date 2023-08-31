@@ -1,0 +1,11 @@
+216 DIALOGEX 0, 0, 255, 87, 0
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Діалог"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ CTEXT "...", 1146, 7, 8, 243, 13
+ CONTROL "", 1122, "msctls_progress32", WS_BORDER, 12, 44, 230, 16
+ PUSHBUTTON "Згорнути в трей", 1145, 89, 66, 79, 15
+ CTEXT "...", 1148, 96, 29, 65, 8
+ CTEXT "...", 1149, 41, 27, 175, 13
+}

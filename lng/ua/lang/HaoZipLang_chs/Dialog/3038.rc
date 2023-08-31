@@ -1,0 +1,26 @@
+3038 DIALOGEX 0, 0, 195, 208, 0
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ LTEXT "Назва правила:", 65535, 7, 9, 59, 10
+ EDITTEXT 3023, 7, 22, 168, 14, ES_AUTOHSCROLL
+ LTEXT "Використайте * для вставки імені вихідного файлу", 65535, 7, 45, 176, 10
+ LTEXT "Використайте # для введення цифри або літери", 65535, 7, 58, 185, 10
+ LTEXT "Почати з", 65535, 5, 77, 56, 8
+ EDITTEXT 3024, 64, 74, 40, 14, ES_AUTOHSCROLL | ES_NUMBER
+ CONTROL "", 1011, "msctls_updown32", 0x00000030, 105, 74, 10, 14
+ LTEXT "Крок", 65535, 5, 92, 42, 8
+ EDITTEXT 3025, 64, 89, 40, 14, ES_AUTOHSCROLL | ES_NUMBER
+ CONTROL "", 1013, "msctls_updown32", 0x00000030, 105, 89, 13, 14
+ LTEXT "К-сть цифр", 65535, 5, 108, 56, 8
+ EDITTEXT 3026, 64, 105, 40, 14, ES_AUTOHSCROLL | ES_NUMBER
+ CONTROL "", 3033, "msctls_updown32", 0x00000030, 105, 105, 13, 14
+ AUTOCHECKBOX "&Заповнення нулями", 3027, 7, 125, 52, 16, BS_MULTILINE
+ AUTOCHECKBOX "&Алфавіт", 3028, 95, 127, 45, 15, BS_MULTILINE
+ COMBOBOX 1113, 140, 127, 43, 49, CBS_DROPDOWNLIST | WS_VSCROLL
+ AUTOCHECKBOX "Змінити розширення в", 1114, 7, 146, 87, 10
+ EDITTEXT 1073, 97, 144, 85, 14, ES_AUTOHSCROLL
+ LTEXT "Опції імені файлу", 65535, 7, 163, 65, 10
+ COMBOBOX 1016, 7, 175, 133, 30, CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL
+ AUTOCHECKBOX "Автоматично усувати конфлікти імен", 1017, 7, 193, 166, 11
+}

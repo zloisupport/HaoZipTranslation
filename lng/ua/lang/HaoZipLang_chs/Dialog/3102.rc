@@ -1,0 +1,29 @@
+3102 DIALOGEX 0, 0, 327, 222, 0
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CHILD | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Додатково"
+FONT 8, "MS Shell Dlg", 400, FALSE
+{
+ GROUPBOX "Шляхи файлів", 65535, 5, 8, 157, 63, WS_GROUP
+ AUTORADIOBUTTON "Р&озпакувати з повними шляхами", 3052, 19, 20, 131, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "Роз&пакувати файли без шляхів", 3054, 19, 33, 121, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "&Розпакувати з абсолютними шляхами", 3049, 19, 44, 140, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "Розп&акувати з відносними шляхами", 3055, 19, 56, 133, 10, NOT WS_TABSTOP
+ GROUPBOX "Дата і час файлів", 65535, 166, 8, 156, 63, WS_GROUP
+ AUTOCHECKBOX "В&ідновлювати час зміни", 3271, 182, 19, 121, 11
+ AUTOCHECKBOX "Ві&дновлювати час створення", 3272, 182, 33, 121, 11
+ AUTOCHECKBOX "Віднов&лювати час відкриття", 3273, 182, 47, 121, 11
+ GROUPBOX "Видалення вихідного архіву", 65535, 5, 77, 317, 56, WS_GROUP
+ AUTORADIOBUTTON "&Не видаляти", 3053, 19, 90, 141, 10, WS_GROUP | NOT WS_TABSTOP
+ AUTORADIOBUTTON "&Запит підтвердження", 3051, 19, 102, 141, 10, NOT WS_TABSTOP
+ AUTORADIOBUTTON "&Видаляти завжди", 3050, 19, 114, 141, 10, NOT WS_TABSTOP
+ LTEXT "", 65535, 212, 91, 81, 8
+ LTEXT "", 65535, 212, 103, 81, 8
+ LTEXT "", 65535, 212, 115, 81, 8
+ AUTOCHECKBOX "&Типи файлів виключені із розпакування:", 3268, 16, 144, 147, 11
+ EDITTEXT 3269, 26, 158, 296, 14, ES_AUTOHSCROLL, WS_EX_CLIENTEDGE
+ AUTOCHECKBOX "Зав&жди активувати по замовчуванню", 3270, 26, 174, 201, 11
+ AUTOCHECKBOX "Т&ипи файлів, що підлягають розпакуванню:", 3274, 16, 190, 162, 11
+ EDITTEXT 3275, 26, 203, 296, 14, ES_AUTOHSCROLL, WS_EX_CLIENTEDGE
+ LTEXT "(наприклад: *. tmp *. bak)", 65535, 171, 146, 143, 8
+ LTEXT "(наприклад: *. doc *. txt)", 65535, 182, 192, 131, 8
+}
