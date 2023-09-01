@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 
 archs = ["32", "64"]
-languages = ["ru", "en"]
+languages = ["ru", "en","ua"]
         
 
 class ConvertCommand():
@@ -63,6 +63,9 @@ class CopyCommand:
     
     def execute(self):
         for lng in languages:
+            if not os.path.exists(os.path.join(self.dest_path,lng)):
+                os.makedirs(os.path.join(self.dest_path,lng))
+
             if os.path.exists(os.path.join(f"{self.src_path}/x32/", f"lang/HaoZipLang_chs.dll")):
                 shutil.copy(os.path.join(f"{self.src_path}/x32/", f"lang/HaoZipLang_chs.dll"),
                             os.path.join(f"{self.dest_path}/", f"{lng}"))
@@ -148,13 +151,24 @@ class BuildCopyCommand:
 
         for arch in archs:
             for lng in languages:
+
+                if not os.path.exists(os.path.join(self.dest_haozip_path,f"x{arch}-{lng}")):
+                    os.makedirs(os.path.join(self.dest_haozip_path, f"x{arch}-{lng}"))
+
                 shutil.copy(os.path.join(self.current_directory, f"{lng}/{arch}/HaoZip.exe"),
                             os.path.join(self.dest_haozip_path, f"x{arch}-{lng}"))
+                
+                if not os.path.exists(os.path.join(self.dest_files_path,f"lang/{lng}/lang")):
+                    os.makedirs(os.path.join(self.dest_files_path, f"lang/{lng}/lang"))     
+                           
                 shutil.copy(os.path.join(self.current_directory, f"{lng}/HaoZipLang_chs.dll"),
                             os.path.join(self.dest_files_path, f"lang/{lng}/lang"))
 
                 for tool in tools:
                     if tool == "HaoZipCD.exe":
+                        if not os.path.exists(os.path.join(self.dest_haozip_path,f"x{arch}-app-tools/VirtualCD/{lng}")):
+                            os.makedirs(os.path.join(self.dest_haozip_path, f"x{arch}-app-tools/VirtualCD/{lng}"))
+
                         shutil.copy(os.path.join(self.current_directory, f"{lng}/{arch}/{tool}"),
                                     os.path.join(self.dest_haozip_path, f"x{arch}-app-tools/VirtualCD/{lng}"))
                     else:
