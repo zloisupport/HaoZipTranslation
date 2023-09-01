@@ -1,6 +1,7 @@
 import json
 import subprocess
 import os
+import datetime
 
 def readJson():
 	confFile = "conf.json"
@@ -53,10 +54,10 @@ def changePe(workDir=None,lang=None,arch=None):
 #  "ProductVersion:5.8
 
 
-	productVersion = "6.4.0.11152"
-	fileVersion = "6.4.0.11152"
+	# productVersion = "6.4.0.11152"
+	# fileVersion = "6.4.0.11152"
 	companyName = "HaoZip"
-	legalCopyright = "HaoZip(c) 2023 haozip.2345.com"
+	legalCopyright = f"HaoZip(c) {datetime.datetime.now().year} haozip.2345.com"
 
 	subprocess.run(f'Restorator.exe -open {workDir}\\{lang}\\HaoZipLang_chs.dll -nobackup \
 			-verSetString Comments "HaoZipLang_chs {lang}"\
