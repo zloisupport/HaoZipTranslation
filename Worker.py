@@ -42,7 +42,8 @@ class ClearCommand:
         self.path = path
         self.remove_files =["2345Uninst.exe", "HaoZipUpdate.exe", "Uninstall.exe",
                             "HaoZipHomePage.exe", "HaoZipAce32Loader.exe", "Haozip_2345Upgrade.exe",
-                            "Haozip_2345Upgrade.dll", "pic", "Protect", "tool"]
+                            "Haozip_2345Upgrade.dll","Install.data","libcurl_x64.dll","libcurl_x86.dll",
+							"HaoZipWorker.exe","pic", "Protect", "tool"]
 
     
     def execute(self):

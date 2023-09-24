@@ -82,7 +82,7 @@ def setAssignLang(workdir, res_type, res_path, resourse):
                         f'Restorator.exe -open "{workdir[:len(workdir) - 2]}\HaoZipLang_chs.dll" -nobackup -assignOn "{res_type}" "{res_path}" -save -exit')
                
                 if res_type == "Dialog":
-                        del_dialog_elements = (2091,2163,23118,23201)
+                        del_dialog_elements = (2091,2163,23118,23201,2211)
                         for element in del_dialog_elements:
                             subprocess.run(
                                 f'Restorator.exe -open "{workdir[:len(workdir) - 2]}\HaoZipLang_chs.dll" -nobackup -delete Dialog\{element} -save -exit')
