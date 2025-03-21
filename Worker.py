@@ -223,7 +223,7 @@ class CopyFilesToWorkSpace(Model, metaclass=ModelMeta):
                     continue
                 if os.path.exists(path_lang_file):
                     res_path.add(dest_dir)
-                    shutil.copy(path_lang_file, self.work_dir)
+                    shutil.copy(path_lang_file, dest_dir)
                 else:
                     print(f'File not found: {path_lang_file}')
 
