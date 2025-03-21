@@ -1,6 +1,5 @@
 import datetime
 from enum import Enum
-
 import shutil
 import codecs
 import subprocess
@@ -9,11 +8,6 @@ import json
 from subprocess import SubprocessError
 from typing import Dict
 
-from dotenv import load_dotenv
-
-ARCHITECTURE = ["32", "64"]
-LANGUAGES = ["ru", "en", "ua"]
-count = 0
 RES_TOOL_EXE = "Restorator.exe"
 OPEN_ARG = " -open"
 FILE_BACKUP_ARG = '-nobackup'
@@ -48,7 +42,7 @@ HAO_FILES = [
 
 class ModelMeta(type):
     def __new__(cls, name, bases, dct):
-        dct['langs'] = {}  # Инициализируем langs в метаклассе
+        dct['langs'] = {}
         dct['work_dir'] = None
         dct['translation_files'] = None
         dct['count'] = 0
@@ -154,11 +148,11 @@ class TranslatePeFileCommand(Model, metaclass=ModelMeta):
     def get_resource_hao(self, lang, paths):
         root_dir = f'{self.translation_files}\\lng\\{lang}'
 
-        root_lang_cd = f'{root_dir}\\HaoZip'
-        res_sub_cd = self.get_sub_folder(root_lang_cd)
-        res_lang_cd = self.checking_name_istype(root_lang_cd,res_sub_cd)
+        root_hao = f'{root_dir}\\HaoZip'
+        res_sub_hao = self.get_sub_folder(root_hao)
+        res_hao = self.checking_name_istype(root_hao,res_sub_hao)
 
-        return res_lang_cd
+        return res_hao
 
     def process_translate_hao_lang(self,lang,path):
         data_path = self.get_resource_hao_lang(lang, path)
@@ -187,23 +181,14 @@ class TranslatePeFileCommand(Model, metaclass=ModelMeta):
                 res.append(file)
         return res
 
-    def set_assign_resource(self,path:str, res_type:ResType, exe_name:str, res_path:str):
+    @staticmethod
+    def set_assign_resource(path:str, res_type:ResType, exe_name:str, res_path:str):
         try:
-           # geg = self.get_files(res_path)
-
-           # print(geg)
            # print(f'{RES_TOOL_EXE} {OPEN_ARG} "{path}\\{exe_name}" {FILE_BACKUP_ARG} -delete  {res_type.name} -assign "{res_type.name}" "{res_path}" {FILE_SAVE_ARG} {EXIT_ARG}')
            subprocess.run(f'{RES_TOOL_EXE} {OPEN_ARG} "{path}\\{exe_name}" {FILE_BACKUP_ARG} -assignOn {res_type.name} "{res_path}" {FILE_SAVE_ARG} {EXIT_ARG}')
         except SubprocessError as err:
             print(err)
 
-    @staticmethod
-    def create_work_dir(dir_path):
-        if not os.path.exists(dir_path):
-            print("Creating Empty Project folder!")
-            print(dir_path)
-            os.makedirs(dir_path)
-            # raise UserWarning("Project folder empty!")
 
     def execute(self):
         for lang in self.langs:
@@ -269,7 +254,7 @@ class ChangePeInfoCommand(Model,metaclass=ModelMeta):
         for lang in self.langs:
             lang_file = f'{self.work_dir}\\{lang}\\{LANG_DLL_FILE}'
             if os.path.exists(lang_file):
-                subprocess.run(f'Restorator.exe -open {lang_file} -nobackup \
+                subprocess.run(f'{RES_TOOL_EXE} -open {lang_file} -nobackup \
                             -verSetString Comments "HaoZipLang {lang} "\
                             -verSetString CompanyName "{self.company}"\
                             -verSetString FileDescription "HaoZipLang {lang}"\
@@ -280,7 +265,6 @@ class ChangePeInfoCommand(Model,metaclass=ModelMeta):
                             -save -exit')
 
     def process_change_other_files(self):
-
         for arch in self.arch:
             for lang in self.langs:
                 for file in HAO_FILES:
@@ -289,7 +273,7 @@ class ChangePeInfoCommand(Model,metaclass=ModelMeta):
 
                     hao_file = f'{self.work_dir}\\{lang}\\{arch}\\{file}'
                     if os.path.exists(hao_file):
-                        subprocess.run(f'Restorator.exe -open {hao_file} -nobackup \
+                        subprocess.run(f'{RES_TOOL_EXE} -open {hao_file} -nobackup \
                                        -verSetString Comments "{file_name}"\
                                        -verSetString CompanyName "{self.company}"\
                                        -verSetString FileDescription "{file_name}"\
@@ -298,8 +282,6 @@ class ChangePeInfoCommand(Model,metaclass=ModelMeta):
                                        -verSetString OriginalFilename "{file_name}"\
                                        -verSetString ProductName "{file_name}"\
                                        -save -exit')
-
-
 
     def execute(self):
         self.process_change_pe_lang_dll()
@@ -349,42 +331,46 @@ class ConvertCommand:
                     f.write(content)
 
 
-class ClearCommand:
-    def __init__(self, path):
-        self.path = path
+class ClearCommand(Model,metaclass=ModelMeta):
+    def __init__(self):
+        super().__init__()
+        super().load_config()
+
         self.remove_files = ["2345Uninst.exe", "HaoZipUpdate.exe", "Uninstall.exe",
                              "HaoZipHomePage.exe", "HaoZipAce32Loader.exe", "Haozip_2345Upgrade.exe",
                              "Haozip_2345Upgrade.dll", "Install.data", "libcurl_x64.dll", "libcurl_x86.dll",
                              "HaoZipWorker.exe", "pic", "Protect", "tool"]
 
-    def execute(self):
-        for lng in LANGUAGES:
-            for arch in ARCHITECTURE:
-                for rmfile in self.remove_files:
-                    file_path = os.path.join(self.path, f"{lng}//{arch}//{rmfile}")
-                    print(file_path)
+    def clear_files(self):
+        for lng in self.langs:
+            for arch in self.arch:
+                for rm_file in self.remove_files:
+                    file_path = os.path.join(self.work_dir, f"{lng}\\{arch}\\{rm_file}")
                     if os.path.isfile(file_path):
                         os.remove(file_path)
                     elif os.path.exists(file_path):
                         shutil.rmtree(file_path)
 
+    def execute(self):
+        self.clear_files()
 
 class CopyCommand:
-    def __init__(self, src_path, dest_path):
-        self.src_path = src_path
-        self.dest_path = dest_path
-
-    def execute(self):
-        for lng in LANGUAGES:
-            if not os.path.exists(os.path.join(self.dest_path, lng)):
-                os.makedirs(os.path.join(self.dest_path, lng))
-
-            if os.path.exists(os.path.join(f"{self.src_path}/x32/", f"lang/{LANG_DLL_FILE}")):
-                shutil.copy(os.path.join(f"{self.src_path}/x32/", f"lang/{LANG_DLL_FILE}"),
-                            os.path.join(f"{self.dest_path}/", f"{lng}"))
-            for arch in ARCHITECTURE:
-                if os.path.exists(f"{self.src_path}/x{arch}"):
-                    shutil.copytree(f"{self.src_path}/x{arch}/", f"{self.dest_path}/{lng}/{arch}", dirs_exist_ok=True)
+    pass
+    # def __init__(self, src_path, dest_path):
+    #     self.src_path = src_path
+    #     self.dest_path = dest_path
+    #
+    # def execute(self):
+    #     for lng in LANGUAGES:
+    #         if not os.path.exists(os.path.join(self.dest_path, lng)):
+    #             os.makedirs(os.path.join(self.dest_path, lng))
+    #
+    #         if os.path.exists(os.path.join(f"{self.src_path}/x32/", f"lang/{LANG_DLL_FILE}")):
+    #             shutil.copy(os.path.join(f"{self.src_path}/x32/", f"lang/{LANG_DLL_FILE}"),
+    #                         os.path.join(f"{self.dest_path}/", f"{lng}"))
+    #         for arch in ARCHITECTURE:
+    #             if os.path.exists(f"{self.src_path}/x{arch}"):
+    #                 shutil.copytree(f"{self.src_path}/x{arch}/", f"{self.dest_path}/{lng}/{arch}", dirs_exist_ok=True)
 
 
 class BuildCopyCommand:
@@ -463,41 +449,41 @@ class BuildCopyCommand:
             "ZipNew.data"
         ]
 
-        for arch in ARCHITECTURE:
-            for lng in LANGUAGES:
-
-                if not os.path.exists(os.path.join(self.dest_haozip_path, f"x{arch}-{lng}")):
-                    os.makedirs(os.path.join(self.dest_haozip_path, f"x{arch}-{lng}"))
-
-                shutil.copy(os.path.join(self.current_directory, f"{lng}/{arch}/HaoZip.exe"),
-                            os.path.join(self.dest_haozip_path, f"x{arch}-{lng}"))
-
-                if not os.path.exists(os.path.join(self.dest_files_path, f"lang/{lng}/lang")):
-                    os.makedirs(os.path.join(self.dest_files_path, f"lang/{lng}/lang"))
-
-                shutil.copy(os.path.join(self.current_directory, f"{lng}/{LANG_DLL_FILE}"),
-                            os.path.join(self.dest_files_path, f"lang/{lng}/lang"))
-
-                for tool in tools:
-                    if tool == "HaoZipCD.exe":
-                        if not os.path.exists(
-                                os.path.join(self.dest_haozip_path, f"x{arch}-app-tools/VirtualCD/{lng}")):
-                            os.makedirs(os.path.join(self.dest_haozip_path, f"x{arch}-app-tools/VirtualCD/{lng}"))
-
-                        shutil.copy(os.path.join(self.current_directory, f"{lng}/{arch}/{tool}"),
-                                    os.path.join(self.dest_haozip_path, f"x{arch}-app-tools/VirtualCD/{lng}"))
-                    else:
-                        shutil.copy(os.path.join(self.current_directory, f"{lng}/{arch}/{tool}"),
-                                    os.path.join(self.dest_haozip_path, f"x{arch}-app-tools"))
-
-                for driver in drivers:
-                    shutil.copy(os.path.join(self.current_directory, f"{lng}/{arch}/{driver}"),
-                                os.path.join(self.dest_haozip_path, f"x{arch}-app-tools/VirtualCD"))
-
-                for x64_file in app_x64_files:
-                    if os.path.exists(os.path.join(self.current_directory, f"{lng}/{arch}/{x64_file}")):
-                        shutil.copy(os.path.join(self.current_directory, f"{lng}/{arch}/{x64_file}"),
-                                    os.path.join(self.dest_haozip_path, f"x{arch}-app"))
+        # for arch in ARCHITECTURE:
+        #     for lng in LANGUAGES:
+        #
+        #         if not os.path.exists(os.path.join(self.dest_haozip_path, f"x{arch}-{lng}")):
+        #             os.makedirs(os.path.join(self.dest_haozip_path, f"x{arch}-{lng}"))
+        #
+        #         shutil.copy(os.path.join(self.current_directory, f"{lng}/{arch}/HaoZip.exe"),
+        #                     os.path.join(self.dest_haozip_path, f"x{arch}-{lng}"))
+        #
+        #         if not os.path.exists(os.path.join(self.dest_files_path, f"lang/{lng}/lang")):
+        #             os.makedirs(os.path.join(self.dest_files_path, f"lang/{lng}/lang"))
+        #
+        #         shutil.copy(os.path.join(self.current_directory, f"{lng}/{LANG_DLL_FILE}"),
+        #                     os.path.join(self.dest_files_path, f"lang/{lng}/lang"))
+        #
+        #         for tool in tools:
+        #             if tool == "HaoZipCD.exe":
+        #                 if not os.path.exists(
+        #                         os.path.join(self.dest_haozip_path, f"x{arch}-app-tools/VirtualCD/{lng}")):
+        #                     os.makedirs(os.path.join(self.dest_haozip_path, f"x{arch}-app-tools/VirtualCD/{lng}"))
+        #
+        #                 shutil.copy(os.path.join(self.current_directory, f"{lng}/{arch}/{tool}"),
+        #                             os.path.join(self.dest_haozip_path, f"x{arch}-app-tools/VirtualCD/{lng}"))
+        #             else:
+        #                 shutil.copy(os.path.join(self.current_directory, f"{lng}/{arch}/{tool}"),
+        #                             os.path.join(self.dest_haozip_path, f"x{arch}-app-tools"))
+        #
+        #         for driver in drivers:
+        #             shutil.copy(os.path.join(self.current_directory, f"{lng}/{arch}/{driver}"),
+        #                         os.path.join(self.dest_haozip_path, f"x{arch}-app-tools/VirtualCD"))
+        #
+        #         for x64_file in app_x64_files:
+        #             if os.path.exists(os.path.join(self.current_directory, f"{lng}/{arch}/{x64_file}")):
+        #                 shutil.copy(os.path.join(self.current_directory, f"{lng}/{arch}/{x64_file}"),
+        #                             os.path.join(self.dest_haozip_path, f"x{arch}-app"))
 
 
 class Invoker:
@@ -513,7 +499,7 @@ class Invoker:
 
 def main():
     """main"""
-    load_dotenv()
+
     dest_haozip_path = os.getenv("DEST_HAOZIP_PATH")
     dest_files_path = os.getenv("DEST_FILES_PATH")
 
@@ -527,8 +513,8 @@ def main():
     copy_orign_files = UnpackOrignFilesCommand()
     copy_to_workspace_command = CopyFilesToWorkSpace()
     change_pe_command = ChangePeInfoCommand()
-    clear_command = ClearCommand(current_directory)
-    copy_command = CopyCommand(current_directory, current_directory)
+    clear_command = ClearCommand()
+    copy_command = CopyCommand()
 
     base_encoding = None
     to_encoding = None
