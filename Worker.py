@@ -242,6 +242,30 @@ class CopyFilesToWorkSpace(Model, metaclass=ModelMeta):
         self.copy_lang_file_to_work_space()
         self.copy_other_file_to_work_space()
 
+class ClearWorkspace(Model,metaclass=ModelMeta):
+    def __init__(self):
+        super().__init__()
+        super().load_config()
+
+    def clear(self):
+        for lang in self.langs:
+            langs_path = os.path.join(self.work_dir,lang)
+            files = self.get_files(langs_path)
+            self.remove_files(langs_path, files)
+            for arch in self.arch:
+                app_path = os.path.join(self.work_dir, lang,arch)
+                files = self.get_files(app_path)
+                self.remove_files(app_path,files)
+
+    @staticmethod
+    def remove_files(path, files):
+         for file in files:
+             file_path = os.path.join(path,file)
+             if os.path.exists(file_path):
+                 os.remove(file_path)
+
+    def execute(self):
+        self.clear()
 
 class ChangePeInfoCommand(Model, metaclass=ModelMeta):
     def __init__(self):
@@ -501,7 +525,7 @@ def main():
     clear_hao_utils_command = ClearHaoUtilsCommand()
     convert_command = ConvertCommand()
     build_copy_command = BuildCopyCommand()
-
+    clear_workspace_command = ClearWorkspace()
     invoker = Invoker()
 
     while True:
@@ -512,10 +536,11 @@ def main():
           02-unpack hao##.exe
           03-copy files to workspace
           04-change pe info
+          05-pack translate PE file
           1-delete hao utils
-          2-build
-          3-convert
-          4-pack translate PE file
+          2-clear workspace
+          3-build
+          4-convert
           : """)
         if user_input == "0":
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -533,19 +558,21 @@ def main():
         if user_input == "04":
             invoker.set_command(change_pe_command)
             invoker.execute_command()
+        if user_input == "05":
+            invoker.set_command(translated_command)
+            invoker.execute_command()
         if user_input == "1":
             invoker.set_command(clear_hao_utils_command)
             invoker.execute_command()
         if user_input == "2":
-            invoker.set_command(build_copy_command)
+            invoker.set_command(clear_workspace_command)
             invoker.execute_command()
         if user_input == "3":
-            invoker.set_command(convert_command)
+            invoker.set_command(build_copy_command)
             invoker.execute_command()
         if user_input == "4":
-            invoker.set_command(translated_command)
+            invoker.set_command(convert_command)
             invoker.execute_command()
-
 
 if __name__ == "__main__":
     main()
