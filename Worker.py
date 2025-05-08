@@ -28,10 +28,10 @@ HAO_FILES = [
     "HaoZipCom.dll",
     "HaoZipCom32.dll",
     "HaoZipEditor.dll",
-    "HaoZipExt.dll",
+    # "HaoZipExt.dll",
     "HaoZipExt32.dll",
     "HaoZipFormats.dll",
-    "HaoZipIcons.dll",
+    # "HaoZipIcons.dll",
     "HaoZipLoader.exe",
     "HaoZipLoader32.exe",
     "HaoZipMd5.exe",
@@ -48,6 +48,8 @@ class ModelMeta(type):
         dct['count'] = 0
         dct['app_paths'] = 0
         return super().__new__(cls, name, bases, dct)
+
+
 
 class Model(metaclass=ModelMeta):
     langs: Dict[str, Dict[str, str]]
@@ -89,11 +91,13 @@ class Model(metaclass=ModelMeta):
             self.source_exe = f'{self.work_dir}\\source_exe'
 
     def create_work_dir(self):
-        for arch in self.arch:
-            dir_path = os.path.join(self.source_exe, arch)
-            if not os.path.exists(dir_path):
-                print("Creating Empty Project folder!")
-                os.makedirs(dir_path)
+        
+        for lang in self.langs:
+            for arch in self.arch:
+                dir_path = os.path.join(self.work_dir, lang, str(arch))
+                if not os.path.exists(dir_path):
+                    print("Creating Empty Project folder!")
+                    os.makedirs(dir_path)
 
     @staticmethod
     def get_files(res_path) -> list[str]:
@@ -170,14 +174,14 @@ class TranslatePeFileCommand(Model, metaclass=ModelMeta):
         data_path = self.get_resource_hao_cd(lang)
         for res_key, res_path in data_path.items():
             for arch in self.arch:
-                recourse_path = os.path.join(path, arch)
+                recourse_path = os.path.join(path, str(arch))
                 self.set_assign_resource(str(recourse_path), res_key, HAO_CD_EXE_FILE, str(res_path))
 
     def process_translate_hao(self, lang, path):
         data_path = self.get_resource_hao(lang)
         for res_key, res_path in data_path.items():
             for arch in self.arch:
-                recourse_path = os.path.join(path, arch)
+                recourse_path = os.path.join(path, str(arch))
                 self.set_assign_resource(str(recourse_path), res_key, HAO_EXE_FILE, str(res_path))
 
     @staticmethod
@@ -216,7 +220,7 @@ class CopyFilesToWorkSpace(Model, metaclass=ModelMeta):
     def copy_lang_file_to_work_space(self):
         res_path = set()
         for arch in self.arch:
-            path_lang_file = os.path.join(self.source_exe, arch, "lang", LANG_DLL_FILE)
+            path_lang_file = os.path.join(self.source_exe, str(arch), "lang", LANG_DLL_FILE)
             for lang in self.langs:
                 dest_dir = os.path.join(self.work_dir, lang)
                 if dest_dir in res_path:
@@ -230,9 +234,9 @@ class CopyFilesToWorkSpace(Model, metaclass=ModelMeta):
     def copy_other_file_to_work_space(self):
         for arch in self.arch:
             for lang in self.langs:
-                dest_dir = os.path.join(self.work_dir, lang, arch)
+                dest_dir = os.path.join(self.work_dir, lang, str(arch))
                 for file in HAO_FILES:
-                    path_file = os.path.join(self.source_exe, arch, file)
+                    path_file = os.path.join(self.source_exe, str(arch), file)
                     if os.path.exists(path_file):
                         shutil.copy(path_file, dest_dir)
                     else:
@@ -296,7 +300,7 @@ class ChangePeInfoCommand(Model, metaclass=ModelMeta):
                     ext_len = len(file) - 4
                     file_name = f'{file[:ext_len]} {lang} '
 
-                    hao_file = os.path.join(self.work_dir, lang, arch, file)
+                    hao_file = os.path.join(self.work_dir, lang, str(arch), file)
                     if os.path.exists(hao_file):
                         subprocess.run(f'{RES_TOOL_EXE} -open {hao_file} -nobackup \
                                        -verSetString Comments "{file_name}"\
@@ -321,7 +325,7 @@ class UnpackOrignFilesCommand(Model, metaclass=ModelMeta):
 
     def unpack_exe_source(self):
         for arch in self.arch:
-            dest_path = os.path.join(self.source_exe, arch)
+            dest_path = os.path.join(self.source_exe, str(arch))
             src_exe = input(f'Enter path Hao###{arch}.exe\nTo return to the menu, enter: 0\n')
             if src_exe == '0':
                 return
@@ -377,7 +381,7 @@ class ClearHaoUtilsCommand(Model, metaclass=ModelMeta):
     def clear_files(self):
         for arch in self.arch:
             for rm_file in self.remove_files:
-                file_path = os.path.join(self.source_exe, arch, rm_file)
+                file_path = os.path.join(self.source_exe, str(arch), rm_file)
                 if os.path.isfile(file_path):
                     os.remove(file_path)
                 elif os.path.exists(file_path):
